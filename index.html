@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adia's HOME | 角色卡倉庫</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="bunny.ico">
+</head>
+<body>
+    <div id="top-fixed-container">
+        <header>
+            <a href="#" id="home-btn" class="home-title-btn">HOME</a>
+        </header>
+        <div class="scrollable-nav main-nav-scroll">
+            <nav>
+                <a href="#" id="fantasy-btn" class="nav-btn">奇幻世界</a>
+                <a href="#" id="fictional-btn" class="nav-btn">現實架空</a>
+            </nav>
+        </div>
+        <div class="scrollable-nav sub-nav-scroll">
+            <div id="fantasy-sub-nav" class="sub-nav" data-parent="fantasy-content">
+                <a href="#" class="sub-nav-btn active" data-target="fantasy-all">全部</a>
+                <a href="#" class="sub-nav-btn" data-target="fantasy-east">魔都</a>
+                <a href="#" class="sub-nav-btn" data-target="fantasy-south">南境</a>
+            </div>
+            <div id="fictional-sub-nav" class="sub-nav" data-parent="fictional-content">
+                <a href="#" class="sub-nav-btn active" data-target="fictional-all">全部</a>
+                <a href="#" class="sub-nav-btn" data-target="fictional-gods">諸神</a>
+                <a href="#" class="sub-nav-btn" data-target="fictional-humans">凡人</a>
+            </div>
+        </div>
+    </div>
+    <main id="content-area">
+        <section id="home-content" class="content-section active">
+            <h1>Adia</h1>
+            <p>不愛社交的 AI-RP 愛好者。</p>
+            <p>專注力不高，時常一邊 AI-RP 一邊東摸摸西摸摸，但並沒有因此特別精通了什麼。</p>
+            <p>寫下了教學與提示詞、微調了 SillyTavern 介面美化、創作了角色卡、時不時算個圖，這些都放置於 Discord AI 深夜奶茶店。</p>
+            <p>這裡主要簡介我創作的角色卡，如果想要獲取角色卡，或是其他更多的資源就煩請前往 Discord AI 深夜奶茶店吧。</p>
+            <h1>AI 深夜奶茶店</h1>
+            <p>專為熱愛 AI-RP 的人們而設的繁體中文 Discord 伺服器，我們深知繁體中文的 AI-RP 專業資訊相對零散，因此希望這裡能成為一個友善的據點，讓大家能一起分享經過查證的知識，交流、討論、分享、學習關於 AI 角色扮演的點點滴滴！</p>
+            <div class="home-buttons-container">
+                <a href="https://chocochocococo.github.io/ai-milktea-wiki/" target="_blank" class="join-discord-btn">
+                    <span>AI 深夜奶茶店 wiki</span>
+                </a>
+                <a href="https://discord.gg/Qpcv7wDk8x" target="_blank" class="join-discord-btn">
+                    <span>加入伺服器</span>
+                </a>
+            </div>
+        </section>
+        <section id="fantasy-content" class="content-section">
+            <div class="controls-container">
+                <input type="search" class="search-box" placeholder="搜尋角色名或標籤...">
+            </div>
+            <div class="sub-content-scroll-area">
+                <!-- 角色卡將由 JavaScript 動態生成於此 -->
+            </div>
+            <div class="pagination-container">
+                <!-- 分頁按鈕將由 JavaScript 動態生成於此 -->
+            </div>
+        </section>
+        <!-- ★★★ 現實架空分頁 - 已清空並加入新結構 ★★★ -->
+        <section id="fictional-content" class="content-section">
+            <div class="controls-container">
+                <input type="search" class="search-box" placeholder="搜尋角色名或標籤...">
+            </div>
+            <div class="sub-content-scroll-area">
+                <!-- 角色卡將由 JavaScript 動態生成於此 -->
+            </div>
+            <div class="pagination-container">
+                <!-- 分頁按鈕將由 JavaScript 動態生成於此 -->
+            </div>
+        </section>
+    </main>
+    <footer id="page-footer">
+        <p>我的角色卡僅供個人私下遊玩，禁止二次上傳！包含禁止無授權、無標註原作者、無提供原角色卡連結的任何形式的修改、參考、借鑑、盜用後再上傳！</p>
+        <p>我的角色卡僅只有發布於 Discord AI 深夜奶茶店。</p>
+    </footer>
+    <script src="chars.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
