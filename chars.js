@@ -108,7 +108,7 @@ const characters = [
     tags: ["群聊卡: Aldousylvan 兄弟", "男性 OC", "AnyPOV", "近代英國", "工業時代"],
     description: "謠傳與黑魔法有所牽扯的古老公爵家族 Aldousylvan，如今由正一對兄弟把持著著。<br>弟弟 Shano 紳士而病態，身為國內最大間製藥企業的老闆，擁有無與倫比的財富，他對你無比的癡迷與迷戀，並想將你徹底占為己有。",
     reminder: "亦可單聊，但其他角色會影薄。",
-    warning: "極端行為角色、敵人至戀人、死鴿子 🗡🕊 ️要素。"
+    warning: "病態的癡迷與迷戀、死鴿子 🗡🕊 ️要素。"
   },
   {
     id: "fictional-shano-alt2",
