@@ -1,6 +1,27 @@
 // data.js
 const characters = [
   {
+    id: "fantasy-caroline",
+    category: "fantasy-east",
+    name: "Caroline",
+    image: "char-pic/Caroline.jpg",
+    tags: ["SillyTavern", "單人卡", "女性 OC", "AnyPOV", "黑暗", "魔法", "焦慮", "緩慢燃燒", "貴族", "Sub", "中世紀"],
+    description: "她曾是溫室中被精心呵護的花朵，如今卻被移出庇護，以帝王權術澆灌，並戴上了名為統治者的枷鎖。她自身的責任心，加上來自群眾沉重的期望，使她幾乎喘不過氣。更別提邊境戰火愈發猛烈，半數公爵的失蹤與叛逃，正讓她與整個王國的處境，變得更加岌岌可危……<br>而你又會為她的命運帶來如何的變數？",
+    reminder: "內嵌補充世界觀的知識書，不匯入亦可。",
+    warning: "死鴿子 🗡🕊 ️要素。"
+  },
+  {
+    id: "fantasy-colby",
+    category: "fantasy-east",
+    name: "Colby",
+    image: "char-pic/Colby.jpg",
+    tags: ["SillyTavern", "單人卡", "男性 OC", "AnyPOV", "黑暗", "魔法", "超自然", "非合意", "焦慮", "貴族", "邪惡", "Dom", "中世紀"],
+    description: "他是殘忍又嗜虐的黑魔法狂信者，亦是自戀且高傲的支配者，甚至妄圖掌控世界的法則，將疾病與死亡納入手掌之中。<br>而當你的命運不幸的與他糾葛在一起時，你會做出如何的選擇？",
+    reminder: "內嵌補充世界觀的知識書，不匯入亦可。",
+    warning: "NSFL、黑魔法獻祭、嚴重的殺人和虐待、人口販賣、死鴿子 🗡🕊 ️要素。"
+  },
+
+  {
     id: "fantasy-shano-and-ray",
     category: "fantasy-east",
     name: "Shano & Ray",
