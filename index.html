@@ -14,23 +14,26 @@
     <div id="top-fixed-container">
         <header>
             <a href="#" id="home-btn" class="home-title-btn">HOME</a>
+            <button id="toggle-nav-btn" class="nav-toggle-btn">☰</button>
         </header>
-        <div class="scrollable-nav main-nav-scroll">
-            <nav>
-                <a href="#" id="fantasy-btn" class="nav-btn">奇幻世界</a>
-                <a href="#" id="fictional-btn" class="nav-btn">現實架空</a>
-            </nav>
-        </div>
-        <div class="scrollable-nav sub-nav-scroll">
-            <div id="fantasy-sub-nav" class="sub-nav" data-parent="fantasy-content">
-                <a href="#" class="sub-nav-btn active" data-target="fantasy-all">全部</a>
-                <a href="#" class="sub-nav-btn" data-target="fantasy-east">魔都</a>
-                <a href="#" class="sub-nav-btn" data-target="fantasy-south">南境</a>
+        <div id="main-nav-container">
+            <div class="scrollable-nav main-nav-scroll">
+                <nav>
+                    <a href="#" id="fantasy-btn" class="nav-btn">奇幻世界</a>
+                    <a href="#" id="fictional-btn" class="nav-btn">現實架空</a>
+                </nav>
             </div>
-            <div id="fictional-sub-nav" class="sub-nav" data-parent="fictional-content">
-                <a href="#" class="sub-nav-btn active" data-target="fictional-all">全部</a>
-                <a href="#" class="sub-nav-btn" data-target="fictional-gods">諸神</a>
-                <a href="#" class="sub-nav-btn" data-target="fictional-humans">凡人</a>
+            <div class="scrollable-nav sub-nav-scroll">
+                <div id="fantasy-sub-nav" class="sub-nav" data-parent="fantasy-content">
+                    <a href="#" class="sub-nav-btn active" data-target="fantasy-all">全部</a>
+                    <a href="#" class="sub-nav-btn" data-target="fantasy-east">魔都</a>
+                    <a href="#" class="sub-nav-btn" data-target="fantasy-south">南境</a>
+                </div>
+                <div id="fictional-sub-nav" class="sub-nav" data-parent="fictional-content">
+                    <a href="#" class="sub-nav-btn active" data-target="fictional-all">全部</a>
+                    <a href="#" class="sub-nav-btn" data-target="fictional-gods">諸神</a>
+                    <a href="#" class="sub-nav-btn" data-target="fictional-humans">凡人</a>
+                </div>
             </div>
         </div>
     </div>
@@ -54,7 +57,11 @@
         </section>
         <section id="fantasy-content" class="content-section">
             <div class="controls-container">
-                <input type="search" class="search-box" placeholder="搜尋角色名或標籤...">
+                <input type="search" class="search-box" placeholder="搜尋角色名字、內文或標籤...">
+                <button class="tag-toggle-btn">開啟標籤列表</button>
+                <div class="tag-list-container">
+                    <!-- 標籤將由 JavaScript 動態生成於此 -->
+                </div>
             </div>
             <div class="sub-content-scroll-area">
                 <!-- 角色卡將由 JavaScript 動態生成於此 -->
@@ -63,10 +70,14 @@
                 <!-- 分頁按鈕將由 JavaScript 動態生成於此 -->
             </div>
         </section>
-        <!-- ★★★ 現實架空分頁 - 已清空並加入新結構 ★★★ -->
+        <!-- 現實架空分頁結構 -->
         <section id="fictional-content" class="content-section">
             <div class="controls-container">
-                <input type="search" class="search-box" placeholder="搜尋角色名或標籤...">
+                <input type="search" class="search-box" placeholder="搜尋角色名字、內文或標籤...">
+                <button class="tag-toggle-btn">開啟標籤列表</button>
+                <div class="tag-list-container">
+                    <!-- 標籤將由 JavaScript 動態生成於此 -->
+                </div>
             </div>
             <div class="sub-content-scroll-area">
                 <!-- 角色卡將由 JavaScript 動態生成於此 -->
