@@ -1,7 +1,7 @@
-// script.js (全新進化 ⛤ 搜尋分頁魔法版)
+// script.js
 document.addEventListener('DOMContentLoaded', () => {
     // --- 初始設定 & 變數宣告 ---
-    const CARDS_PER_PAGE = 5; // ★★★ 每頁顯示幾張角色卡，妳可以改成任何妳喜歡的數字 ★★★
+    const CARDS_PER_PAGE = 5; // 每頁顯示幾張角色卡
     let currentPage = 1;
     let currentFilter = 'all';
     let currentSearchTerm = '';
@@ -11,7 +11,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const mainContentSections = document.querySelectorAll('.content-section');
     const allSubNavs = document.querySelectorAll('.sub-nav');
     const searchBoxes = document.querySelectorAll('.search-box');
-    // --- 核心魔法：渲染角色卡與分頁 ---
+    const tagToggleButtons = document.querySelectorAll('.tag-toggle-btn');
+    const toggleNavButton = document.getElementById('toggle-nav-btn');
+    const mainNavContainer = document.getElementById('main-nav-container');
+    // --- 渲染角色卡與分頁 ---
     function renderContent() {
         // 確定當前在哪個主要分頁 (fantasy 或 fictional)
         const activeSection = document.querySelector('.content-section.active');
@@ -30,7 +33,10 @@ document.addEventListener('DOMContentLoaded', () => {
             // 條件 C: 角色必須符合搜尋關鍵字
             const searchTermMatch = !currentSearchTerm ||
                                     char.name.toLowerCase().includes(currentSearchTerm) ||
-                                    char.tags.some(tag => tag.toLowerCase().includes(currentSearchTerm));
+                                    char.tags.some(tag => tag.toLowerCase().includes(currentSearchTerm)) ||
+                                    char.description.toLowerCase().includes(currentSearchTerm) ||
+                                    char.reminder.toLowerCase().includes(currentSearchTerm) ||
+                                    char.warning.toLowerCase().includes(currentSearchTerm);
             return subCategoryMatch && searchTermMatch;
         });
         // 2. 處理分頁
@@ -46,19 +52,27 @@ document.addEventListener('DOMContentLoaded', () => {
             const tagsHTML = char.tags.map(tag => `<span>${tag}</span>`).join('');
             const reminderHTML = char.reminder ? `<p class="character-reminder">${char.reminder}</p>` : '';
             const warningHTML = char.warning ? `<p class="character-warning">${char.warning}</p>` : '';
-            const cardHTML = `
-                <div class="character-card" data-category="${char.category}">
-                    <img src="${char.image}" alt="${char.name}的角色圖">
-                    <div class="character-info">
-                        <h3 class="character-name">${char.name}</h3>
-                        <div class="character-tags">${tagsHTML}</div>
-                        <p class="character-desc">${char.description}</p>
-                        ${reminderHTML}
-                        ${warningHTML}
+            const linksHTML = char.links && char.links.length > 0
+                ? `<div class="character-links">${char.links.map(link =>
+                    `<a href="${link.url}" target="_blank" class="char-link-btn">${link.name}</a>`
+                  ).join('')}</div>`
+                : '';
+                const cardHTML = `
+                    <div class="character-card" data-category="${char.category}">
+                        <div class="card-main-content">
+                            <img src="${char.image}" alt="${char.name}的角色圖">
+                            <div class="character-info">
+                                <h3 class="character-name">${char.name}</h3>
+                                <div class="character-tags">${tagsHTML}</div>
+                                <p class="character-desc">${char.description}</p>
+                                ${reminderHTML}
+                                ${warningHTML}
+                            </div>
+                        </div>
+                        ${linksHTML ? `<div class="card-footer">${linksHTML}</div>` : ''}
                     </div>
-                </div>
-            `;
-            scrollArea.innerHTML += cardHTML;
+                `;
+                scrollArea.innerHTML += cardHTML;
         });
         // 4. 渲染分頁按鈕
         renderPagination(activeSection, totalPages);
@@ -138,18 +152,21 @@ document.addEventListener('DOMContentLoaded', () => {
             const targetSubNav = document.querySelector(`.sub-nav[data-parent="${targetContentId}"]`);
             if (targetSubNav) {
                 targetSubNav.classList.add('active');
-
-                // 重設並觸發預設的「全部」按鈕
+                // 1. 找到預設的「全部」按鈕
                 const defaultAllButton = targetSubNav.querySelector('.sub-nav-btn');
                 if (defaultAllButton) {
-                    currentFilter = defaultAllButton.dataset.target;
-                    currentPage = 1;
-                    currentSearchTerm = ''; // 切換主分類時清空搜尋
-                    const activeSearchBox = document.querySelector(`#${targetContentId} .search-box`);
-                    if(activeSearchBox) activeSearchBox.value = '';
+                    // 2. 更新所有按鈕的狀態
                     targetSubNav.querySelectorAll('.sub-nav-btn').forEach(btn => btn.classList.remove('active'));
                     defaultAllButton.classList.add('active');
-                    renderContent();
+                    // 3. 更新全域篩選器變數
+                    currentFilter = defaultAllButton.dataset.target;
+                    currentPage = 1;
+                    currentSearchTerm = '';
+                    const activeSearchBox = document.querySelector(`#${targetContentId} .search-box`);
+                    if (activeSearchBox) activeSearchBox.value = '';
+                    // 4. 在所有變數都設好後，再觸發更新
+                    updateTagList(); // 更新標籤辭典
+                    renderContent(); // 渲染角色卡
                 }
             }
         });
@@ -168,7 +185,61 @@ document.addEventListener('DOMContentLoaded', () => {
 
             currentFilter = button.dataset.target;
             currentPage = 1; // 每次篩選都回到第一頁
+            updateTagList();
             renderContent();
+        });
+    });
+    // --- 標籤辭典相關功能 ---
+    function updateTagList() {
+        // 首先，確定我們在哪個大分類
+        const activeSection = document.querySelector('.content-section.active');
+        if (!activeSection || activeSection.id === 'home-content') return;
+        const sectionType = activeSection.id.replace('-content', '');
+        // 然後，根據大分類和當前的小分類來篩選角色
+        const relevantCharacters = characters.filter(char => {
+            const categoryPrefix = char.category.split('-')[0];
+            if (categoryPrefix !== sectionType) return false; // 排除不屬於大分類的角色
+            // 如果篩選是 'fantasy-all' 或 'fictional-all'，就選所有該分類的角色
+            // 否則，就只選 category 完全符合 currentFilter 的角色
+            return currentFilter === `${sectionType}-all` || char.category === currentFilter;
+        });
+        const allTags = [...new Set(relevantCharacters.flatMap(char => char.tags))].sort();
+        const container = activeSection.querySelector('.tag-list-container');
+        if (!container) return;
+        container.innerHTML = ''; // 清空舊標籤
+        allTags.forEach(tag => {
+            const tagButton = document.createElement('button');
+            tagButton.classList.add('tag-suggestion-btn');
+            tagButton.textContent = tag;
+            tagButton.addEventListener('click', () => {
+                const searchBox = container.previousElementSibling.previousElementSibling;
+                searchBox.value = tag;
+                searchBox.dispatchEvent(new Event('input', { bubbles: true }));
+                container.classList.remove('active');
+                // 順手把辭典按鈕的文字變回去
+                const toggleBtn = container.previousElementSibling;
+                toggleBtn.textContent = '開啟標籤列表';
+            });
+            container.appendChild(tagButton);
+        });
+    }
+    // 當開啟辭典時，順便更新一下按鈕文字
+    tagToggleButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const container = button.nextElementSibling;
+            const isActive = container.classList.toggle('active');
+            button.textContent = isActive ? '關閉標籤列表' : '開啟標籤列表';
+        });
+    });
+    // 點擊容器以外的地方，自動關閉
+    document.addEventListener('click', (e) => {
+        document.querySelectorAll('.tag-list-container.active').forEach(container => {
+            const toggleBtn = container.previousElementSibling;
+            const searchBox = toggleBtn.previousElementSibling;
+            // 如果點擊的目標不是容器本身，也不是它的兄弟按鈕，也不是搜尋框，就關閉它
+            if (!container.contains(e.target) && e.target !== toggleBtn && e.target !== searchBox) {
+                container.classList.remove('active');
+            }
         });
     });
     // 搜尋框事件
@@ -179,6 +250,18 @@ document.addEventListener('DOMContentLoaded', () => {
             renderContent();
         });
     });
+    // --- 分類列折疊開關 ---
+    if (toggleNavButton && mainNavContainer) {
+        toggleNavButton.addEventListener('click', () => {
+            mainNavContainer.classList.toggle('collapsed');
+            // 順便更新按鈕上的文字
+            if (mainNavContainer.classList.contains('collapsed')) {
+                toggleNavButton.textContent = '☰';
+            } else {
+                toggleNavButton.textContent = '☰';
+            }
+        });
+    }
     // --- 初始啟動 ---
     // 手動觸發一次 HOME 按鈕的點擊事件，確保初始狀態正確
     homeButton.click();
