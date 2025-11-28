@@ -198,27 +198,35 @@ document.addEventListener('DOMContentLoaded', () => {
         // 然後，根據大分類和當前的小分類來篩選角色
         const relevantCharacters = characters.filter(char => {
             const categoryPrefix = char.category.split('-')[0];
-            if (categoryPrefix !== sectionType) return false; // 排除不屬於大分類的角色
-            // 如果篩選是 'fantasy-all' 或 'fictional-all'，就選所有該分類的角色
-            // 否則，就只選 category 完全符合 currentFilter 的角色
+            if (categoryPrefix !== sectionType) return false;
             return currentFilter === `${sectionType}-all` || char.category === currentFilter;
         });
         const allTags = [...new Set(relevantCharacters.flatMap(char => char.tags))].sort();
         const container = activeSection.querySelector('.tag-list-container');
         if (!container) return;
-        container.innerHTML = ''; // 清空舊標籤
+        // 1. 先藏起 header
+        const header = container.querySelector('.tag-list-header');
+        // 2. 清空
+        container.innerHTML = '';
+        // 3. 把 header 放回去
+        if (header) {
+            container.appendChild(header);
+        }
         allTags.forEach(tag => {
             const tagButton = document.createElement('button');
             tagButton.classList.add('tag-suggestion-btn');
             tagButton.textContent = tag;
             tagButton.addEventListener('click', () => {
-                const searchBox = container.previousElementSibling.previousElementSibling;
-                searchBox.value = tag;
-                searchBox.dispatchEvent(new Event('input', { bubbles: true }));
+                const searchBox = activeSection.querySelector('.search-box');
+                if(searchBox) { // 稍微加個保險，免得找不到
+                    searchBox.value = tag;
+                    searchBox.dispatchEvent(new Event('input', { bubbles: true }));
+                }
                 container.classList.remove('active');
-                // 順手把辭典按鈕的文字變回去
-                const toggleBtn = container.previousElementSibling;
-                toggleBtn.textContent = '開啟標籤列表';
+                const toggleBtn = activeSection.querySelector('.tag-toggle-btn');
+                if (toggleBtn) {
+                     toggleBtn.textContent = '標籤清單';
+                }
             });
             container.appendChild(tagButton);
         });
@@ -228,7 +236,7 @@ document.addEventListener('DOMContentLoaded', () => {
         button.addEventListener('click', () => {
             const container = button.nextElementSibling;
             const isActive = container.classList.toggle('active');
-            button.textContent = isActive ? '關閉標籤列表' : '開啟標籤列表';
+            button.textContent = isActive ? '標籤清單' : '標籤清單';
         });
     });
     // 點擊容器以外的地方，自動關閉
