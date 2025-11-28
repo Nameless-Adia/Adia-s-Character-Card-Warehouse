@@ -48,6 +48,9 @@ body {
     display: flex;
     flex-direction: column;
 }
+button, input {
+    font-family: inherit;
+}
 * {
     scrollbar-width: thin;
     scrollbar-color: var(--color-border) var(--color-main-bg);
@@ -429,7 +432,7 @@ nav, .sub-nav {
 /* 搜尋框 */
 .search-box {
     width: 100%;
-    max-width: 400px;
+    max-width: 240px;
     padding: 6px 10px;
     background-color: var(--color-surface);
     border: 1px solid var(--color-border);
@@ -489,12 +492,12 @@ nav, .sub-nav {
     transform: translateX(-50%);
     width: 90%;
     max-width: 500px;
-    max-height: 200px;
+    max-height: 250px;
     overflow-y: auto;
     background-color: var(--color-contrast-bg);
     border: 1px solid var(--color-border);
     border-radius: 8px;
-    padding: 10px;
+    padding: 12px;
     z-index: 101;
     box-shadow: 0 8px 16px var(--shadow-color-medium);
     margin-top: 5px;
@@ -502,15 +505,31 @@ nav, .sub-nav {
 .tag-list-container.active {
     display: flex;
     flex-wrap: wrap;
-    gap: 6px;
+    gap: 8px;
+    align-content: flex-start;
+}
+.tag-list-header {
+    position: sticky;
+    top: -12px;
+    background-color: var(--color-contrast-bg);
+    z-index: 102;
+    width: 100%;
+    text-align: left;
+    color: var(--color-hint-text);
+    font-size: 0.65em;
+    margin: -12px 0 10px 0;
+    padding: 12px 0 10px 0;
+    border-bottom: 1px solid var(--color-border);
+    flex-basis: 100%;
+    user-select: none;
 }
 .tag-suggestion-btn {
     background-color: var(--color-surface);
     color: var(--color-main-text);
     border: 1px solid var(--color-border);
-    border-radius: 15px;
-    padding: 4px 10px;
-    font-size: 0.8em;
+    border-radius: 20px;
+    padding: 5px 12px;
+    font-size: 0.85em;
     cursor: pointer;
     transition: all 0.3s ease;
 }
