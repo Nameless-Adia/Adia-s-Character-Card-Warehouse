@@ -1,9 +1,13 @@
 /* style.css */
+/* ☙—————————————————————————————❧ */
+/*         0. :root 變數設定         */
+/* ☙—————————————————————————————❧ */
+/* 調色盤 */
 :root {
     /* 基礎色調 */
-    --color-main-bg: #2d3445;
-    --color-main-text: #c0c8d9;
-    --color-secondary-text: #828a9c;
+    --color-main-bg: #2d3445; /* 主背景 */
+    --color-main-text: #c0c8d9; /* 主要文字顏色 */
+    --color-secondary-text: #828a9c; /* 次要文字 */
     --color-pure-white: #fff;
     --color-pure-black: #000;
     /* 反差色 (用於 Header/Footer) */
@@ -16,41 +20,43 @@
     --color-hint-text: #819ec4;
     /* UI 元素顏色 */
     --color-surface: #363e52; /* 卡片、按鈕等的基礎背景 */
-    --color-surface-hover: #404961;
-    --color-surface-transparent: #363e5299;
+    --color-surface-hover: #404961; /* 滑鼠移上去的時候 */
+    --color-surface-transparent: #363e5299; /* 透明度，層次感 */
     --color-surface-hover-transparent: #40496199;
-    --color-card-footer-bg: #282e3c;
-    --color-border: #4a546e;
+    --color-card-footer-bg: #282e3c; /* 角色卡片底部的顏色 */
+    --color-border: #4a546e; /* 分隔線、邊框 */
     /* 選中狀態 */
-    --color-active-bg: var(--color-accent-moon);
-    --color-active-text: #21252b;
+    --color-active-bg: var(--color-accent-moon); /* 按鈕被選中時的背景 */
+    --color-active-text: #21252b; /* 被選中時的文字顏色 */
     /* 陰影 */
-    --shadow-color-light: rgba(0,0,0,0.2);
-    --shadow-color-medium: rgba(0,0,0,0.3);
-    --shadow-color-dark: rgba(0,0,0,0.4);
+    --color-shadow-light: rgba(0,0,0,0.2);
+    --color-shadow-medium: rgba(0,0,0,0.3);
+    --color-shadow-dark: rgba(0,0,0,0.4);
 }
 /* ☙—————————————————————————————❧ */
 /*        1. 全域與基礎設定          */
 /* ☙—————————————————————————————❧ */
 html {
-    height: 100%;
+    height: 100%; /* 讓 html 元素跟視窗一樣高 */
 }
 body {
     background-color: var(--color-main-bg);
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 300 300' fill='%23363e52'%3e%3cpath d='M0 298.923c0-1.046.03-1.051 1-.173.55.498 1 .983 1 1.077 0 .095-.45.173-1 .173-.69 0-1-.333-1-1.077Zm58.253-12.048C98.075 246.657 113.32 231.5 113.95 231.5c.974 0 12.052 11.013 12.042 11.972-.004.428-12.435 13.347-27.625 28.71-24.46 24.738-27.77 27.91-28.95 27.75-1.204-.165 1.303-2.847 26.103-27.932 15.088-15.262 27.444-28.092 27.457-28.511.03-.997-8.011-8.989-9.044-8.989-.438 0-15.364 14.738-33.17 32.75C51.63 296.722 48.233 300 46.823 300c-1.464 0-.723-.851 11.43-13.125ZM97.75 293c3.843-3.85 7.225-7 7.517-7 .292 0 3.557 3.085 7.257 6.856 5.995 6.11 6.596 6.876 5.528 7.044-.968.152-2.264-.875-6.758-5.356-3.058-3.05-5.762-5.544-6.01-5.544-.247 0-2.982 2.475-6.078 5.5-4.466 4.364-5.92 5.5-7.036 5.5-1.277 0-.761-.647 5.58-7zm109.77 5.625C211.411 294.14 252.878 253 253.505 253c1.107 0 12.129 11.211 11.919 12.123-.096.417-7.735 8.435-16.975 17.818C234.481 297.126 231.42 300 230.28 300h-1.372l2.014-2.375c1.107-1.306 8.666-9.011 16.796-17.122 8.13-8.11 14.783-15.09 14.783-15.51 0-1.02-8.049-8.993-9.077-8.993-.443 0-10.598 9.9-22.566 22-18.274 18.476-21.981 22-23.145 22h-1.386l1.193-1.375zm44.754.25c.511-.619 5.888-6.131 11.949-12.25 8.411-8.493 11.31-11.125 12.247-11.125 1.702 0 23.53 21.67 23.53 23.36 0 .627-.162 1.14-.36 1.14-.2 0-5.33-4.95-11.401-11-6.072-6.05-11.366-11.007-11.764-11.015-.399-.008-5.563 4.942-11.476 11-9.13 9.356-10.97 11.015-12.202 11.015-1.448 0-1.45-.003-.523-1.125zm-104.107-56.143c-25.933-26.138-44.73-44.709-45.167-44.625-.412.079-13.345 12.856-28.739 28.393s-28.331 28.314-28.75 28.391c-.445.083-10.05-9.163-23.136-22.273C3.002 213.21 0 210.005 0 208.728c0-1.32 2.326.851 22.377 20.9C34.684 241.931 45.011 252 45.325 252c.314 0 13.283-12.825 28.82-28.5 15.538-15.675 28.587-28.5 28.999-28.5.412 0 20.718 20.137 45.124 44.75 24.407 24.613 44.62 44.75 44.919 44.75.71 0 9.313-8.564 9.313-9.27 0-.298-20.137-20.409-44.75-44.69-24.613-24.283-44.75-44.522-44.75-44.977 0-.916 11.93-13.063 12.829-13.063.31 0 13.432 13.275 29.158 29.5 15.727 16.225 28.767 29.5 28.978 29.5.211 0 10.972-10.463 23.912-23.25S231.553 185 231.734 185c.18 0 15.637 15.248 34.348 33.884 29.46 29.343 33.99 34.05 33.813 35.125-.181 1.096-3.18-1.708-25.675-24.009a22669.038 22669.038 0 0 0-34.09-33.74l-8.62-8.49-19.63 19.492c-27.32 27.128-27.64 27.43-28.471 26.92-.388-.238-13.395-13.538-28.905-29.557-15.51-16.019-28.44-29.125-28.736-29.125-.535 0-10.268 9.52-10.268 10.043 0 .15 20.25 20.253 45 44.67 24.75 24.42 45 44.658 45 44.975 0 .752-11.587 12.312-12.34 12.312-.317 0-20.564-20.146-44.993-44.768zm-137.289 23.86C1.956 257.644 0 255.434 0 254.298c0-1.229 1.24-.178 11.107 9.409C17.215 269.644 22.45 274.5 22.74 274.5c.811 0 9.758-9.169 9.767-10.01.005-.407-7.333-7.94-16.305-16.74C1.787 233.611-.089 231.594.07 230.405c.164-1.228 1.708.157 17.829 16 9.706 9.54 17.638 17.694 17.625 18.12-.03.976-12.113 12.975-13.066 12.975-.386 0-5.597-4.909-11.58-10.909zm260.497-63.137C255.769 188.033 243 175.063 243 174.63c0-1.067 10.98-12.131 12.039-12.131.464 0 10.77 10.027 22.903 22.281C295.063 202.076 300 207.34 300 208.3c0 1.05-.14 1.161-.93.739-.51-.274-10.444-10.182-22.073-22.018-11.838-12.048-21.529-21.52-22.017-21.52-.83 0-8.954 8.406-9.003 9.316-.013.239 12.157 12.472 27.045 27.186 24.167 23.884 27.05 26.898 26.898 28.122-.155 1.248-2.678-1.11-28.545-26.67zm-241.41 8.74c-3.28-3.24-5.965-6.204-5.965-6.585 0-.381 19.856-20.701 44.125-45.156 24.269-24.454 44.203-44.827 44.3-45.273.206-.964-7.773-9.181-8.916-9.181-.42 0-13.587 12.832-29.26 28.515-22.006 22.018-28.742 28.482-29.566 28.375-.63-.083-10.013-8.992-22.875-21.722C3.8 123.348 0 119.351 0 118.238c0-1.258.286-1.083 4.375 2.675 2.406 2.212 12.361 12.024 22.122 21.804S44.472 160.5 44.75 160.5c.277 0 13.44-12.938 29.251-28.75C89.81 115.937 103.089 103 103.507 103c.999 0 11.993 11.038 11.993 12.04 0 .427-20.061 20.973-44.58 45.66l-44.58 44.883 4.87 4.833 4.87 4.834 44.633-44.875c33.275-33.457 44.923-44.875 45.777-44.875.842 0 7.225 6.036 24.06 22.75C163.15 160.762 173.67 171 173.924 171c.255 0 20.432-20.137 44.838-44.75 24.405-24.612 44.715-44.75 45.132-44.75C264.933 81.5 276 92.491 276 93.522c0 .455-20.062 21.017-44.582 45.693l-44.582 44.865 4.87 4.835 4.871 4.835 44.648-44.875c24.556-24.681 44.958-44.869 45.336-44.86.38.007 3.558 2.794 7.064 6.193 5.163 5.005 6.375 6.445 6.375 7.573v1.393l-1.375-1.196c-.756-.658-3.651-3.42-6.433-6.137-2.782-2.717-5.381-4.862-5.776-4.766-.395.096-20.487 20.088-44.649 44.425-24.162 24.337-44.258 44.445-44.658 44.683-.542.322-2.246-1.081-6.668-5.492-3.268-3.259-5.941-6.229-5.941-6.6 0-.37 19.856-20.677 44.125-45.126 24.269-24.45 44.203-44.822 44.3-45.274.206-.976-7.766-9.191-8.921-9.191-.423 0-20.752 20.138-45.177 44.75-24.425 24.613-44.664 44.75-44.975 44.75-.312 0-10.954-10.372-23.65-23.048-13.495-13.474-23.386-22.976-23.812-22.875-.4.095-20.604 20.198-44.897 44.673s-44.482 44.689-44.865 44.919c-.502.302-2.363-1.227-6.662-5.473zM21.363 116.1C3.769 98.476 0 94.462 0 93.35 0 92.608.062 92 .139 92c.076 0 9.691 9.563 21.367 21.25 11.676 11.688 21.453 21.25 21.726 21.25.68 0 9.268-8.594 9.268-9.275 0-.3-11.813-12.193-26.25-26.43C5.71 78.542 0 72.643 0 71.68c0-.911.181-1.126.7-.83 1.333.762 54.8 53.762 54.8 54.322 0 .71-11.55 12.328-12.255 12.328-.287 0-10.134-9.63-21.883-21.4zM126.91 82.75C102.17 58.138 81.668 38 81.35 38c-.316 0-10.734 10.15-23.15 22.554-17.765 17.75-22.774 22.49-23.512 22.255-.517-.165-8.553-7.917-17.859-17.227C2.58 51.326-.059 48.465.106 47.452c.17-1.048 2.374.961 17.194 15.673C26.649 72.406 34.626 80 35.026 80c.4 0 10.851-10.125 23.224-22.5S81.128 35 81.595 35c.466 0 1.142.395 1.502.879 1.634 2.198 88.925 88.621 89.511 88.621 1.052 0 10.014-9.266 9.816-10.149-.096-.43-20.255-20.612-44.799-44.851S93 25.073 93 24.638c0-1.051 10.966-12.138 12.006-12.138.447 0 20.786 20.137 45.198 44.75S194.884 102 195.243 102c.359 0 13.365-12.825 28.902-28.5 15.538-15.675 28.56-28.5 28.94-28.5.38 0 11.09 10.417 23.802 23.148C296.172 87.462 300 91.524 300 92.673c0 1.047-.171 1.28-.715.977-.393-.22-10.774-10.593-23.07-23.05-14.058-14.245-22.653-22.595-23.16-22.5-.443.082-13.4 12.862-28.794 28.4-15.394 15.537-28.354 28.317-28.8 28.4-.513.095-17.072-16.207-45.368-44.665-29.392-29.561-44.84-44.759-45.388-44.65-.456.09-2.72 2.22-5.028 4.732l-4.199 4.567 45.011 44.414c24.756 24.427 45.011 44.771 45.011 45.208 0 .933-12.041 12.994-12.972 12.994-.349 0-20.876-20.137-45.617-44.75zm154.398-28.3C271.24 44.522 263 36.025 263 35.567c0-.82 11.878-13.067 12.673-13.067.631 0 23.128 21.944 23.817 23.231.335.626.519 1.56.41 2.078-.154.724-2.914-1.742-11.957-10.684-6.466-6.394-11.971-11.625-12.234-11.625-.263 0-2.724 2.267-5.468 5.038l-4.991 5.038 17.375 17.105C296.986 66.82 300 70.022 300 71.143c0 .746-.086 1.357-.19 1.357-.106 0-8.43-8.123-18.5-18.05zm-101.343 7.746c-3.281-3.241-5.966-6.243-5.966-6.671 0-.428 12.34-13.117 27.422-28.197C224.706 4.046 229.025-.06 230.047.108c1.043.173-2.448 3.865-26.288 27.802l-27.49 27.602 4.866 4.867 4.867 4.866 32.67-32.667C246.295 4.958 251.53-.062 252.546.094c1.038.16-3.393 4.817-32.024 33.67-18.276 18.417-33.535 33.675-33.91 33.905-.485.299-2.393-1.273-6.646-5.473zM40.367 40.617C37.14 37.382 34.5 34.4 34.5 33.99c0-.41 7.482-8.226 16.628-17.368C65.51 2.244 67.956 0 69.243 0c1.346 0-.124 1.614-15.49 17.004L36.778 34.007l4.727 4.747c2.6 2.61 4.946 4.746 5.215 4.746.27 0 6.686-6.13 14.26-13.622C92.48-1.28 91.218-.096 92.74.084c1.277.152-.603 2.132-22.127 23.291C57.674 36.094 46.896 46.5 46.662 46.5c-.236 0-3.068-2.647-6.295-5.883zM162.25 45.01c-.55-.235-11.012-10.459-23.248-22.718C119.062 2.312 116.907 0 118.228 0c1.274 0 4.395 2.917 23.128 21.617l21.655 21.618 21.667-21.663C203.028 3.226 206.528-.059 207.548.11c1.045.173-1.738 3.153-21.29 22.795-12.371 12.427-22.609 22.58-22.75 22.563-.142-.017-.708-.224-1.258-.46Zm-150.6-32.62C5.241 6.003 0 .603 0 .39 0 .175.51 0 1.134 0c.779 0 2.85 1.73 6.625 5.535 3.02 3.045 7.925 7.81 10.9 10.587l5.408 5.052 10.596-10.587C43.72 1.537 45.475 0 46.75 0c1.364 0 .465 1.027-10.5 12-6.596 6.6-12.208 12-12.472 12-.263 0-5.721-5.225-12.129-11.61Z'/%3e%3c/svg%3e");
     color: var(--color-main-text);
-    font-family: "LXGW WenKai TC", cursive;
+    font-family: "LXGW WenKai TC", cursive; /* 字型 */
     font-weight: bold;
     margin: 0;
     padding: 0;
     height: 100%;
-    box-sizing: border-box;
+    box-sizing: border-box; /* 避免 padding 和 border 影響盒子大小 */
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* 讓 header, main, footer 能垂直排列 */
 }
+/* 讓按鈕和輸入框繼承 body 的字型，不然它們會用系統預設的字型 */
 button, input {
     font-family: inherit;
 }
+/* 全域的滾動條樣式 */
 * {
     scrollbar-width: thin;
     scrollbar-color: var(--color-border) var(--color-main-bg);
@@ -73,25 +79,28 @@ button, input {
 /* ☙—————————————————————————————❧ */
 /*         2. 頁面主要佈局           */
 /* ☙—————————————————————————————❧ */
+/* 頂部固定容器，也就是放 header 和 nav 的地方 */
 #top-fixed-container {
     background-color: var(--color-contrast-bg);
-    box-shadow: 0 4px 12px var(--shadow-color-dark);
-    position: relative;
+    box-shadow: 0 4px 12px var(--color-shadow-dark);
+    position: relative; /* 為了讓裡面的絕對定位元素有參考點 */
     z-index: 100;
-    padding: 10px 0;
+    padding: 8px 0 6px 0;
 }
+/* 頁尾，放版權宣告的地方 */
 #page-footer {
     background-color: var(--color-contrast-bg);
-    box-shadow: 0 2px 8px var(--shadow-color-medium);
-    padding: 10px 15px;
+    box-shadow: 0 2px 8px var(--color-shadow-medium);
+    padding: 6px 15px;
     text-align: center;
     border-top: 1px solid var(--color-pure-black);
     width: 100%;
     box-sizing: border-box;
 }
+/* 讓 header 和 main 保持置中且有最大寬度限制，不會在大螢幕上寬得嚇人 */
 header, main {
     width: 100%;
-    max-width: 800px;
+    max-width: 900px;
     margin-left: auto;
     margin-right: auto;
     box-sizing: border-box;
@@ -99,25 +108,29 @@ header, main {
 header {
     text-align: center;
 }
+/* 主要內容區 */
 main {
-    flex: 1;
+    flex: 1; /* 讓它填滿除了 header 和 footer 以外的所有空間 */
     padding: 0 15px;
-    overflow: hidden;
+    overflow: hidden; /* 避免子元素溢出時出現奇怪的滾動條 */
     display: flex;
     scrollbar-color: var(--color-border) var(--color-main-bg);
 }
+/* 每個分頁的內容區塊 */
 .content-section {
     width: 100%;
-    display: none;
+    display: none; /* 預設都藏起來 */
     flex-direction: column;
 }
+/* 只有 active 的那個才顯示出來 */
 .content-section.active {
     display: flex;
 }
+/* 角色卡片列表的滾動區域 */
 .sub-content-scroll-area {
-    flex: 1;
-    overflow-y: auto;
-    padding-right: 10px;
+    flex: 1; /* 填滿 content-section 裡除了控制項以外的空間 */
+    overflow-y: auto; /* 內容太多時，出現垂直滾動條 */
+    padding-right: 10px; /* 留點空間給滾動條，免得太擠 */
     scrollbar-color: var(--color-border) var(--color-main-bg);
 }
 /* ☙—————————————————————————————❧ */
@@ -128,32 +141,34 @@ main {
     color: var(--color-contrast-text);
     font-size: 2em;
     letter-spacing: 3px;
-    padding: 10px;
+    padding: 2px;
     display: inline-block;
     transition: color 0.3s ease;
 }
 .home-title-btn:hover {
     color: var(--color-pure-white);
 }
+/* 可橫向滾動的導航列 */
 .scrollable-nav {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    overflow-x: auto;
-    padding-bottom: 5px;
+    overflow-x: auto; /* 當按鈕太多時，可以橫向滾動 */
+    padding-bottom: 2px;
     position: relative;
     scrollbar-color: var(--color-border) var(--color-contrast-bg);
 }
 .scrollable-nav::-webkit-scrollbar-track {
     background-color: var(--color-contrast-bg);
 }
+/* 左右兩側的漸變遮罩，提示使用者這裡可以滾動 */
 .scrollable-nav::before, .scrollable-nav::after {
     content: '';
     position: absolute;
     top: 0;
-    bottom: 15px;
+    bottom: 0; /* 讓遮罩跟滾動條一樣高 */
     width: 30px;
-    pointer-events: none;
+    pointer-events: none; /* 讓滑鼠可以點穿遮罩 */
 }
 .scrollable-nav::before {
     left: 0;
@@ -164,32 +179,34 @@ main {
     background: linear-gradient(to left, var(--color-contrast-bg), transparent);
 }
 .main-nav-scroll {
-    margin-top: 1em;
-}
-.sub-nav-scroll {
-    padding-top: 10px;
     margin-top: 10px;
 }
+.sub-nav-scroll {
+    padding-top: 6px;
+    margin-top: 2px;
+}
+/* 導航按鈕的容器 */
 nav, .sub-nav {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: nowrap; /* 強制不換行，才能橫向滾動 */
     gap: 10px;
     padding: 0 15px;
     margin: 0 auto;
 }
 .sub-nav {
-    display: none;
+    display: none; /* 子分類預設隱藏 */
 }
 .sub-nav.active {
     display: flex;
 }
-/* 大/小分類按鈕共用樣式 */
+/* 大/小分類按鈕的共同樣式，省得寫兩次 */
 .nav-btn, .sub-nav-btn {
     text-decoration: none;
     color: var(--color-contrast-text);
     border: 1px solid var(--color-border);
     transition: all 0.3s ease;
     white-space: nowrap;
+    cursor: pointer;
 }
 .nav-btn:hover, .sub-nav-btn:hover {
     border-color: var(--color-accent-silver);
@@ -199,24 +216,25 @@ nav, .sub-nav {
     background-color: var(--color-active-bg);
     color: var(--color-active-text);
     border-color: var(--color-active-bg);
+    cursor: default; /* 已經是 active 狀態，就沒必要再顯示小手指標 */
 }
 /* 大分類按鈕 */
 .nav-btn {
     font-size: 0.9em;
-    padding: 6px 12px;
+    padding: 3px 12px;
     border-radius: 20px;
     background-color: transparent;
 }
 /* 小分類按鈕 */
 .sub-nav-btn {
     background-color: var(--color-surface);
-    padding: 3px 10px;
-    border-radius: 8px;
+    padding: 1px 10px;
+    border-radius: 20px;
     font-size: 0.8em;
 }
 /* 摺疊開關按鈕 */
 .nav-toggle-btn {
-    padding: 0px 2px;
+    padding: 0px 4px;
     font-size: 0.65em;
     font-family: inherit;
     color: var(--color-contrast-text);
@@ -230,13 +248,13 @@ nav, .sub-nav {
     border-color: var(--color-accent-silver);
     color: var(--color-pure-white);
 }
-/* 摺疊預設展開 */
+/* 控制導航列摺疊的容器 */
 #main-nav-container {
     transition: all 0.4s ease-in-out;
-    max-height: 500px;
+    max-height: 500px; /* 給個足夠大的值，讓它看起來是展開的 */
     overflow: hidden;
 }
-/* 摺疊時的樣子 */
+/* 摺疊時的樣子，max-height 變成 0 */
 #main-nav-container.collapsed {
     max-height: 0;
     margin-top: 0;
@@ -267,22 +285,18 @@ nav, .sub-nav {
 #home-content p {
     margin-top: 0.3em;
     line-height: 1.5;
-    max-width: 58ch;
+    max-width: 68ch; /* 讓每行文字不要太長，這樣比較好讀 */
     color: var(--color-main-text);
 }
 .home-buttons-container {
     display: flex;
-    justify-content: center;
-    gap: 15px;
+    justify-content: space-around;
+    gap: 20px;
     flex-wrap: wrap;
-    margin-top: 2em;
+    margin-top: 1.25em;
 }
 .join-discord-btn {
-    display: block;
-    width: max-content;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 2em;
+    display: inline-block; /* 改成 inline-block 讓它能跟其他元素並排 */
     text-decoration: none;
     background-color: var(--color-surface);
     color: var(--color-accent-moon);
@@ -290,7 +304,6 @@ nav, .sub-nav {
     padding: 10px 20px;
     border-radius: 8px;
     border: 1px solid var(--color-border);
-    margin-top: 0;
     transition: all 0.3s ease;
 }
 .join-discord-btn:hover {
@@ -298,31 +311,56 @@ nav, .sub-nav {
     color: var(--color-active-text);
     border-color: var(--color-accent-moon);
     transform: translateY(-2px);
-    box-shadow: 0 4px 10px var(--shadow-color-light);
+    box-shadow: 0 4px 10px var(--color-shadow-light);
+}
+/* 友情作者連結的特殊樣式 */
+.friend-links-container {
+    justify-content: flex-start;
+    max-width: 68ch;
+    margin-left: 0;
+    margin-top: 0.3em;
+    margin-bottom: 2em;
+    gap: 6px;
+}
+.friend-links-container .join-discord-btn {
+    background-color: transparent;
+    color: var(--color-secondary-text);
+    font-size: 0.8em;
+    padding: 4px 10px;
+    border-radius: 15px;
+    border-color: var(--color-border);
+    margin-bottom: 0.5em;
+    transition: all 0.2s ease;
+}
+.friend-links-container .join-discord-btn:hover {
+    background-color: var(--color-surface);
+    color: var(--color-pure-white);
+    border-color: var(--color-accent-moon);
+    transform: none;
+    box-shadow: none;
 }
 /* ☙—————————————————————————————❧ */
 /*          5. 角色卡片樣式          */
 /* ☙—————————————————————————————❧ */
+/* --- 主卡片結構 --- */
 .character-card {
     display: flex;
     flex-direction: column;
     background-color: var(--color-surface-transparent);
     border-radius: 8px;
     margin-bottom: 20px;
-    padding: 0;
-    align-items: stretch;
-    transition: background-color 0.3s ease;
     overflow: hidden;
+    transition: background-color 0.3s ease;
 }
 .character-card:hover {
     background-color: var(--color-surface-hover-transparent);
 }
+/* --- 卡片上半部 (圖片 + 主要資訊) --- */
 .card-main-content {
     display: flex;
     align-items: flex-start;
     gap: 15px;
-    padding: 25px;
-    padding-bottom: 15px;
+    padding: 20px 30px 20px 20px;
 }
 .character-card img {
     width: 240px;
@@ -331,14 +369,15 @@ nav, .sub-nav {
     border-radius: 4px;
     border: 1px solid var(--color-border);
     background: radial-gradient(circle, var(--color-main-bg) 0%, var(--color-surface) 100%);
+    flex-shrink: 0; /* 防止圖片在空間不夠時被壓縮 */
 }
 .character-info {
-    flex: 1;
+    flex: 1; /* 讓文字資訊區塊填滿剩餘空間 */
 }
 .character-name {
     font-size: 1.25em;
     color: var(--color-accent-silver);
-    margin: 0.2em 0 0.5em;
+    margin: 0 0 0.5em;
     padding-left: 5px;
 }
 .character-name::before {
@@ -348,6 +387,9 @@ nav, .sub-nav {
     font-size: 0.9em;
     line-height: 1.5;
     margin: 0.25em 0 0.5em;
+}
+.character-tags {
+    margin-bottom: 10px;
 }
 .character-tags span {
     display: inline-block;
@@ -375,20 +417,37 @@ nav, .sub-nav {
 .character-warning::before {
     content: "⚠ ";
 }
-/* 卡片置底欄 & 連結按鈕 */
+/* --- 卡片置底欄 (Footer) · 總設定 --- */
 .card-footer {
-    padding: 10px 25px 8px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    padding: 2px 25px 6px 25px;
     background-color: var(--color-card-footer-bg);
     border-top: 1px solid var(--color-border);
-    width: 100%;
-    box-sizing: border-box;
 }
+/* --- 置底欄 · 上半部 (狀態列) --- */
+.character-status-container {
+    display: flex;
+    flex-wrap: wrap; /* 內容太多就換行 */
+    align-items: center;
+    /* 垂直間距 4px，水平間距 20px */
+    gap: 4px 20px;
+    padding-bottom: 2px;
+    /* 如果下面還有連結區，就顯示底線 */
+    border-bottom: 1px solid var(--color-border);
+}
+/* 如果狀態列是 Footer 裡唯一的，那條底線就沒必要了 */
+.character-status-container:only-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+/* --- 置底欄 · 下半部 (連結按鈕) --- */
 .character-links {
-    margin-top: 0;
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
-    justify-content: flex-end;
+    justify-content: flex-end; /* 讓按鈕靠右 */
 }
 .char-link-btn {
     text-decoration: none;
@@ -406,28 +465,76 @@ nav, .sub-nav {
     color: var(--color-active-text);
     border-color: var(--color-accent-moon);
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px var(--shadow-color-light);
+    box-shadow: 0 4px 8px var(--color-shadow-light);
+}
+/* --- Checkbox 和 Lorebook 的通用樣式 --- */
+.feature-label,
+.character-lorebook,
+.lorebook-text {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.65em;
+    color: var(--color-secondary-text);
+    user-select: none; /* 讓文字無法被選取 */
+}
+/* 隱藏真正的 checkbox，用自己畫的 */
+.feature-label input[type="checkbox"] {
+    display: none;
+}
+/* 自己畫的 checkbox 方框 */
+.feature-label .checkmark {
+    width: 12px;
+    height: 12px;
+    border: 1px solid var(--color-border);
+    background-color: var(--color-main-bg);
+    border-radius: 3px;
+    margin-right: 5px;
+    position: relative;
+    flex-shrink: 0;
+    transition: all 0.2s ease;
+}
+/* 被選中時的樣式 */
+.feature-label input[type="checkbox"]:checked + .checkmark {
+    background-color: var(--color-accent-moon);
+    border-color: var(--color-accent-moon);
+}
+/* 這是那個「✓」符號，用偽元素畫出來的，很聰明吧 */
+.feature-label .checkmark::after {
+    content: '';
+    position: absolute;
+    display: none; /* 預設不顯示 */
+    left: 4px;
+    top: 1px;
+    width: 3px;
+    height: 7px;
+    border: solid var(--color-active-text);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+/* 當 checkbox 被選中時，才顯示「✓」 */
+.feature-label input[type="checkbox"]:checked + .checkmark::after {
+    display: block;
 }
 /* ☙—————————————————————————————❧ */
 /*    6. 搜尋、分頁 & 標籤辭典       */
 /* ☙—————————————————————————————❧ */
+/* 控制項和分頁的容器的共同樣式 */
 .controls-container, .pagination-container {
     padding: 0 15px;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 6px;
+    flex-wrap: wrap; /* 在小螢幕上可以換行 */
 }
 .controls-container {
     padding-top: 12px;
     padding-bottom: 10px;
-    position: relative;
-    flex-wrap: wrap;
+    position: relative; /* 為了讓標籤列表可以定位 */
 }
 .pagination-container {
     padding-top: 8px;
     padding-bottom: 8px;
-    flex-wrap: wrap;
 }
 /* 搜尋框 */
 .search-box {
@@ -445,7 +552,7 @@ nav, .sub-nav {
 .search-box:focus {
     outline: none;
     border-color: var(--color-accent-moon);
-    box-shadow: 0 0 10px rgba(129, 158, 196, 0.3); /* 特殊發光，暫不放入root色碼表 */
+    box-shadow: 0 0 10px rgba(129, 158, 196, 0.3); /* focus 時有點微光，看起來很高級 */
 }
 /* 分頁按鈕 */
 .page-btn {
@@ -457,6 +564,7 @@ nav, .sub-nav {
     border-radius: 8px;
     transition: all 0.3s ease;
     background-color: var(--color-surface);
+    cursor: pointer;
 }
 .page-btn:hover {
     border-color: var(--color-accent-silver);
@@ -468,7 +576,7 @@ nav, .sub-nav {
     border-color: var(--color-active-bg);
     cursor: default;
 }
-/* 標籤辭典 */
+/* 標籤清單的開關按鈕 */
 .tag-toggle-btn {
     padding: 6px 10px;
     font-size: 0.7em;
@@ -484,8 +592,9 @@ nav, .sub-nav {
     border-color: var(--color-accent-silver);
     color: var(--color-pure-white);
 }
+/* 標籤清單本體 */
 .tag-list-container {
-    display: none;
+    display: none; /* 預設隱藏 */
     position: absolute;
     top: 100%;
     left: 50%;
@@ -499,7 +608,7 @@ nav, .sub-nav {
     border-radius: 8px;
     padding: 12px;
     z-index: 101;
-    box-shadow: 0 8px 16px var(--shadow-color-medium);
+    box-shadow: 0 8px 16px var(--color-shadow-medium);
     margin-top: 5px;
 }
 .tag-list-container.active {
@@ -508,9 +617,10 @@ nav, .sub-nav {
     gap: 8px;
     align-content: flex-start;
 }
+/* 標籤清單的 sticky 標題 */
 .tag-list-header {
     position: sticky;
-    top: -12px;
+    top: -12px; /* 黏在頂部時，稍微往上一點，把 padding 也蓋住 */
     background-color: var(--color-contrast-bg);
     z-index: 102;
     width: 100%;
@@ -520,9 +630,10 @@ nav, .sub-nav {
     margin: -12px 0 10px 0;
     padding: 12px 0 10px 0;
     border-bottom: 1px solid var(--color-border);
-    flex-basis: 100%;
+    flex-basis: 100%; /* 讓它佔滿一整行 */
     user-select: none;
 }
+/* 標籤清單裡的每個標籤按鈕 */
 .tag-suggestion-btn {
     background-color: var(--color-surface);
     color: var(--color-main-text);
@@ -549,21 +660,22 @@ nav, .sub-nav {
     word-break: break-all;
 }
 /* ☙—————————————————————————————❧ */
-/*          8. 手機版樣式            */
+/*          8. RWD 手機版樣式        */
 /* ☙—————————————————————————————❧ */
+/* 當螢幕寬度小於 600px 時，這些樣式就會生效。 */
 @media (max-width: 600px) {
+    /* 讓卡片內容垂直排列 */
     .card-main-content {
         flex-direction: column;
         align-items: center;
+        padding: 15px;
     }
     .character-card img {
         width: 180px;
         height: 240px;
         margin-bottom: 10px;
     }
-    .card-footer {
-        width: 100%;
-    }
+    /* 卡片底部也置中 */
     .character-links {
         justify-content: center;
     }
