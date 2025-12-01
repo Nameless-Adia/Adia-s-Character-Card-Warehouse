@@ -238,7 +238,7 @@ const characters = [
     lorebook: "",
     links: [
         { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1355493695591415858/1355493695591415858" },
-        { name: "去大冰奶遊玩", url: "https://cc-production-f594.up.railway.app/" },
+        { name: "去大冰奶遊玩", url: "https://milkteaaichat.up.railway.app/" },
         { name: "大冰奶是什麼？", url: "https://www.plurk.com/p/3hq6spas09" },
     ]
   },
