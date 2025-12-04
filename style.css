@@ -417,6 +417,100 @@ nav, .sub-nav {
 .character-warning::before {
     content: "⚠ ";
 }
+/* --- 卡片上半部 (圖片輪播器) --- */
+.character-image-slider {
+    position: relative; /* 讓裡面的按鈕和圓點可以絕對定位 */
+    width: 240px;
+    height: 320px;
+    border-radius: 4px;
+    border: 1px solid var(--color-border);
+    background: radial-gradient(circle, var(--color-main-bg) 0%, var(--color-surface) 100%);
+    overflow: hidden; /* 隱藏所有不在顯示區的圖片 */
+    flex-shrink: 0;
+}
+.slides-container {
+    width: 100%;
+    height: 100%;
+}
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* 預設所有圖片都是透明的 */
+    transition: opacity 0.8s ease-in-out; /* 切換時的淡入淡出效果 */
+    z-index: 1;
+}
+.slide.active {
+    opacity: 1; /* 只有 active 的那張才顯示 */
+    z-index: 2; /* 確保它在最上層 */
+}
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 確保圖片填滿容器且不變形 */
+}
+/* --- 輪播器：左右切換按鈕 --- */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3; /* 要在圖片之上 */
+    background-color: transparent;
+    color: var(--color-main-text);
+    border: 1px solid transparent;
+    border-radius: 50%; /* 圓形的按鈕 */
+    width: 30px;
+    height: 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    line-height: 26px; /* 讓箭頭垂直置中 */
+    text-align: center;
+    cursor: pointer;
+    opacity: 0; /* 平常藏起來 */
+    transition: all 0.3s ease;
+}
+.character-image-slider:hover .slider-btn {
+    opacity: 1; /* 滑鼠移上去才顯示 */
+}
+.slider-btn.prev {
+    left: 10px;
+}
+.slider-btn.next {
+    right: 10px;
+}
+.slider-btn:hover {
+    background-color: transparent;
+    color: var(--color-pure-white);
+}
+/* --- 輪播器：底部圓點指示器 --- */
+.dots-container {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    display: flex;
+    gap: 8px;
+    background-color: var(--color-surface-transparent);
+    padding: 4px 8px;
+    border-radius: 10px;
+}
+.dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--color-border);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.dot:hover {
+    background-color: var(--color-secondary-text);
+}
+.dot.active {
+    background-color: var(--color-pure-white);
+}
 /* --- 卡片置底欄 (Footer) · 總設定 --- */
 .card-footer {
     display: flex;
@@ -436,6 +530,51 @@ nav, .sub-nav {
     padding-bottom: 2px;
     /* 如果下面還有連結區，就顯示底線 */
     border-bottom: 1px solid var(--color-border);
+}
+/* --- 版本號 & 摺疊箭頭 --- */
+.version-name-container {
+    display: inline-flex; /* 讓箭頭和文字能漂亮地並排 */
+    align-items: center;
+    gap: 7px;
+}
+/* 加上 role="button" 才套用，這樣沒有更新的角色就不會有手指示標 */
+.version-name-container[role="button"] {
+    cursor: pointer;
+    user-select: none; /* 讓文字不會在快速點擊時被選取 */
+}
+.toggle-arrow {
+    font-size: 0.65em;
+    font-weight: bold;
+    color: var(--color-secondary-text);
+    transition: transform 0.3s ease-in-out; /* 這就是箭頭轉動的動畫！ */
+}
+/* 當箭頭使用了 expanded 時，它就會旋轉 90 度 */
+.toggle-arrow.expanded {
+    transform: rotate(90deg);
+}
+.version-name {
+    font-size: 0.65em;
+    color: var(--color-accent-silver);
+    margin-right: 5px; /* 跟後面的選項拉開一點距離 */
+}
+/* --- 更新紀要的容器 --- */
+.version-updates-container {
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out, opacity 0.3s ease; /* 開關門的動畫 */
+    max-height: 500px; /* 預設給個足夠大的高度，讓它看起來是打開的 */
+    opacity: 1;
+}
+/* 當使用了 collapsed 時，它就會關上 */
+.version-updates-container.collapsed {
+    max-height: 0;
+    opacity: 0;
+}
+.version-update {
+    font-size: 0.65em; /* 讓字小一點，像悄悄話一樣 */
+    color: var(--color-hint-text); /* 用提示文字的顏色，不那麼搶眼 */
+    margin: 0;
+    padding-left: 10px; /* 在左側留出空間 */
+    line-height: 1.5;
 }
 /* 如果狀態列是 Footer 裡唯一的，那條底線就沒必要了 */
 .character-status-container:only-child {
@@ -671,6 +810,11 @@ nav, .sub-nav {
         padding: 15px;
     }
     .character-card img {
+        width: 180px;
+        height: 240px;
+        margin-bottom: 10px;
+    }
+    .character-image-slider {
         width: 180px;
         height: 240px;
         margin-bottom: 10px;
