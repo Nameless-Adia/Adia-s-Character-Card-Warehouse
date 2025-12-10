@@ -612,7 +612,7 @@ nav, .sub-nav {
 .lorebook-text {
     display: inline-flex;
     align-items: center;
-    font-size: 0.65em;
+    font-size: 0.65rem;
     color: var(--color-secondary-text);
     user-select: none; /* 讓文字無法被選取 */
 }
