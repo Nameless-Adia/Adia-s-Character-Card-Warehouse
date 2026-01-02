@@ -17,7 +17,7 @@ const characters = [
     },
     lorebook: "",
     links: [
-        { name: "DC 下載", url: "" }
+        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1456588648983302174/1456588648983302174" }
     ]
   },
   {
