@@ -1,7 +1,27 @@
 // data.js
 const characters = [
   {
-    id: "fantasy-new-char",
+    id: "fantasy-surya-and-chandra",
+    category: "fantasy-south",
+    name: "Surya & Chandra",
+    image: "char-pic/Surya and Chandra.jpg",
+    tags: ["多人卡", "男性", "AnyPOV", "黑暗", "焦慮", "精靈", "奴隸", "Sub", "中世紀"],
+    description: "誕生他們、養育他們的邪教教團遭到國家軍隊的殲滅之後，容貌姣好的他們被私販至妓院，成了妓院中最高等級的男妓們。<br>而你，今晚他們的『買主』，又打算如何處置他們？",
+    reminder: "",
+    warning: "含感情利用和欺騙、人口販賣、娼妓、死鴿子 🗡🕊 ️要素。",
+    features: {
+        "中文開場": true,
+        "英文開場": true,
+        "可替換頭像": true,
+        "視覺小說立繪": false
+    },
+    lorebook: "",
+    links: [
+        { name: "DC 下載", url: "" }
+    ]
+  },
+  {
+    id: "fantasy-boreuse",
     category: "fantasy-north",
     name: "Boreuse",
     image: "char-pic/Boreuse.jpg",
@@ -174,26 +194,6 @@ const characters = [
     ]
   },
   {
-    id: "fantasy-surya-and-chandra",
-    category: "fantasy-south",
-    name: "Surya & Chandra",
-    image: "char-pic/Surya and Chandra.jpg",
-    tags: ["多人卡", "男性", "AnyPOV", "黑暗", "焦慮", "精靈", "奴隸", "Sub", "中世紀"],
-    description: "誕生他們、養育他們的邪教教團遭到國家軍隊的殲滅之後，容貌姣好的他們被私販至妓院，成了妓院中最高等級的男妓們。<br>而你，今晚他們的『買主』，又打算如何處置他們？",
-    reminder: "",
-    warning: "含感情利用和欺騙、人口販賣、娼妓、死鴿子 🗡🕊 ️要素。",
-    features: {
-        "中文開場": true,
-        "英文開場": true,
-        "可替換頭像": true,
-        "視覺小說立繪": false
-    },
-    lorebook: "",
-    links: [
-        { name: "DC 下載", url: "" }
-    ]
-  },
-  {
     id: "fictional-ei",
     category: "fictional-gods",
     name: "翳",
@@ -356,4 +356,3 @@ const characters = [
     ]
   },
 ];
-
