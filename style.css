@@ -417,7 +417,7 @@ nav, .sub-nav {
     transform: translateY(-2px);
 }
 .prompt-item:last-child {
-    margin-bottom: 0.6em;
+    margin-bottom: 1em;
 }
 /* 提示詞卡片內的大標題 */
 .prompt-name {
