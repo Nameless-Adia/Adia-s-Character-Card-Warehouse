@@ -1,6 +1,66 @@
 // data.js
 const characters = [
   {
+    id: "fantasy-north01",
+    category: "fantasy-north",
+    name: "？？？",
+    image: "char-pic/fantasy-north01.jpg",
+    tags: ["單人卡", "女性", "AnyPOV", "黑暗", "中世紀"],
+    description: "近期上架。",
+    reminder: "",
+    warning: "含死鴿子 🗡🕊 ️要素。",
+    features: {
+        "中文開場": true,
+        "英文開場": true,
+        "可替換頭像": true,
+        "視覺小說立繪": false
+    },
+    lorebook: "",
+    links: [
+        { name: "近期上架", url: "" }
+    ]
+  },
+  {
+    id: "fantasy-south01",
+    category: "fantasy-south",
+    name: "？？？",
+    image: "char-pic/fantasy-south01.jpg",
+    tags: ["單人卡", "女性", "AnyPOV", "黑暗", "中世紀"],
+    description: "近期上架。",
+    reminder: "",
+    warning: "含死鴿子 🗡🕊 ️要素。",
+    features: {
+        "中文開場": true,
+        "英文開場": true,
+        "可替換頭像": true,
+        "視覺小說立繪": false
+    },
+    lorebook: "",
+    links: [
+        { name: "近期上架", url: "" }
+    ]
+  },
+  {
+    id: "fantasy-west01",
+    category: "fantasy-west",
+    name: "？？？",
+    image: "char-pic/fantasy-west01.jpg",
+    tags: ["單人卡", "女性", "AnyPOV", "黑暗", "中世紀"],
+    description: "近期上架。",
+    reminder: "",
+    warning: "含死鴿子 🗡🕊 ️要素。",
+    features: {
+        "中文開場": true,
+        "英文開場": true,
+        "可替換頭像": true,
+        "視覺小說立繪": false
+    },
+    lorebook: "",
+    links: [
+        { name: "近期上架", url: "" }
+    ]
+  },
+  {
     id: "fantasy-surya-and-chandra",
     category: "fantasy-south",
     name: "Surya & Chandra",

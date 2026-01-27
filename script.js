@@ -16,6 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const tagToggleButtons = document.querySelectorAll('.tag-toggle-btn');
     const toggleNavButton = document.getElementById('toggle-nav-btn');
     const mainNavContainer = document.getElementById('main-nav-container');
+    const promptsOutputContainer = document.getElementById('prompts-output-container');
+    const mainPromptToggle = document.querySelector('.prompt-intro-toggle');
     // ☙—————————————————————————————❧
     //   2. 核心渲染功能 (角色卡 & 分頁)
     // ☙—————————————————————————————❧
@@ -155,6 +157,88 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     /**
+     * @description 生成單個提示詞卡片的 HTML。
+     * @param {object} promptData - 單一提示詞物件。
+     * @returns {string} 提示詞卡片的 HTML 字串。
+     */
+    function createPromptCardHTML(promptData) {
+        // 副標題，如果不存在則為空
+        const subNameHTML = promptData.subName ? `<span class="prompt-subname">${promptData.subName}</span>` : '';
+        const createVersionDetailHTML = (version, isLatest = false) => {
+
+            const linksHTML = version.links && version.links.length > 0
+                ? `<div class="${isLatest ? 'prompt-links' : 'old-version-links'}">${version.links.map(link =>
+                    `<a href="${link.url}" target="_blank" class="prompt-link-btn ${isLatest ? 'primary' : 'secondary'}">${link.name}</a>`
+                  ).join('')}</div>`
+                : '';
+
+            const guideHTML = version.guide
+                ? `<p class="${isLatest ? 'prompt-guide' : 'old-version-guide'}">
+                        <span class="label">▪ 搭配結構：</span> ${version.guide.text} <a href="${version.guide.link.url}" target="_blank" rel="noopener noreferrer">${version.guide.link.name}</a>
+                   </p>`
+                : '';
+
+            return `
+                <p class="${isLatest ? 'current-version' : 'old-version-item-version'}">
+                    <span class="label">▪ 版本：</span> <span class="version-number">${version.versionName}</span>
+                </p>
+                <p class="${isLatest ? 'prompt-compatibility' : 'old-version-compatibility'}">
+                    <span class="label">▪ 適用模型：</span> ${version.compatibility}
+                </p>
+                <p class="${isLatest ? 'prompt-feature' : 'old-version-feature'} prompt-text-wrap">
+                    <span class="label">▪ 特色功能：</span> ${version.features}
+                </p>
+                ${guideHTML}
+                ${linksHTML}
+            `;
+        };
+        const latestVersionHTML = createVersionDetailHTML(promptData.latestVersion, true);
+        const oldVersionsHTML = promptData.oldVersions && promptData.oldVersions.length > 0
+            ? `
+                <div class="prompt-version-history">
+                    <div class="version-history-toggle" role="button" tabindex="0">
+                        <span class="toggle-arrow">›</span>
+                        查看重點歷史版本
+                    </div>
+                    <div class="version-history-list collapsed">
+                        ${promptData.oldVersions.map(version => `
+                            <div class="old-version-item">
+                                ${createVersionDetailHTML(version, false)}
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+              `
+            : '';
+        return `
+            <div class="prompt-item" id="prompt-${promptData.id}">
+                <h2 class="prompt-name">
+                    <span>${promptData.mainName}</span>
+                    ${subNameHTML}
+                </h2>
+                <div class="prompt-details">
+                    ${latestVersionHTML}
+                </div>
+                ${oldVersionsHTML}
+            </div>
+        `;
+    }
+    /**
+     * @description 在 home-content 區塊中渲染所有提示詞。
+     */
+    function renderPrompts() {
+        if (!promptsOutputContainer) return;
+        promptsOutputContainer.innerHTML = prompts.map(createPromptCardHTML).join('');
+        // 初始化提示詞摺疊狀態
+        promptsOutputContainer.classList.add('collapsed');
+        if (mainPromptToggle) mainPromptToggle.classList.remove('expanded');
+        document.querySelectorAll('.version-history-list').forEach(list => {
+            list.classList.add('collapsed');
+            const toggle = list.previousElementSibling;
+            if (toggle) toggle.classList.remove('expanded');
+        });
+    }
+    /**
      * @description 主要的渲染函數。所有的篩選、分頁和最終的畫面呈現都在這裡完成。
      */
     function renderContent() {
@@ -222,6 +306,7 @@ document.addEventListener('DOMContentLoaded', () => {
         mainNavButtons.forEach(btn => btn.classList.remove('active'));
         hideAllSubNavs();
         showMainContent('home-content');
+        renderPrompts(); // 確保回到 HOME 頁面時也渲染提示詞
     });
     mainNavButtons.forEach(button => {
         button.addEventListener('click', (e) => {
@@ -367,13 +452,36 @@ document.addEventListener('DOMContentLoaded', () => {
     /** @description 摺疊的開關。 */
     document.addEventListener('click', function(e) {
         const toggleButton = e.target.closest('.version-name-container[role="button"]');
-        if (!toggleButton) return;
-        const statusContainer = toggleButton.closest('.character-status-container');
-        const updatesContainer = statusContainer.nextElementSibling;
-        const arrow = toggleButton.querySelector('.toggle-arrow');
-        if (!updatesContainer || !arrow) return;
-        // 箭頭的轉動。
-        updatesContainer.classList.toggle('collapsed');
-        arrow.classList.toggle('expanded', !updatesContainer.classList.contains('collapsed'));
+        if (toggleButton) { // 確保是角色卡的摺疊按鈕
+             const statusContainer = toggleButton.closest('.character-status-container');
+             const updatesContainer = statusContainer.nextElementSibling;
+             const arrow = toggleButton.querySelector('.toggle-arrow');
+             if (updatesContainer && arrow) {
+                 updatesContainer.classList.toggle('collapsed');
+                 arrow.classList.toggle('expanded', !updatesContainer.classList.contains('collapsed'));
+             }
+             return;
+        }
+        // 提示詞的主區塊摺疊
+        const mainPromptToggle = e.target.closest('.prompt-intro-toggle');
+        if (mainPromptToggle) {
+            const wrapper = mainPromptToggle.nextElementSibling; // 這是 promptsOutputContainer
+            const arrow = mainPromptToggle.querySelector('.toggle-arrow');
+            if (wrapper && arrow) {
+                wrapper.classList.toggle('collapsed');
+                mainPromptToggle.classList.toggle('expanded', !wrapper.classList.contains('collapsed'));
+            }
+            return;
+        }
+        // 提示詞的舊版本歷史摺疊
+        const versionHistoryToggle = e.target.closest('.version-history-toggle');
+        if (versionHistoryToggle) {
+            const list = versionHistoryToggle.nextElementSibling;
+            const arrow = versionHistoryToggle.querySelector('.toggle-arrow');
+            if (list && arrow) {
+                list.classList.toggle('collapsed');
+                versionHistoryToggle.classList.toggle('expanded', !list.classList.contains('collapsed'));
+            }
+        }
     });
 });

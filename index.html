@@ -29,6 +29,7 @@
                     <a href="#" class="sub-nav-btn" data-target="fantasy-east">魔都</a>
                     <a href="#" class="sub-nav-btn" data-target="fantasy-south">南境</a>
                     <a href="#" class="sub-nav-btn" data-target="fantasy-north">雪域</a>
+                    <a href="#" class="sub-nav-btn" data-target="fantasy-west">西國</a>
                 </div>
                 <div id="fictional-sub-nav" class="sub-nav" data-parent="fictional-content">
                     <a href="#" class="sub-nav-btn active" data-target="fictional-all">全部</a>
@@ -45,6 +46,15 @@
             <p>專注力不高，時常一邊 AI-RP 一邊東摸西摸，但並沒有因此特別精通了什麼。</p>
             <p>寫下了教學與提示詞、微調了 SillyTavern 介面美化、創作了角色卡、時不時算個圖，這些都放置於 Discord AI 深夜奶茶店。</p>
             <p>這裡主要簡介我創作的 SillyTavern 角色卡，如果想要獲取角色卡，或是其他更多的資源還煩請前往 Discord AI 深夜奶茶店吧。</p>
+            <div class="prompt-intro-container">
+                <div class="prompt-intro-toggle" role="button" tabindex="0">
+                    <span class="toggle-arrow">›</span>
+                    <span class="title-text">SillyTavern 提示詞s</span>
+                </div>
+                <div id="prompts-output-container" class="prompt-list-wrapper collapsed">
+                    <!-- 提示詞將由 JavaScript 動態生成於此 -->
+                </div>
+            </div>
             <h1>AI 深夜奶茶店</h1>
             <p>專為熱愛 AI-RP 的人們而設的繁體中文 Discord 伺服器，我們深知繁體中文的 AI-RP 專業資訊相對零散，因此希望這裡能成為一個友善的據點，讓大家能一起分享經過查證的知識，交流、討論、分享、學習關於 AI 角色扮演的點點滴滴！</p>
             <div class="home-buttons-container">
@@ -128,7 +138,7 @@
         <p>我的角色卡僅只有發布於 Discord AI 深夜奶茶店。</p>
     </footer>
     <script src="chars.js"></script>
+    <script src="prompts.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
-
