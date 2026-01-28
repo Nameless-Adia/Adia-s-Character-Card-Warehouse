@@ -355,14 +355,6 @@ nav, .sub-nav {
     padding-left: 12px;
     padding-right: 12px;
 }
-@media (max-width: 600px) {
-    .prompt-intro-container {
-        margin-left: 0px; 
-        margin-right: 4px; 
-        padding-left: 12px;
-        padding-right: 12px;
-    }
-}
 /* 折疊主標題 */
 .prompt-intro-toggle {
     margin: 0.75em 0;
@@ -461,16 +453,6 @@ nav, .sub-nav {
     margin-top: 7px;
     letter-spacing: 0.5px;
     white-space: normal; /* 確保副標題文本可換行 */
-}
-@media (max-width: 600px) {
-    .prompt-name {
-        flex-direction: column;
-        gap: 0px;
-    }
-    .prompt-name .prompt-subname {
-        margin-top: 2px;
-        margin-left: 2px;
-    }
 }
 .prompt-name::before {
     content: none;
@@ -648,11 +630,6 @@ nav, .sub-nav {
     justify-content: flex-start;
     white-space: normal;
     flex-wrap: wrap;
-}
-@media (max-width: 600px) {
-    .prompt-item p, .old-version-item p {
-        flex-wrap: wrap;
-    }
 }
 #home-content .prompt-item p,
 #home-content .old-version-item p {
@@ -1141,5 +1118,23 @@ nav, .sub-nav {
     /* 卡片底部也置中 */
     .character-links {
         justify-content: center;
+    }
+    /* 提示詞介紹部分 */
+    .prompt-intro-container {
+        margin-left: 0px; 
+        margin-right: 4px; 
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+    .prompt-name {
+        flex-direction: column;
+        gap: 0px;
+    }
+    .prompt-name .prompt-subname {
+        margin-top: 2px;
+        margin-left: 2px;
+    }
+    .prompt-item p, .old-version-item p {
+        flex-wrap: wrap;
     }
 }
