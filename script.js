@@ -180,7 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             return `
                 <p class="${isLatest ? 'current-version' : 'old-version-item-version'}">
-                    <span class="label">▪ 版本：</span> <span class="version-number">${version.versionName}</span>
+                    <span class="label">▪ 版本：</span> ${version.versionName}
                 </p>
                 <p class="${isLatest ? 'prompt-compatibility' : 'old-version-compatibility'}">
                     <span class="label">▪ 適用模型：</span> ${version.compatibility}

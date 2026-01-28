@@ -503,10 +503,6 @@ nav, .sub-nav {
     align-items: baseline;
     gap: 4px;
 }
-/* 統一版本數字為粗體 */
-.version-number {
-    font-weight: bold;
-}
 /* 連結按鈕群組 */
 .prompt-links {
     display: flex;
