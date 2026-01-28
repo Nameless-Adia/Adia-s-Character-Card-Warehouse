@@ -464,6 +464,7 @@ nav, .sub-nav {
     line-height: 1.6;
     color: var(--color-main-text);
     margin: 0;
+    padding-left: 0;
     display: flex;
     align-items: baseline;
     gap: 6px;
