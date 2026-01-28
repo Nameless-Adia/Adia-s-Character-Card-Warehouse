@@ -503,13 +503,9 @@ nav, .sub-nav {
     align-items: baseline;
     gap: 4px;
 }
-/* 統一版本數字為粗體，並確保其文本流行為 */
+/* 統一版本數字為粗體 */
 .version-number {
     font-weight: bold;
-    color: var(--color-accent-silver);
-    white-space: normal;
-    line-height: inherit; /* 繼承父級行高，確保垂直對齊 */
-    vertical-align: baseline;
 }
 /* 連結按鈕群組 */
 .prompt-links {
