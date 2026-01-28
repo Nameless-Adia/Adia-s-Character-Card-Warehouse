@@ -345,6 +345,7 @@ nav, .sub-nav {
 .prompt-intro-container {
     margin-top: 0.85em;
     margin-right: 24px;
+    margin-left: 6px;
     border-top: 1px solid var(--color-border);
     border-bottom: 1px solid var(--color-border);
     background-color: transparent;
@@ -352,18 +353,21 @@ nav, .sub-nav {
     box-shadow: none;
     position: relative;
     padding-left: 12px;
+    padding-right: 12px;
 }
 @media (max-width: 600px) {
     .prompt-intro-container {
-        margin-right: 0px;
+        margin-left: 0px; 
+        margin-right: 4px; 
         padding-left: 12px;
+        padding-right: 12px;
     }
 }
 /* 折疊主標題 */
 .prompt-intro-toggle {
     margin: 0.75em 0;
-    max-width: none; /* 取消寬度限制 */
-    font-size: 0.95em;
+    max-width: none;
+    font-size: 0.7em;
     color: var(--color-accent-moon);
     cursor: pointer;
     display: flex;
@@ -372,6 +376,7 @@ nav, .sub-nav {
     user-select: none;
     font-weight: 300;
     letter-spacing: 0.8px;
+    transition: all 0.3s ease;
 }
 .prompt-intro-toggle:hover {
     color: var(--color-pure-white);
@@ -385,6 +390,13 @@ nav, .sub-nav {
     transform: rotate(90deg);
     color: var(--color-pure-white);
 }
+.prompt-intro-toggle .title-text {
+    font-size: 1.55em;
+}
+.prompt-intro-toggle:hover .title-text {
+    border-bottom-color: var(--color-accent-moon);
+    color: var(--color-pure-white);
+}
 /* 提示詞列表總容器 (展開狀態) */
 .prompt-list-wrapper {
     overflow: hidden;
@@ -395,8 +407,9 @@ nav, .sub-nav {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box; /* 確保 padding 和 border 不增加總寬度 */
 }
 .prompt-list-wrapper.collapsed {
     max-height: 0;
@@ -419,7 +432,7 @@ nav, .sub-nav {
 .prompt-item:last-child {
     margin-bottom: 1em;
 }
-/* 提示詞卡片內的大標題 */
+/* 提示詞卡片內的大標題 (主名稱) */
 .prompt-name {
     font-size: 0.95em;
     color: var(--color-accent-silver);
@@ -429,22 +442,25 @@ nav, .sub-nav {
     border-bottom: 1px solid var(--color-border-lightest);
     padding-bottom: 0.4em;
     display: flex;
-    flex-direction: row;
-    align-items: flex-start; /* 確保靠左對齊 */
-    gap: 6px; /* 主副標題之間間距 */
+    flex-direction: row; /* 預設為橫向排列 */
+    align-items: flex-start;
+    gap: 6px;
+    flex-wrap: wrap; 
 }
 /* 主標題文字 */
 .prompt-name span {
-    color: var(--color-accent-silver); /* 確保主標題顏色 */
+    color: var(--color-accent-silver);
     font-weight: 500;
+    white-space: normal; /* 確保主標題文本可換行 */
 }
 /* 副標題樣式 */
 .prompt-name .prompt-subname {
     font-size: 0.7em;
     color: var(--color-secondary-text);
     font-weight: 300;
-    margin-top: 7px; /* 看上去像是註腳 */
+    margin-top: 7px;
     letter-spacing: 0.5px;
+    white-space: normal; /* 確保副標題文本可換行 */
 }
 @media (max-width: 600px) {
     .prompt-name {
@@ -452,6 +468,7 @@ nav, .sub-nav {
         gap: 0px;
     }
     .prompt-name .prompt-subname {
+        margin-top: 2px;
         margin-left: 2px;
     }
 }
@@ -464,11 +481,11 @@ nav, .sub-nav {
     line-height: 1.6;
     color: var(--color-main-text);
     margin: 0;
-    padding-left: 0;
     display: flex;
-    align-items: baseline;
+    align-items: baseline; 
     gap: 6px;
     white-space: normal;
+    max-width: none;
 }
 .prompt-details p:last-child, .old-version-item p:last-child {
     margin-bottom: 0;
@@ -476,17 +493,23 @@ nav, .sub-nav {
 /* 確保以下標籤不會換行 */
 .prompt-details .label, .old-version-item .label {
     font-weight: bold;
-    color: var(--color-secondary-text); 
-    flex-shrink: 0;
+    color: var(--color-secondary-text);
+    flex-shrink: 0; /* 防止 label 被壓縮 */
     width: auto;
     min-width: 70px; /* 增加最小寬度，以容納圖示和文字 */
-    text-align: right; /* 保留靠右對齊 */
-    white-space: nowrap; /* 確保標籤本身不換行 */
+    text-align: right;
+    white-space: nowrap;
+    display: inline-flex; /* 變成 inline-flex，讓其內部元素（如 icon 和文字）在一行，但也允許它作為一個整體參與 wrap */
+    align-items: baseline;
+    gap: 4px;
 }
-/* 統一版本數字為粗體 */
+/* 統一版本數字為粗體，並確保其文本流行為 */
 .version-number {
     font-weight: bold;
     color: var(--color-accent-silver);
+    white-space: normal;
+    line-height: inherit; /* 繼承父級行高，確保垂直對齊 */
+    vertical-align: baseline;
 }
 /* 連結按鈕群組 */
 .prompt-links {
@@ -494,6 +517,15 @@ nav, .sub-nav {
     gap: 10px;
     padding-top: 0.8em;
     justify-content: flex-end;
+    flex-wrap: wrap;
+}
+/* 歷史版本連結按鈕群組 */
+.old-version-links {
+    padding-top: 4px;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 8px;
 }
 .prompt-link-btn {
     text-decoration: none;
@@ -506,6 +538,8 @@ nav, .sub-nav {
     transition: all 0.3s ease;
     font-size: 0.82em;
     letter-spacing: 0.4px;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 .prompt-link-btn.primary:hover {
     background-color: var(--color-accent-moon);
@@ -541,8 +575,9 @@ nav, .sub-nav {
     border-top: 1px dashed var(--color-border-light);
     padding-top: 15px;
 }
+/* 舊版本歷史的摺疊開關 */
 .version-history-toggle {
-    margin: 0 0 0.2em 0; /* 靠左對齊 */
+    margin: 0 0 0.5em 0;
     font-size: 0.85em;
     color: var(--color-secondary-text);
     cursor: pointer;
@@ -550,8 +585,10 @@ nav, .sub-nav {
     align-items: center;
     gap: 8px;
     user-select: none;
-    text-align: left; /* 確保文字靠左 */
-    justify-content: flex-start; /* 確保內容靠左排列 */
+    text-align: left;
+    justify-content: flex-start;
+    font-weight: 400;
+    letter-spacing: 0.5px;
 }
 .version-history-toggle:hover {
     color: var(--color-hint-text);
@@ -572,7 +609,7 @@ nav, .sub-nav {
     padding-top: 8px;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 8px;
 }
 .version-history-list.collapsed {
     max-height: 0;
@@ -592,14 +629,15 @@ nav, .sub-nav {
     background-color: var(--color-surface-hover);
 }
 .old-version-item p {
-    font-size: 0.8em;
+    font-size: 0.75em;
     margin: 0;
     line-height: 1.5;
     color: var(--color-secondary-text);
     display: flex;
-    align-items: flex-start;
+    align-items: baseline;
     gap: 6px;
     white-space: normal;
+    margin-bottom: 0.4em;
 }
 .old-version-item p:last-of-type {
     margin-bottom: 0.6em;
@@ -611,17 +649,22 @@ nav, .sub-nav {
     font-weight: 500;
     margin: 0;
     border-bottom: 1px dotted var(--color-border-lightest);
-    display: flex; 
+    padding-bottom: 0.3em;
+    display: flex;
     align-items: center;
     gap: 6px;
-    justify-content: flex-start; /* 靠左對齊 */
-    white-space: normal; /* 讓名稱也能在需要時換行 */
+    justify-content: flex-start;
+    white-space: normal;
+    flex-wrap: wrap;
 }
-/* 重點歷史版本連結靠右對齊 */
-.old-version-links {
-    padding-top: 4px;
-    display: flex;
-    justify-content: flex-end;
+@media (max-width: 600px) {
+    .prompt-item p, .old-version-item p {
+        flex-wrap: wrap;
+    }
+}
+#home-content .prompt-item p,
+#home-content .old-version-item p {
+    max-width: unset;
 }
 /* ☙—————————————————————————————❧ */
 /*          5. 角色卡片樣式          */
