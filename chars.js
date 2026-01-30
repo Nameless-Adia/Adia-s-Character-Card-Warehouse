@@ -41,23 +41,23 @@ const characters = [
     ]
   },
   {
-    id: "fantasy-west01",
+    id: "fantasy-nemany",
     category: "fantasy-west",
-    name: "？？？",
-    image: "char-pic/fantasy-west01.jpg",
-    tags: ["單人卡", "女性", "AnyPOV", "黑暗", "中世紀"],
-    description: "近期上架。",
+    name: "Nemany",
+    image: "char-pic/Nemany.jpg",
+    tags: ["單人卡", "女性", "AnyPOV", "黑暗", "魔法", "焦慮", "反派", "Dom", "中世紀"],
+    description: "她是戰場上的瘋狗，是無論敵我都感到恐懼的癲狂存在。她沉溺於殺戮，享受他人的不幸，尤其鍾愛將精靈作為她娛樂的祭品與玩物，並以此為食糧而感受到活著的意義。<br>而你，將如何與她相處？",
     reminder: "",
-    warning: "含死鴿子 🗡🕊 ️要素。",
+    warning: "含NSFL、極端行為角色、嚴重的殺人和虐待、嚴重的病態心理、死鴿子 🗡🕊 ️要素。",
     features: {
         "中文開場": true,
         "英文開場": true,
         "可替換頭像": true,
         "視覺小說立繪": false
     },
-    lorebook: "",
+    lorebook: "世界觀補充，可不匯入。",
     links: [
-        { name: "近期上架", url: "" }
+        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1466786970087850259/1466786970087850259" }
     ]
   },
   {
@@ -318,7 +318,7 @@ const characters = [
     category: "fictional-gods",
     name: "亦壹",
     image: "char-pic/Yakuichi.jpg",
-    tags: ["奶茶店 bot 店員", "單人卡", "男性", "AnyPOV", "超自然", "Dom", "現代日本"],
+    tags: ["奶茶店 bot 店員：退休", "單人卡", "男性", "AnyPOV", "超自然", "Dom", "現代日本"],
     description: "他，一名地方小鎮的風流河神。<br>而你與他偶然相遇，並引起了他的興趣，在他心滿意足前，他不會輕易的放你走。",
     reminder: "大冰奶中僅提供中文開場。",
     warning: "含死鴿子 🗡🕊 ️要素。",
