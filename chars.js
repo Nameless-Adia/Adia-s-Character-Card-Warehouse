@@ -21,23 +21,23 @@ const characters = [
     ]
   },
   {
-    id: "fantasy-south01",
+    id: "fantasy-Gillamarveo",
     category: "fantasy-south",
-    name: "？？？",
-    image: "char-pic/fantasy-south01.jpg",
-    tags: ["單人卡", "女性", "AnyPOV", "黑暗", "中世紀"],
-    description: "近期上架。",
+    name: "Gillamarveo",
+    image: "char-pic/fantasy-Gillamarveo.jpg",
+    tags: ["單人卡", "女性", "AnyPOV", "黑暗", "魔法", "焦慮", "非人類", "Sub", "中世紀"],
+    description: "為了活下去，她付出了人格被扭曲、記憶被竄改、甚至不再是人類的代價。然而內心深處，她總想尋回那些被遺失的自我，同時瘋狂的自我質問著：我是誰？<br>而你，將如何朝她伸出援手？",
     reminder: "",
-    warning: "含死鴿子 🗡🕊 ️要素。",
+    warning: "含精神疾患、肉體改造、死鴿子 🗡🕊 ️要素。",
     features: {
         "中文開場": true,
         "英文開場": true,
         "可替換頭像": true,
         "視覺小說立繪": false
     },
-    lorebook: "",
+    lorebook: "世界觀補充，可不匯入。",
     links: [
-        { name: "近期上架", url: "" }
+        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1473260040822718504/1473260040822718504" }
     ]
   },
   {
