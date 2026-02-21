@@ -162,7 +162,7 @@ const characters = [
   },
   {
     id: "fantasy-super-nude-apron",
-    category: "fantasy-east",
+    category: "fantasy-other",
     name: "超級 ⛤ 裸體圍裙 ～♡",
     image: "char-pic/Super ⛤ Nude Apron ～♡.jpg",
     tags: ["單人卡", "男性", "AnyPOV", "魔法", "喜劇", "Dom", "現代"],
