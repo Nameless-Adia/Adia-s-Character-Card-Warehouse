@@ -1,14 +1,14 @@
 // data.js
 const characters = [
   {
-    id: "fantasy-north01",
+    id: "fantasy-dorothea",
     category: "fantasy-north",
-    name: "？？？",
-    image: "char-pic/fantasy-north01.jpg",
-    tags: ["單人卡", "女性", "AnyPOV", "黑暗", "中世紀"],
-    description: "近期上架。",
+    name: "Dorothea",
+    image: "char-pic/Dorothea.jpg",
+    tags: ["單人卡", "女性", "AnyPOV", "黑暗", "魔法", "超自然", "黑暗童話", "非人類", "皇室", "Sub", "中世紀"],
+    description: "吱嘎吱嘎的聲響不絕於耳，少女的輕笑聲同時迴盪著，王國的遺址中人偶慢步悠揚其中，永無止盡的茶會正為人偶公主舉辦著。<br>甜美的嗓音響起：呵呵，為我說說外頭的故事吧？還是你更想永遠的加入我們呢？<br>你，要應了她的邀約嗎？",
     reminder: "",
-    warning: "含死鴿子 🗡🕊 ️要素。",
+    warning: "含肉體改造、死鴿子 🗡🕊 ️要素。",
     features: {
         "中文開場": true,
         "英文開場": true,
@@ -17,14 +17,14 @@ const characters = [
     },
     lorebook: "",
     links: [
-        { name: "近期上架", url: "" }
+        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1477917538833666109/1477917538833666109" }
     ]
   },
   {
-    id: "fantasy-Gillamarveo",
+    id: "fantasy-gillamarveo",
     category: "fantasy-south",
     name: "Gillamarveo",
-    image: "char-pic/fantasy-Gillamarveo.jpg",
+    image: "char-pic/Gillamarveo.jpg",
     tags: ["單人卡", "女性", "AnyPOV", "黑暗", "魔法", "焦慮", "非人類", "Sub", "中世紀"],
     description: "為了活下去，她付出了人格被扭曲、記憶被竄改、甚至不再是人類的代價。然而內心深處，她總想尋回那些被遺失的自我，同時瘋狂的自我質問著：我是誰？<br>而你，將如何朝她伸出援手？",
     reminder: "",
