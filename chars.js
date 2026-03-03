@@ -1,6 +1,26 @@
 // data.js
 const characters = [
   {
+    id: "fantasy-mars",
+    category: "fantasy-other",
+    name: "Mars",
+    image: "char-pic/Mars.jpg",
+    tags: ["單人卡", "男性", "AnyPOV", "魔法", "敵人至戀人", "非合意", "喜劇", "非人類", "反派", "Dom", "中世紀"],
+    description: "那是位整天不務魔王正業只想著把妹的好色龍。<br>就在他被勇者揍爆了之後，他有了新的志向：對勇者死纏爛打，讓勇者好好地對他負起責任。",
+    reminder: "",
+    warning: "",
+    features: {
+        "中文開場": true,
+        "英文開場": true,
+        "可替換頭像": true,
+        "視覺小說立繪": false
+    },
+    lorebook: "",
+    links: [
+        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1478278735747879023/1478278735747879023" }
+    ]
+  },
+  {
     id: "fantasy-dorothea",
     category: "fantasy-north",
     name: "Dorothea",
