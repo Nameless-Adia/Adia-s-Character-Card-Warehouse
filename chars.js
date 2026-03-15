@@ -1,6 +1,46 @@
 // data.js
 const characters = [
   {
+    id: "fictional-tan-lewang-alt",
+    category: "fictional-humans",
+    name: "譚樂望",
+    image: "char-pic/譚樂望 [ALT].jpg",
+    tags: ["單人卡", "男性", "AnyPOV", "仙俠", "超自然", "喜劇", "Dom", "現代"],
+    description: "戰火紛飛的年代，他最終接受了遊說，隨著他的師父一同遁入洞天福地，只為修身求道，然而他的心卻無論如何都斬斷不了那份貪戀。百年的時光過去，他依然想念著故鄉、留戀著人間的那份煙火氣息，也因此來自師父的那道出山課題，可讓他樂壞了。<br>背起簡便的小行囊，他，就是滿懷希冀與興奮的再次來到人間……",
+    reminder: "",
+    warning: "可能涉及歷史爭議與敏感政治議題。<br>所有情節、觀點與對話，皆為角色塑造所需，其生成內容亦受 AI 模型之不確定性影響，均不代表作者本人之立場。",
+    features: {
+        "中文開場": true,
+        "英文開場": false,
+        "可替換頭像": true,
+        "視覺小說立繪": false
+    },
+    lorebook: "",
+    links: [
+        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1405045119953928202/1482764501735444561" }
+    ]
+  },
+  {
+    id: "fictional-tan-lewang",
+    category: "fictional-humans",
+    name: "譚樂望",
+    image: "char-pic/譚樂望.jpg",
+    tags: ["單人卡", "男性", "AnyPOV", "仙俠", "超自然", "Dom", "現代台灣"],
+    description: "從民國初年至現代，從中國東北至台灣，歷經了戰火與歲月的磨礪，他，一名無名半仙，卻依舊保有初心，堅持著他的俠義心腸。<br>而你與這樣的他相遇了……",
+    reminder: "",
+    warning: "可能涉及歷史爭議與敏感政治議題。<br>所有情節、觀點與對話，皆為角色塑造所需，其生成內容亦受 AI 模型之不確定性影響，均不代表作者本人之立場。",
+    features: {
+        "中文開場": true,
+        "英文開場": false,
+        "可替換頭像": true,
+        "視覺小說立繪": false
+    },
+    lorebook: "",
+    links: [
+        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1405045119953928202/1405045119953928202" }
+    ]
+  },
+  {
     id: "fantasy-eluas",
     category: "fantasy-south",
     name: "Eluas",
@@ -433,26 +473,6 @@ const characters = [
     lorebook: "",
     links: [
         { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1397239771323175018/1397239771323175018" }
-    ]
-  },
-  {
-    id: "fictional-tan-lewang",
-    category: "fictional-humans",
-    name: "譚樂望",
-    image: "char-pic/譚樂望.jpg",
-    tags: ["單人卡", "男性", "AnyPOV", "仙俠", "超自然", "Dom", "現代台灣"],
-    description: "從民國初年至現代，從中國東北至台灣，歷經了戰火與歲月的磨礪，他，一名無名半仙，卻依舊保有初心，堅持著他的俠義心腸。<br>而你與這樣的他相遇了……",
-    reminder: "",
-    warning: "可能涉及歷史爭議與敏感政治議題。<br>所有情節、觀點與對話，皆為角色塑造所需，其生成內容亦受 AI 模型之不確定性影響，均不代表作者本人之立場。",
-    features: {
-        "中文開場": true,
-        "英文開場": false,
-        "可替換頭像": true,
-        "視覺小說立繪": false
-    },
-    lorebook: "",
-    links: [
-        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1405045119953928202/1405045119953928202" }
     ]
   },
 ];
