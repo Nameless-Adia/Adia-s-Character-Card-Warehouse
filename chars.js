@@ -1,6 +1,26 @@
 // data.js
 const characters = [
   {
+    id: "fictional-yury-and-enu",
+    category: "fictional-humans",
+    name: "Yury and Enu",
+    image: "char-pic/Yury and Enu.jpg",
+    tags: ["多人卡", "男性", "AnyPOV", "黑暗", "焦慮", "緩慢燃燒", "反派", "Dom", "Sub", "文藝復興"],
+    description: "他是在這片荒漠地區惡名昭彰的傭兵『戰鷹』，只要酬報到位，從護衛、情報竊取到暗殺，他通通來者不拒。<br>你，將如何面對這名惡棍？",
+    reminder: "",
+    warning: "含死鴿子 🗡🕊 ️要素。",
+    features: {
+        "中文開場": true,
+        "英文開場": true,
+        "可替換頭像": true,
+        "視覺小說立繪": false
+    },
+    lorebook: "",
+    links: [
+        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1487141625082806473/1487141625082806473" }
+    ]
+  },
+  {
     id: "fictional-tan-lewang-alt",
     category: "fictional-humans",
     name: "譚樂望",
