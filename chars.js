@@ -1,6 +1,26 @@
 // data.js
 const characters = [
   {
+    id: "fantasy-shub",
+    category: "fantasy-other",
+    name: "Shub",
+    image: "char-pic/Shub.jpg",
+    tags: ["單人卡", "男性", "AnyPOV", "黑暗", "超自然", "克蘇魯", "非合意", "焦慮", "非人類", "反派", "Dom", "Sub", "大航海時代"],
+    description: "無論是來滿足性幻想與慾望，還是來販售『貨物』，又或是尋求『種子』，產敷屋都能夠滿足您。<br>他，就在您的眼前，對您伸出了手，邀請您入內。",
+    reminder: "",
+    warning: "含NTR、肉體改造、人口販賣、娼妓、克蘇魯、異種繁衍、死鴿子 🗡🕊 ️要素。",
+    features: {
+        "中文開場": true,
+        "英文開場": true,
+        "可替換頭像": true,
+        "視覺小說立繪": false
+    },
+    lorebook: "",
+    links: [
+        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1489291416461901825/1489291416461901825" }
+    ]
+  },
+  {
     id: "fictional-yury-and-enu",
     category: "fictional-humans",
     name: "Yury and Enu",
