@@ -1,6 +1,38 @@
 // data.js
 const characters = [
   {
+    id: "fictional-isidore-isidora",
+    category: "fictional-humans",
+    name: "Isidore／Isidora",
+    images: [
+      "char-pic/Isidore／Isidora/Isidore.jpg",
+      "char-pic/Isidore／Isidora/Isidora.jpg",
+    ],
+    tags: ["單人卡", "男性", "女性", "AnyPOV", "科幻", "黑暗", "焦慮", "緩慢燃燒", "Dom", "Sub", "未來", "後末日"],
+    description: "地磁急劇偏轉、太陽風暴增強與地幔柱緩慢上升的現象讓大地已不再適居，連赤道的天空都被赤紅色的極光給撕裂，萬幸的是人類已經有了多座移動都市以躲避末日災難，然而終點站卻是百萬年後自我修復回適居樣貌的地球……<br>移動都市Aurora，美製的其中一艘難民型移動都市，他／她是生活在其中的小市民，與其他被末日氣氛浸染的人們一樣，對未來悲觀而茫然，卻仍還未放棄的掙扎著活下去。",
+    reminder: "",
+    warning: "含憂鬱傾向、自殺傾向、死鴿子 🗡🕊 ️要素。",
+    versions: [
+      {
+        versionName: "Ver Isidore",
+        features: {
+            "中文開場": true,
+            "英文開場": true,
+            "可替換頭像": true,
+            "視覺小說立繪": false,
+        },
+        lorebook: ""
+      },
+      {
+        versionName: "Ver Isidora",
+        updateDescription: "與Isidore的定義基本相同，只有與性別相關的定義有所差距。"
+      }
+    ],
+    links: [
+        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1492375041701052476/1492375041701052476" }
+    ]
+  },
+  {
     id: "fantasy-shub",
     category: "fantasy-other",
     name: "Shub",
