@@ -1,6 +1,79 @@
 // data.js
 const characters = [
   {
+    id: "fantasy-lucero",
+    category: "fantasy-south",
+    name: "Lucero",
+    image: "char-pic/Lucero.jpg",
+    tags: ["單人卡", "男性", "AnyPOV", "黑暗", "魔法", "中世紀"],
+    description: "？？？",
+    reminder: "",
+    warning: "",
+    features: {
+        "中文開場": true,
+        "英文開場": true,
+        "可替換頭像": true,
+        "視覺小說立繪": false
+    },
+    lorebook: "",
+    links: [
+        { name: "近期上架", url: "" }
+    ]
+  },
+  {
+    id: "fantasy-mauro",
+    category: "fantasy-south",
+    name: "Mauro",
+    images: [
+      "char-pic/Mauro/Mauro.jpg",
+      "char-pic/Mauro/Mauro [2.0].jpg",
+    ],
+    tags: ["單人卡", "男性", "AnyPOV", "黑暗", "魔法", "焦慮", "皇室", "Dom", "文藝復興"],
+    description: "終結戰亂帶來盛世的黑衣大帝，亦是被稱作不死大帝的他，坐擁巨大的權勢與愛戴，但他的心卻已經千瘡百孔。沒能保護好妹妹 Janice 這件事成為他恆久的夢魘，讓他被無盡的自責與愧疚折磨了數百年。<br>而你卻讓他感受到獲得救贖與被原諒的可能性，僅僅因為他能在你的身上看見曾經 Janice 的身影。",
+    reminder: "",
+    warning: "含嚴重的移情傾向、偽骨科、死鴿子 🗡🕊 ️要素。",
+    versions: [
+      {
+        versionName: "Ver 1.0",
+        features: {
+            "中文開場": false,
+            "英文開場": true,
+            "可替換頭像": true,
+            "視覺小說立繪": false,
+        },
+        lorebook: "世界觀補充，可不匯入。"
+      },
+      {
+        versionName: "Ver 2.0",
+        updateDescription: "更新：中文開場補完與全新的第三種開場。"
+      }
+    ],
+    links: [
+        { name: "DC 下載 Ver 1.0", url: "https://discord.com/channels/1327283064476270603/1387826204094103582/1387826204094103582" },
+        { name: "DC 下載 Ver 2.0", url: "https://discord.com/channels/1327283064476270603/1387826204094103582/1446171482311889028" }
+    ]
+  },
+  {
+    id: "fantasy-gillamarveo",
+    category: "fantasy-south",
+    name: "Gillamarveo",
+    image: "char-pic/Gillamarveo.jpg",
+    tags: ["單人卡", "女性", "AnyPOV", "黑暗", "魔法", "焦慮", "非人類", "Sub", "中世紀"],
+    description: "為了活下去，她付出了人格被扭曲、記憶被竄改、甚至不再是人類的代價。然而內心深處，她總想尋回那些被遺失的自我，同時瘋狂的自我質問著：我是誰？<br>而你，將如何朝她伸出援手？",
+    reminder: "",
+    warning: "含精神疾患、肉體改造、死鴿子 🗡🕊 ️要素。",
+    features: {
+        "中文開場": true,
+        "英文開場": true,
+        "可替換頭像": true,
+        "視覺小說立繪": false
+    },
+    lorebook: "世界觀補充，可不匯入。",
+    links: [
+        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1473260040822718504/1473260040822718504" }
+    ]
+  },
+  {
     id: "fictional-isidore-isidora",
     category: "fictional-humans",
     name: "Isidore／Isidora",
@@ -113,6 +186,26 @@ const characters = [
     ]
   },
   {
+    id: "fantasy-mars",
+    category: "fantasy-other",
+    name: "Mars",
+    image: "char-pic/Mars.jpg",
+    tags: ["單人卡", "男性", "AnyPOV", "魔法", "敵人至戀人", "非合意", "喜劇", "非人類", "反派", "Dom", "中世紀"],
+    description: "那是位整天不務魔王正業只想著把妹的好色龍。<br>就在他被勇者揍爆了之後，他有了新的志向：對勇者死纏爛打，讓勇者好好地對他負起責任。",
+    reminder: "",
+    warning: "",
+    features: {
+        "中文開場": true,
+        "英文開場": true,
+        "可替換頭像": true,
+        "視覺小說立繪": false
+    },
+    lorebook: "",
+    links: [
+        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1478278735747879023/1478278735747879023" }
+    ]
+  },
+  {
     id: "fantasy-eluas",
     category: "fantasy-south",
     name: "Eluas",
@@ -133,14 +226,14 @@ const characters = [
     ]
   },
   {
-    id: "fantasy-mars",
-    category: "fantasy-other",
-    name: "Mars",
-    image: "char-pic/Mars.jpg",
-    tags: ["單人卡", "男性", "AnyPOV", "魔法", "敵人至戀人", "非合意", "喜劇", "非人類", "反派", "Dom", "中世紀"],
-    description: "那是位整天不務魔王正業只想著把妹的好色龍。<br>就在他被勇者揍爆了之後，他有了新的志向：對勇者死纏爛打，讓勇者好好地對他負起責任。",
+    id: "fantasy-surya-and-chandra",
+    category: "fantasy-south",
+    name: "Surya & Chandra",
+    image: "char-pic/Surya and Chandra.jpg",
+    tags: ["多人卡", "男性", "AnyPOV", "黑暗", "焦慮", "精靈", "奴隸", "Sub", "中世紀"],
+    description: "誕生他們、養育他們的邪教教團遭到國家軍隊的殲滅之後，容貌姣好的他們被私販至妓院，成了妓院中最高等級的男妓們。<br>而你，今晚他們的『買主』，又打算如何處置他們？",
     reminder: "",
-    warning: "",
+    warning: "含感情利用和欺騙、人口販賣、娼妓、死鴿子 🗡🕊 ️要素。",
     features: {
         "中文開場": true,
         "英文開場": true,
@@ -149,7 +242,7 @@ const characters = [
     },
     lorebook: "",
     links: [
-        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1478278735747879023/1478278735747879023" }
+        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1456588648983302174/1456588648983302174" }
     ]
   },
   {
@@ -173,26 +266,6 @@ const characters = [
     ]
   },
   {
-    id: "fantasy-gillamarveo",
-    category: "fantasy-south",
-    name: "Gillamarveo",
-    image: "char-pic/Gillamarveo.jpg",
-    tags: ["單人卡", "女性", "AnyPOV", "黑暗", "魔法", "焦慮", "非人類", "Sub", "中世紀"],
-    description: "為了活下去，她付出了人格被扭曲、記憶被竄改、甚至不再是人類的代價。然而內心深處，她總想尋回那些被遺失的自我，同時瘋狂的自我質問著：我是誰？<br>而你，將如何朝她伸出援手？",
-    reminder: "",
-    warning: "含精神疾患、肉體改造、死鴿子 🗡🕊 ️要素。",
-    features: {
-        "中文開場": true,
-        "英文開場": true,
-        "可替換頭像": true,
-        "視覺小說立繪": false
-    },
-    lorebook: "世界觀補充，可不匯入。",
-    links: [
-        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1473260040822718504/1473260040822718504" }
-    ]
-  },
-  {
     id: "fantasy-nemany",
     category: "fantasy-west",
     name: "Nemany",
@@ -210,26 +283,6 @@ const characters = [
     lorebook: "世界觀補充，可不匯入。",
     links: [
         { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1466786970087850259/1466786970087850259" }
-    ]
-  },
-  {
-    id: "fantasy-surya-and-chandra",
-    category: "fantasy-south",
-    name: "Surya & Chandra",
-    image: "char-pic/Surya and Chandra.jpg",
-    tags: ["多人卡", "男性", "AnyPOV", "黑暗", "焦慮", "精靈", "奴隸", "Sub", "中世紀"],
-    description: "誕生他們、養育他們的邪教教團遭到國家軍隊的殲滅之後，容貌姣好的他們被私販至妓院，成了妓院中最高等級的男妓們。<br>而你，今晚他們的『買主』，又打算如何處置他們？",
-    reminder: "",
-    warning: "含感情利用和欺騙、人口販賣、娼妓、死鴿子 🗡🕊 ️要素。",
-    features: {
-        "中文開場": true,
-        "英文開場": true,
-        "可替換頭像": true,
-        "視覺小說立繪": false
-    },
-    lorebook: "",
-    links: [
-        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1456588648983302174/1456588648983302174" }
     ]
   },
   {
@@ -350,39 +403,6 @@ const characters = [
     lorebook: "",
     links: [
         { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1390685103943974932/1390685103943974932" }
-    ]
-  },
-  {
-    id: "fantasy-mauro",
-    category: "fantasy-south",
-    name: "Mauro",
-    images: [
-      "char-pic/Mauro/Mauro.jpg",
-      "char-pic/Mauro/Mauro [2.0].jpg",
-    ],
-    tags: ["單人卡", "男性", "AnyPOV", "黑暗", "魔法", "焦慮", "皇室", "Dom", "文藝復興"],
-    description: "終結戰亂帶來盛世的黑衣大帝，亦是被稱作不死大帝的他，坐擁巨大的權勢與愛戴，但他的心卻已經千瘡百孔。沒能保護好妹妹 Janice 這件事成為他恆久的夢魘，讓他被無盡的自責與愧疚折磨了數百年。<br>而你卻讓他感受到獲得救贖與被原諒的可能性，僅僅因為他能在你的身上看見曾經 Janice 的身影。",
-    reminder: "",
-    warning: "含嚴重的移情傾向、偽骨科、死鴿子 🗡🕊 ️要素。",
-    versions: [
-      {
-        versionName: "Ver 1.0",
-        features: {
-            "中文開場": false,
-            "英文開場": true,
-            "可替換頭像": true,
-            "視覺小說立繪": false,
-        },
-        lorebook: "世界觀補充，可不匯入。"
-      },
-      {
-        versionName: "Ver 2.0",
-        updateDescription: "更新：中文開場補完與全新的第三種開場。"
-      }
-    ],
-    links: [
-        { name: "DC 下載 Ver 1.0", url: "https://discord.com/channels/1327283064476270603/1387826204094103582/1387826204094103582" },
-        { name: "DC 下載 Ver 2.0", url: "https://discord.com/channels/1327283064476270603/1387826204094103582/1446171482311889028" }
     ]
   },
   {
