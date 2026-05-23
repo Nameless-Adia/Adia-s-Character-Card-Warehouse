@@ -5,19 +5,19 @@ const characters = [
     category: "fantasy-south",
     name: "Lucero",
     image: "char-pic/Lucero.jpg",
-    tags: ["單人卡", "男性", "AnyPOV", "黑暗", "魔法", "中世紀"],
-    description: "？？？",
+    tags: ["單人卡", "男性", "AnyPOV", "黑暗", "魔法", "拯救與被拯救", "焦慮", "緩慢燃燒", "Dom", "Sub", "中世紀"],
+    description: "三年前，戰亂終結而和平到來，他也離開了宮廷與他摯友皇帝的身旁，回歸平民的生活。<br>然而曾為了摯友而背棄了誓言的他，心靈卻再也無法給予自己原諒與寬恕。哪怕他做盡善事，甚至籌辦了孤兒院，他內心的愧疚與自責卻從未停歇。<br>在他不斷的渴求著救贖的餘生中，你會給他的靈魂帶來平靜嗎？",
     reminder: "",
-    warning: "",
+    warning: "含嚴重的偽骨科、愧疚心理、死鴿子 🗡🕊 ️要素。",
     features: {
         "中文開場": true,
         "英文開場": true,
         "可替換頭像": true,
         "視覺小說立繪": false
     },
-    lorebook: "",
+    lorebook: "世界觀補充，可不匯入。",
     links: [
-        { name: "近期上架", url: "" }
+        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1507652430735740948/1507652430735740948" }
     ]
   },
   {

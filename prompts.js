@@ -1,14 +1,33 @@
 // prompts.js
 const prompts = [
     {
+        id: "bowl-ice-prompt",
+        mainName: "碗公冰提示詞",
+        subName: "Adia-🍨-Loacl-in-Chat",
+        latestVersion: {
+            versionName: "0.2.2",
+            compatibility: "多數開源 / 商業模型。",
+            features: "泛用型寫作提示詞，精簡版的餛飩提示詞，保留更多其結構格式，多樣指令項目與附加娛樂項目可自由啟用關閉，提供搭配的正規表示式。",
+            links: [{ name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1342363740519137300/1507647080942927915" }]
+        },
+        oldVersions: [
+            {
+                versionName: "0.1",
+                compatibility: "多數開源 / 商業模型。",
+                features: "泛用型寫作提示詞，精簡版的餛飩提示詞，保留更多本地提示詞結構格式，提供指令項目與附加娛樂項目可自由啟用關閉。",
+                links: [{ name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1342363740519137300/1451871841584156683" }]
+            }
+        ]
+    },
+    {
         id: "wonton-prompt",
         mainName: "餛飩提示詞",
         subName: "Adia-🥟-WontoNnnnnnn",
         latestVersion: {
-            versionName: "1.1.1",
-            compatibility: "Gemini-3.0-Flash / DeepSeek3.2 及常見商業 / 開源模型。",
+            versionName: "1.1.2",
+            compatibility: "Gemini-3.5-Flash / Gemini-3.0-Flash 及常見商業 / 開源模型。",
             features: "泛用型寫作提示詞，強調情感敘述與描寫，多樣指令項目與附加娛樂項目可自由啟用關閉，提供搭配的正規表示式。",
-            links: [{ name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1360563361087094904/1465584090752356548" }]
+            links: [{ name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1360563361087094904/1507644640692801620" }]
         },
         oldVersions: [
             {
@@ -28,25 +47,6 @@ const prompts = [
                 compatibility: "Gemini-2.5-Pro-Exp-0325 (滿血版)。",
                 features: "泛用型寫作提示詞，提供指令項目與附加娛樂項目可自由啟用關閉。",
                 links: [{ name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1360563361087094904/1367731951255031850" }]
-            }
-        ]
-    },
-    {
-        id: "bowl-ice-prompt",
-        mainName: "碗公冰提示詞",
-        subName: "Adia-🍨-Loacl-in-Chat",
-        latestVersion: {
-            versionName: "0.2.1",
-            compatibility: "多數開源 / 商業模型。",
-            features: "泛用型寫作提示詞，精簡版的餛飩提示詞，保留更多其結構格式，多樣指令項目與附加娛樂項目可自由啟用關閉，提供搭配的正規表示式。",
-            links: [{ name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1342363740519137300/1465585939035459584" }]
-        },
-        oldVersions: [
-            {
-                versionName: "0.1",
-                compatibility: "多數開源 / 商業模型。",
-                features: "泛用型寫作提示詞，精簡版的餛飩提示詞，保留更多本地提示詞結構格式，提供指令項目與附加娛樂項目可自由啟用關閉。",
-                links: [{ name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1342363740519137300/1451871841584156683" }]
             }
         ]
     },
