@@ -1,6 +1,86 @@
 // data.js
 const characters = [
   {
+    id: "fantasy-raymond",
+    category: "fantasy-south",
+    name: "Raymond",
+    image: "char-pic/Raymond.jpg",
+    tags: ["群聊卡: Raymond & Anamor", "男性", "AnyPOV", "吸血鬼", "中世紀"],
+    description: "？？？",
+    reminder: "",
+    warning: "",
+    features: {
+        "中文開場": true,
+        "英文開場": true,
+        "可替換頭像": true,
+        "視覺小說立繪": false
+    },
+    lorebook: "",
+    links: [
+        { name: "近期上架", url: "" }
+    ]
+  },
+  {
+    id: "fantasy-anamor",
+    category: "fantasy-south",
+    name: "Anamor",
+    image: "char-pic/Anamor.jpg",
+    tags: ["群聊卡: Raymond & Anamor", "女性", "AnyPOV", "吸血鬼", "中世紀"],
+    description: "？？？",
+    reminder: "",
+    warning: "",
+    features: {
+        "中文開場": true,
+        "英文開場": true,
+        "可替換頭像": true,
+        "視覺小說立繪": false
+    },
+    lorebook: "",
+    links: [
+        { name: "近期上架", url: "" }
+    ]
+  },
+  {
+    id: "fantasy-surya-and-chandra",
+    category: "fantasy-south",
+    name: "Surya & Chandra",
+    image: "char-pic/Surya and Chandra.jpg",
+    tags: ["多人卡", "男性", "AnyPOV", "黑暗", "焦慮", "精靈", "奴隸", "Sub", "中世紀"],
+    description: "誕生他們、養育他們的邪教教團遭到國家軍隊的殲滅之後，容貌姣好的他們被私販至妓院，成了妓院中最高等級的男妓們。<br>而你，今晚他們的『買主』，又打算如何處置他們？",
+    reminder: "",
+    warning: "含感情利用和欺騙、人口販賣、娼妓、死鴿子 🗡🕊 ️要素。",
+    features: {
+        "中文開場": true,
+        "英文開場": true,
+        "可替換頭像": true,
+        "視覺小說立繪": false
+    },
+    lorebook: "",
+    links: [
+        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1456588648983302174/1456588648983302174" }
+    ]
+  },
+  {
+    id: "fantasy-eluas",
+    category: "fantasy-south",
+    name: "Eluas",
+    image: "char-pic/Eluas.jpg",
+    tags: ["單人卡", "男性", "AnyPOV", "黑暗", "魔法", "緩慢燃燒", "非人類", "Dom", "文藝復興"],
+    description: "他是食腐女妖這個被詛咒汙染的族群中唯一的男性，更是被她們視為希望的唯一存在。為了不讓他親愛的族人們再被厭惡與獵殺，他為此奔波而毫無怨言。<br>而你，與這樣的他相遇了。",
+    reminder: "",
+    warning: "含死鴿子 🗡🕊 ️要素。",
+    features: {
+        "中文開場": true,
+        "英文開場": true,
+        "可替換頭像": true,
+        "視覺小說立繪": false
+    },
+    lorebook: "",
+    links: [
+        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1480173021661757460/1480173021661757460" }
+    ]
+  },
+  {
     id: "fantasy-lucero",
     category: "fantasy-south",
     name: "Lucero",
@@ -203,46 +283,6 @@ const characters = [
     lorebook: "",
     links: [
         { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1478278735747879023/1478278735747879023" }
-    ]
-  },
-  {
-    id: "fantasy-eluas",
-    category: "fantasy-south",
-    name: "Eluas",
-    image: "char-pic/Eluas.jpg",
-    tags: ["單人卡", "男性", "AnyPOV", "黑暗", "魔法", "緩慢燃燒", "非人類", "Dom", "文藝復興"],
-    description: "他是食腐女妖這個被詛咒汙染的族群中唯一的男性，更是被她們視為希望的唯一存在。為了不讓他親愛的族人們再被厭惡與獵殺，他為此奔波而毫無怨言。<br>而你，與這樣的他相遇了。",
-    reminder: "",
-    warning: "含死鴿子 🗡🕊 ️要素。",
-    features: {
-        "中文開場": true,
-        "英文開場": true,
-        "可替換頭像": true,
-        "視覺小說立繪": false
-    },
-    lorebook: "",
-    links: [
-        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1480173021661757460/1480173021661757460" }
-    ]
-  },
-  {
-    id: "fantasy-surya-and-chandra",
-    category: "fantasy-south",
-    name: "Surya & Chandra",
-    image: "char-pic/Surya and Chandra.jpg",
-    tags: ["多人卡", "男性", "AnyPOV", "黑暗", "焦慮", "精靈", "奴隸", "Sub", "中世紀"],
-    description: "誕生他們、養育他們的邪教教團遭到國家軍隊的殲滅之後，容貌姣好的他們被私販至妓院，成了妓院中最高等級的男妓們。<br>而你，今晚他們的『買主』，又打算如何處置他們？",
-    reminder: "",
-    warning: "含感情利用和欺騙、人口販賣、娼妓、死鴿子 🗡🕊 ️要素。",
-    features: {
-        "中文開場": true,
-        "英文開場": true,
-        "可替換頭像": true,
-        "視覺小說立繪": false
-    },
-    lorebook: "",
-    links: [
-        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1456588648983302174/1456588648983302174" }
     ]
   },
   {
