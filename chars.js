@@ -57,7 +57,8 @@ const characters = [
     },
     lorebook: "",
     links: [
-        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1456588648983302174/1456588648983302174" }
+        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1456588648983302174/1456588648983302174" },
+        { name: "直接下載", file: "char/Surya and Chandra.png" }
     ]
   },
   {
@@ -77,7 +78,8 @@ const characters = [
     },
     lorebook: "",
     links: [
-        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1480173021661757460/1480173021661757460" }
+        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1480173021661757460/1480173021661757460" },
+        { name: "直接下載", file: "char/Eluas.png" }
     ]
   },
   {
@@ -130,7 +132,8 @@ const characters = [
     ],
     links: [
         { name: "DC 下載 Ver 1.0", url: "https://discord.com/channels/1327283064476270603/1387826204094103582/1387826204094103582" },
-        { name: "DC 下載 Ver 2.0", url: "https://discord.com/channels/1327283064476270603/1387826204094103582/1446171482311889028" }
+        { name: "DC 下載 Ver 2.0", url: "https://discord.com/channels/1327283064476270603/1387826204094103582/1446171482311889028" },
+        { name: "直接下載 Ver 2.0", file: "char/Mauro [2.0].png" }
     ]
   },
   {
@@ -150,7 +153,8 @@ const characters = [
     },
     lorebook: "世界觀補充，可不匯入。",
     links: [
-        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1473260040822718504/1473260040822718504" }
+        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1473260040822718504/1473260040822718504" },
+        { name: "直接下載", file: "char/Gillamarveo.png" }
     ]
   },
   {
@@ -182,7 +186,9 @@ const characters = [
       }
     ],
     links: [
-        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1492375041701052476/1492375041701052476" }
+        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1492375041701052476/1492375041701052476" },
+        { name: "直接下載 Ver Isidore", file: "char/Isidore.png" },
+        { name: "直接下載 Ver Isidora", file: "char/Isidora.png" }
     ]
   },
   {
@@ -222,7 +228,8 @@ const characters = [
     },
     lorebook: "",
     links: [
-        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1487141625082806473/1487141625082806473" }
+        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1487141625082806473/1487141625082806473" },
+        { name: "直接下載", file: "char/Yury and Enu.png" }
     ]
   },
   {
@@ -262,7 +269,8 @@ const characters = [
     },
     lorebook: "",
     links: [
-        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1405045119953928202/1405045119953928202" }
+        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1405045119953928202/1405045119953928202" },
+        { name: "直接下載", file: "char/譚樂望.png" }
     ]
   },
   {
@@ -282,7 +290,8 @@ const characters = [
     },
     lorebook: "",
     links: [
-        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1478278735747879023/1478278735747879023" }
+        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1478278735747879023/1478278735747879023" },
+        { name: "直接下載", file: "char/Mars.png" }
     ]
   },
   {
@@ -342,7 +351,8 @@ const characters = [
     },
     lorebook: "世界觀補充，可不匯入。",
     links: [
-        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1444999278777864294/1444999278777864294" }
+        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1444999278777864294/1444999278777864294" },
+        { name: "直接下載", file: "char/Boreuse.png" }
     ]
   },
   {
@@ -362,7 +372,8 @@ const characters = [
     },
     lorebook: "世界觀補充，可不匯入。",
     links: [
-        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1443241193617227786/1443241193617227786" }
+        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1443241193617227786/1443241193617227786" },
+        { name: "直接下載", file: "char/Caroline.png" }
     ]
   },
   {
@@ -402,7 +413,8 @@ const characters = [
     },
     lorebook: "",
     links: [
-        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1393266364973711392/1393266364973711392" }
+        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1393266364973711392/1393266364973711392" },
+        { name: "直接下載", file: "char/Shano and Ray [DC].png" }
     ]
   },
   {
@@ -422,7 +434,8 @@ const characters = [
     },
     lorebook: "世界觀補充，可不匯入。",
     links: [
-        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1410254870262583461/1410254870262583461" }
+        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1410254870262583461/1410254870262583461" },
+        { name: "直接下載", file: "char/Super ⛤ Nude Apron ～♡.png" }
     ]
   },
   {
@@ -442,7 +455,8 @@ const characters = [
     },
     lorebook: "",
     links: [
-        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1390685103943974932/1390685103943974932" }
+        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1390685103943974932/1390685103943974932" },
+        { name: "直接下載", file: "char/Lybis [ALT].png" }
     ]
   },
   {
@@ -462,7 +476,8 @@ const characters = [
     },
     lorebook: "世界觀補充，可不匯入。",
     links: [
-        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1411236220867973150/1411236220867973150" }
+        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1411236220867973150/1411236220867973150" },
+        { name: "直接下載", file: "char/方紅綾.png" }
     ]
   },
   {
@@ -543,6 +558,7 @@ const characters = [
     lorebook: "",
     links: [
         { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1355493695591415858/1355493695591415858" },
+        { name: "直接下載", file: "char/Yakuichi.png" },
         { name: "去大冰奶遊玩", url: "https://milkteaaichat.up.railway.app/" },
         { name: "大冰奶是什麼？", url: "https://www.plurk.com/p/3hq6spas09" }
     ]
@@ -564,7 +580,8 @@ const characters = [
     },
     lorebook: "",
     links: [
-        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1380837858251898930/1380837858251898930" }
+        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1380837858251898930/1380837858251898930" },
+        { name: "直接下載", file: "char/Ivansylth [ALT].png" }
     ]
   },
   {
@@ -584,7 +601,8 @@ const characters = [
     },
     lorebook: "",
     links: [
-        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1380837858251898930/1380837858251898930" }
+        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1380837858251898930/1380837858251898930" },
+        { name: "直接下載", file: "char/Shano [ALT].png" }
     ]
   },
   {

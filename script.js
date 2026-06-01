@@ -1,6 +1,129 @@
 /* script.js */
 document.addEventListener('DOMContentLoaded', () => {
     // ☙—————————————————————————————❧
+    //      0. 下載與成人驗證彈窗功能 (角色卡與提示詞)
+    // ☙—————————————————————————————❧
+    const WORKER_URL = "https://long-bar-14d9.tsuki-chen.workers.dev/"; // 部署成功的網址
+    /**
+     * @description 動態渲染並顯示自訂的成人驗證或使用條款彈窗
+     * @param {string} type - 彈窗類型："char" (角色卡) 或 "prompt" (提示詞)
+     * @returns {Promise<boolean>} 使用者是否確認同意
+     */
+    function showVerificationModal(type = "char") {
+        return new Promise((resolve) => {
+            // 創建 overlay 容器
+            const overlay = document.createElement("div");
+            overlay.className = "age-modal-overlay";
+            // 根據下載類型，準備不同檔次的 HTML 結構與文字內容
+            let modalHTMLContent = "";
+            if (type === "char") {
+                // 角色卡條款
+                modalHTMLContent = `
+                    <div class="age-modal-content">
+                        <div class="age-modal-title">【角色卡下載須知】</div>
+                        <div class="age-modal-body">
+                            您即將下載之角色卡可能包含成人向內容（NSFW），包含但不限於：
+                            <ul class="age-modal-list">
+                                <li>露骨性描寫</li>
+                                <li>暴力、恐怖或黑暗題材</li>
+                                <li>心理創傷、身體改造等可能引起不適之內容</li>
+                                <li>其他不適合未成年人閱覽之成人內容</li>
+                            </ul>
+                            點選「我同意」並下載角色卡即表示您聲明並同意以下事項：
+                            <ul class="age-modal-list">
+                                <li>您已年滿 18 歲，或已達您所在地法律規定之成年年齡</li>
+                                <li>您理解下載內容可能包含成人向題材，並自願選擇下載與閱覽</li>
+                                <li>您依所在地法律有權接觸及持有此類內容</li>
+                                <li>您提供之年齡資訊為真實且正確</li>
+                                <li>您下載之角色卡僅用於個人私下 AI-RP 使用，不用於任何商業用途與違法用途</li>
+                                <li>如因提供不實資訊或違反所在地法律而產生任何後果，相關責任應由您自行承擔</li>
+                                <li>禁止二次上傳！包含但不限於禁止無授權、無標註原作者、無提供原出處連結的任何形式的修改、參考、借鑑、盜用後再上傳！</li>
+                            </ul>
+                            請問您是否已閱讀、理解並同意上述內容？<br>
+                            點選「不同意」將不會進行下載。
+                        </div>
+                        <div class="age-modal-footer">
+                            <button type="button" class="age-modal-btn cancel" id="age-confirm-btn">我同意</button>
+                            <button type="button" class="age-modal-btn confirm" id="age-cancel-btn">不同意</button>
+                        </div>
+                    </div>
+                `;
+            } else {
+                // 提示詞條款
+                modalHTMLContent = `
+                    <div class="age-modal-content">
+                        <div class="age-modal-title">【提示詞下載須知】</div>
+                        <div class="age-modal-body">
+                            您即將下載之提示詞可能致使 LLM 產出成人向內容（NSFW），點選「我同意」並下載即表示您聲明並同意以下事項：
+                            <ul class="age-modal-list">
+                                <li>您已年滿 18 歲，或已達您所在地法律規定之成年年齡</li>
+                                <li>您理解下載之提示詞可能致使 LLM 產出成人向內容，並自願選擇下載與使用</li>
+                                <li>您依所在地法律有權接觸及持有此類內容</li>
+                                <li>您提供之年齡資訊為真實且正確</li>
+                                <li>您下載之提示詞僅用於個人私下 AI-RP 使用，不用於任何商業用途與違法用途</li>
+                                <li>如因提供不實資訊或違反所在地法律而產生任何後果，相關責任應由您自行承擔</li>
+                                <li>禁止二次上傳！包含但不限於禁止無授權、無標註原作者、無提供原出處連結的任何形式的修改、參考、借鑑、盜用後再上傳！</li>
+                            </ul>
+                            請問您是否已閱讀、理解並同意上述內容？<br>
+                            點選「不同意」將不會進行下載。
+                        </div>
+                        <div class="age-modal-footer">
+                            <button type="button" class="age-modal-btn cancel" id="age-confirm-btn">我同意</button>
+                            <button type="button" class="age-modal-btn confirm" id="age-cancel-btn">不同意</button>
+                        </div>
+                    </div>
+                `;
+            }
+            overlay.innerHTML = modalHTMLContent;
+            // 掛載到 body 上
+            document.body.appendChild(overlay);
+            // 微小延遲以觸發 CSS 淡入與放大過渡動畫
+            setTimeout(() => {
+                overlay.classList.add("active");
+            }, 10);
+            // 統一的關閉彈窗邏輯
+            const destroyModal = (result) => {
+                overlay.classList.remove("active");
+                // 等待動畫結束後，徹底從 DOM 中移除，保持網頁乾淨
+                setTimeout(() => {
+                    overlay.remove();
+                    resolve(result);
+                }, 300);
+            };
+            // 事件監聽綁定
+            overlay.querySelector("#age-confirm-btn").addEventListener("click", () => destroyModal(true));
+            overlay.querySelector("#age-cancel-btn").addEventListener("click", () => destroyModal(false));
+            // 點擊背景遮罩也可以當作取消關閉
+            overlay.addEventListener("click", (e) => {
+                if (e.target === overlay) {
+                    destroyModal(false);
+                }
+            });
+        });
+    }
+    /**
+     * @description 觸發成人下載（包含角色卡與提示詞判斷）
+     * @param {string} fileName - 要下載的檔案名稱
+     * @param {string} type - 下載類型："char" 或者是 "prompt"
+     */
+    function handleSecureDownload(fileName, type = "char") {
+        showVerificationModal(type).then(isConfirmed => {
+            if (isConfirmed) {
+                try {
+                    // 只需要抓現在的時間秒數
+                    const timestamp = Math.floor(Date.now() / 1000).toString();
+                    // 直接把檔名和時間傳給 Workers
+                    const finalDownloadUrl = `${WORKER_URL}${fileName}?time=${timestamp}`;
+                    // 執行下載
+                    window.location.href = finalDownloadUrl;
+                } catch (err) {
+                    console.error("執行重導向下載時出了點小差錯：", err);
+                    alert("出了點小差錯，請再試一次。");
+                }
+            }
+        });
+    }
+    // ☙—————————————————————————————❧
     //      1. 全域變數 & 初始設定
     // ☙—————————————————————————————❧
     const CARDS_PER_PAGE = 5; // 一頁最多顯示幾張卡片。
@@ -80,24 +203,29 @@ document.addEventListener('DOMContentLoaded', () => {
      */
     function createCardFooterHTML(char) {
         const statusHTML = createCardStatusHTML(char);
+        // 決定你按鈕是往一般 DC 還是往加密 Workers
         const linksHTML = char.links && char.links.length > 0
-            ? `<div class="character-links">${char.links.map(link =>
-                `<a href="${link.url}" target="_blank" class="char-link-btn">${link.name}</a>`
-              ).join('')}</div>`
+            ? `<div class="character-links">${char.links.map(link => {
+                if (link.file) {
+                    // 如果帶有 file 屬性，生成一個安全標記按鈕 (指定 data-type="char")
+                    return `<button type="button" class="char-link-btn" data-secure-file="${link.file}" data-type="char">${link.name}</button>`;
+                } else {
+                    // 否則，生成一般的普通 URL 跳轉按鈕
+                    return `<a href="${link.url}" target="_blank" class="char-link-btn">${link.name}</a>`;
+                }
+              }).join('')}</div>`
             : '';
         if (!statusHTML && !linksHTML) return '';
         return `<div class="card-footer">${statusHTML}${linksHTML}</div>`;
     }
     /**
      * @description 產生包含狀態列與可摺疊更新紀要的 HTML。
-     * @param {object} char - 角色物件。
+     * @param {object} char - 角色物件.
      * @returns {string} 狀態列與更新紀要的 HTML 字串。
      */
     function createCardStatusHTML(char) {
-        // --- 內部輔助函數：專門產生「一排」狀態列 ---
         const createSingleStatusRow = (statusData, versionName = null, updatesAvailable = false) => {
             let featuresHTML = '';
-            // 步驟 1: 加上版本號和那個可以點的箭頭
             if (versionName) {
                 featuresHTML += `
                     <div class="version-name-container" ${updatesAvailable ? 'role="button" tabindex="0"' : ''}>
@@ -106,7 +234,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                 `;
             }
-            // 步驟 2: 把 features 和 lorebook 的選項一個個加上去
             if (statusData.features) {
                 for (const [feature, enabled] of Object.entries(statusData.features)) {
                     featuresHTML += `
@@ -133,17 +260,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                 `;
             }
-            // 步驟 3: 最後用容器把它包起來
             return featuresHTML ? `<div class="character-status-container">${featuresHTML}</div>` : '';
         };
-        // --- 主要邏輯：判斷角色有無 versions ---
         if (char.versions && char.versions.length > 0) {
             const baseVersion = char.versions[0];
             const updates = char.versions.slice(1);
             const hasUpdates = updates.length > 0;
-            // 先產生基礎版本的那一排狀態列
             let finalHTML = createSingleStatusRow(baseVersion, baseVersion.versionName, hasUpdates);
-            // 如果有更新歷史，就把它們全都塞進那預設關上的欄位裡
             if (hasUpdates) {
                 const updatesHTML = updates.map(update =>
                     `<p class="version-update">▪ ${update.versionName} ${update.updateDescription}</p>`
@@ -152,7 +275,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             return finalHTML;
         } else {
-            // 沒 versions 的就用舊方法處理
             return createSingleStatusRow(char);
         }
     }
@@ -162,22 +284,23 @@ document.addEventListener('DOMContentLoaded', () => {
      * @returns {string} 提示詞卡片的 HTML 字串。
      */
     function createPromptCardHTML(promptData) {
-        // 副標題，如果不存在則為空
         const subNameHTML = promptData.subName ? `<span class="prompt-subname">${promptData.subName}</span>` : '';
         const createVersionDetailHTML = (version, isLatest = false) => {
-
+            // 提示詞裡的下載連結部分同步套用判斷，只要在資料中寫 file 就能自動觸發 (指定 data-type="prompt")
             const linksHTML = version.links && version.links.length > 0
-                ? `<div class="${isLatest ? 'prompt-links' : 'old-version-links'}">${version.links.map(link =>
-                    `<a href="${link.url}" target="_blank" class="prompt-link-btn ${isLatest ? 'primary' : 'secondary'}">${link.name}</a>`
-                  ).join('')}</div>`
+                ? `<div class="${isLatest ? 'prompt-links' : 'old-version-links'}">${version.links.map(link => {
+                    if (link.file) {
+                        return `<button type="button" class="prompt-link-btn ${isLatest ? 'primary' : 'secondary'}" data-secure-file="${link.file}" data-type="prompt">${link.name}</button>`;
+                    } else {
+                        return `<a href="${link.url}" target="_blank" class="prompt-link-btn ${isLatest ? 'primary' : 'secondary'}">${link.name}</a>`;
+                    }
+                  }).join('')}</div>`
                 : '';
-
             const guideHTML = version.guide
                 ? `<p class="${isLatest ? 'prompt-guide' : 'old-version-guide'}">
                         <span class="label">▪ 搭配結構：</span> ${version.guide.text} <a href="${version.guide.link.url}" target="_blank" rel="noopener noreferrer">${version.guide.link.name}</a>
                    </p>`
                 : '';
-
             return `
                 <p class="${isLatest ? 'current-version' : 'old-version-item-version'}">
                     <span class="label">▪ 版本：</span> ${version.versionName}
@@ -229,7 +352,6 @@ document.addEventListener('DOMContentLoaded', () => {
     function renderPrompts() {
         if (!promptsOutputContainer) return;
         promptsOutputContainer.innerHTML = prompts.map(createPromptCardHTML).join('');
-        // 初始化提示詞摺疊狀態
         promptsOutputContainer.classList.add('collapsed');
         if (mainPromptToggle) mainPromptToggle.classList.remove('expanded');
         document.querySelectorAll('.version-history-list').forEach(list => {
@@ -245,7 +367,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const activeSection = document.querySelector('.content-section.active');
         if (!activeSection || activeSection.id === 'home-content') return;
         const sectionType = activeSection.id.replace('-content', '');
-        // 步驟 1: 從所有角色裡篩選出想看的
         const filteredCharacters = characters.filter(char => {
             const categoryPrefix = char.category.split('-')[0];
             if (categoryPrefix !== sectionType) return false;
@@ -255,22 +376,17 @@ document.addEventListener('DOMContentLoaded', () => {
                                     .some(text => text.toLowerCase().includes(currentSearchTerm));
             return subCategoryMatch && searchTermMatch;
         });
-        // 步驟 2: 處理分頁的數學題
         const totalPages = Math.ceil(filteredCharacters.length / CARDS_PER_PAGE);
         currentPage = Math.min(currentPage, totalPages) || 1;
         const startIndex = (currentPage - 1) * CARDS_PER_PAGE;
         const paginatedCharacters = filteredCharacters.slice(startIndex, startIndex + CARDS_PER_PAGE);
-        // 步驟 3:  把角色卡顯示到頁面上
         const scrollArea = activeSection.querySelector('.sub-content-scroll-area');
         scrollArea.innerHTML = paginatedCharacters.map(createCharacterCardHTML).join('');
-        // 步驟 4: 最後，處理分頁按鈕，並為所有新出現的輪播器初始化
         renderPagination(activeSection, totalPages);
         initializeAllVisibleSliders();
     }
     /**
      * @description 產生分頁按鈕。
-     * @param {HTMLElement} activeSection - 當前活躍的區塊。
-     * @param {number} totalPages - 總頁數。
      */
     function renderPagination(activeSection, totalPages) {
         const paginationContainer = activeSection.querySelector('.pagination-container');
@@ -285,6 +401,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 e.preventDefault();
                 currentPage = page;
                 renderContent();
+                const scrollArea = activeSection.querySelector('.sub-content-scroll-area');
+                if (scrollArea) {
+                    // 使用 requestAnimationFrame 確保 DOM 渲染結束後，瞬間將置頂高度重設為 0
+                    requestAnimationFrame(() => {
+                        scrollArea.scrollTop = 0;
+                    });
+                }
             });
             return button;
         };
@@ -293,7 +416,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (currentPage < totalPages) paginationContainer.appendChild(createPageButton('下一頁 »', currentPage + 1));
     }
     // ☙—————————————————————————————❧
-    //      3. 事件監聽 & 流程控制
+    //      3. 事件監聽 & 流程控制 (整合事件委託)
     // ☙—————————————————————————————❧
     function hideAllSubNavs() { allSubNavs.forEach(nav => nav.classList.remove('active')); }
     function showMainContent(targetId) {
@@ -306,7 +429,7 @@ document.addEventListener('DOMContentLoaded', () => {
         mainNavButtons.forEach(btn => btn.classList.remove('active'));
         hideAllSubNavs();
         showMainContent('home-content');
-        renderPrompts(); // 確保回到 HOME 頁面時也渲染提示詞
+        renderPrompts();
     });
     mainNavButtons.forEach(button => {
         button.addEventListener('click', (e) => {
@@ -331,6 +454,15 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (activeSearchBox) activeSearchBox.value = '';
                     updateTagList();
                     renderContent();
+                    const activeSection = document.getElementById(targetContentId);
+                    if (activeSection) {
+                        const scrollArea = activeSection.querySelector('.sub-content-scroll-area');
+                        if (scrollArea) {
+                            requestAnimationFrame(() => {
+                                scrollArea.scrollTop = 0;
+                            });
+                        }
+                    }
                 }
             }
         });
@@ -347,12 +479,20 @@ document.addEventListener('DOMContentLoaded', () => {
             currentPage = 1;
             updateTagList();
             renderContent();
+            const activeSection = document.querySelector('.content-section.active');
+            if (activeSection) {
+                const scrollArea = activeSection.querySelector('.sub-content-scroll-area');
+                if (scrollArea) {
+                    requestAnimationFrame(() => {
+                        scrollArea.scrollTop = 0;
+                    });
+                }
+            }
         });
     });
     // ☙—————————————————————————————❧
     //    4. 雜項功能 (標籤/搜尋/摺疊)
     // ☙—————————————————————————————❧
-    /** @description 更新標籤清單。 */
     function updateTagList() {
         const activeSection = document.querySelector('.content-section.active');
         if (!activeSection || activeSection.id === 'home-content') return;
@@ -410,7 +550,6 @@ document.addEventListener('DOMContentLoaded', () => {
     //      6. 圖片輪播器功能
     // ☙—————————————————————————————❧
     const sliderIntervals = {};
-    /** @description 初始化一個指定的圖片輪播器。 */
     function initializeSlider(sliderId) {
         const slider = document.getElementById(sliderId);
         if (!slider) return;
@@ -440,19 +579,28 @@ document.addEventListener('DOMContentLoaded', () => {
         slider.addEventListener('mouseleave', startAutoplay);
         startAutoplay();
     }
-    /** @description 初始化所有可見的輪播器。 */
     function initializeAllVisibleSliders() {
         Object.values(sliderIntervals).forEach(clearInterval);
         const visibleSliders = document.querySelectorAll('.content-section.active .character-image-slider');
         visibleSliders.forEach(slider => initializeSlider(slider.id));
     }
     // ☙—————————————————————————————❧
-    //      7. 更新紀要摺疊功能
+    //    7. 事件委託：統一管理摺疊與成人下載點擊
     // ☙—————————————————————————————❧
-    /** @description 摺疊的開關。 */
     document.addEventListener('click', function(e) {
+        // 成人下載的點擊監聽
+        const secureBtn = e.target.closest('[data-secure-file]');
+        if (secureBtn) {
+            e.preventDefault();
+            const fileName = secureBtn.getAttribute('data-secure-file');
+            // 自動從 data-type 取得類型，好辨別是要展示角色卡警告（char）還是提示詞須知（prompt）的彈窗
+            const downloadType = secureBtn.getAttribute('data-type') || "char";
+            handleSecureDownload(fileName, downloadType);
+            return;
+        }
+        // 角色卡的摺疊按鈕
         const toggleButton = e.target.closest('.version-name-container[role="button"]');
-        if (toggleButton) { // 確保是角色卡的摺疊按鈕
+        if (toggleButton) {
              const statusContainer = toggleButton.closest('.character-status-container');
              const updatesContainer = statusContainer.nextElementSibling;
              const arrow = toggleButton.querySelector('.toggle-arrow');
@@ -465,7 +613,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // 提示詞的主區塊摺疊
         const mainPromptToggle = e.target.closest('.prompt-intro-toggle');
         if (mainPromptToggle) {
-            const wrapper = mainPromptToggle.nextElementSibling; // 這是 promptsOutputContainer
+            const wrapper = mainPromptToggle.nextElementSibling;
             const arrow = mainPromptToggle.querySelector('.toggle-arrow');
             if (wrapper && arrow) {
                 wrapper.classList.toggle('collapsed');

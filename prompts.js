@@ -87,7 +87,7 @@ const prompts = [
             features: "允許透過 SillyTavern 內建的角色定義、知識書、摘要等等欄位，讓 LLM 助手擁有非常私人化的背景、性格、記憶。",
             links: [{ name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1389976248838524959/1389976248838524959" }]
         },
-        oldVersions: [] // 沒有舊版本
+        oldVersions: []
     },
     {
         id: "summary-prompt",

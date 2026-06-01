@@ -53,8 +53,21 @@ body {
     flex-direction: column; /* 讓 header, main, footer 能垂直排列 */
 }
 /* 讓按鈕和輸入框繼承 body 的字型，不然它們會用系統預設的字型 */
+/* 讓按鈕和輸入框繼承 body 的字型 */
 button, input {
     font-family: inherit;
+}
+/* 拔除瀏覽器對按鈕的醜陋預設樣式，確保 button 標籤能完美偽裝成 a 標籤 */
+button {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    -webkit-appearance: none;
+    appearance: none;
 }
 /* 全域的滾動條樣式 */
 * {
@@ -437,7 +450,7 @@ nav, .sub-nav {
     flex-direction: row; /* 預設為橫向排列 */
     align-items: flex-start;
     gap: 6px;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
 }
 /* 主標題文字 */
 .prompt-name span {
@@ -464,10 +477,9 @@ nav, .sub-nav {
     color: var(--color-main-text);
     margin: 0;
     display: flex;
-    align-items: baseline; 
+    align-items: baseline;
     gap: 6px;
     white-space: normal;
-    max-width: none;
 }
 .prompt-details p:last-child, .old-version-item p:last-child {
     margin-bottom: 0;
@@ -481,7 +493,7 @@ nav, .sub-nav {
     min-width: 70px; /* 增加最小寬度，以容納圖示和文字 */
     text-align: right;
     white-space: nowrap;
-    display: inline-flex; /* 變成 inline-flex，讓其內部元素（如 icon 和文字）在一行，但也允許它作為一個整體參與 wrap */
+    display: inline-flex; /* 變成 inline-flex，讓其內部元素在一行 */
     align-items: baseline;
     gap: 4px;
 }
@@ -616,7 +628,7 @@ nav, .sub-nav {
 .old-version-item p:last-of-type {
     margin-bottom: 0.6em;
 }
-/* 重點歷史版本標題不再是標題，只是個普通行 */
+/* 重點歷史版本標題 */
 .old-version-name {
     font-size: 0.8em;
     color: var(--color-accent-silver);
@@ -1138,3 +1150,151 @@ nav, .sub-nav {
         flex-wrap: wrap;
     }
 }
+/* ☙—————————————————————————————❧ */
+/*    9. 年齡驗證彈窗               */
+/* ☙—————————————————————————————❧ */
+/* 彈窗背景遮罩 */
+.age-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* 為滾動留出空間 */
+    overflow-y: auto; /* 當內容高過螢幕時，允許整個遮罩層滾動 */
+    padding: 30px 10px; /* 留出上下安全間距，不讓彈窗貼邊 */
+    box-sizing: border-box;
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-border) var(--color-pure-black);
+}
+/* 啟動動畫時的狀態 */
+.age-modal-overlay.active {
+    opacity: 1;
+}
+/* 彈窗主體 */
+.age-modal-content {
+    background-color: var(--color-contrast-bg);
+    border: 2px solid var(--color-border);
+    border-radius: 12px;
+    width: 100%;
+    max-width: 660px;
+    padding: 30px;
+    box-shadow: 0 10px 30px var(--color-shadow-dark);
+    font-family: inherit;
+    transform: translateY(-20px);
+    transition: transform 0.3s ease-in-out;
+    /* 高度足夠時自動置中，高度不足時配合 flex-start */
+    margin: auto;
+    box-sizing: border-box;
+}
+.age-modal-overlay.active .age-modal-content {
+    transform: translateY(0);
+}
+/* 彈窗標題 */
+.age-modal-title {
+    font-size: 1.2em;
+    color: var(--color-highlight-text);
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 12px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+}
+/* 說明文字主體 */
+.age-modal-body {
+    font-size: 0.85em;
+    line-height: 1.7;
+    color: var(--color-main-text);
+    margin-bottom: 25px;
+    font-weight: normal;
+}
+/* 列表項目 */
+.age-modal-list {
+    margin: 8px 0;
+    padding-left: 15px;
+    list-style-type: none;
+}
+.age-modal-list li {
+    margin-bottom: 4px;
+}
+.age-modal-list li::before {
+    content: "▪ ";
+    color: var(--color-accent-moon);
+}
+/* 底部按鈕區 */
+.age-modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+/* 彈窗按鈕通用樣式 */
+.age-modal-btn {
+    font-size: 0.8em;
+    padding: 8px 20px;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.age-modal-btn.confirm {
+    background-color: var(--color-accent-moon);
+    color: var(--color-active-text);
+}
+.age-modal-btn.confirm:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(129, 158, 196, 0.4);
+}
+.age-modal-btn.cancel {
+    background-color: var(--color-surface);
+    color: var(--color-secondary-text);
+    border-color: var(--color-border);
+}
+.age-modal-btn.cancel:hover {
+    color: var(--color-pure-white);
+    border-color: var(--color-accent-silver);
+}
+/* ☙—————————————————————————————❧ */
+/*    9.5. 手機版彈窗微調           */
+/* ☙—————————————————————————————❧ */
+@media (max-width: 600px) {
+    .age-modal-content {
+        padding: 20px 15px; /* 縮小內邊距，擠出更多顯示空間 */
+        border-radius: 8px;
+    }
+    .age-modal-title {
+        font-size: 1.05em;
+        margin-bottom: 12px;
+        padding-bottom: 8px;
+    }
+    .age-modal-body {
+        font-size: 0.78em; /* 微調字體大小，讓手機上不需滾動太長 */
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+    .age-modal-list {
+        margin: 6px 0;
+        padding-left: 10px;
+    }
+    .age-modal-footer {
+        gap: 10px;
+        justify-content: space-between; /* 按鈕在手機上分散排列，更好點擊 */
+    }
+    .age-modal-btn {
+        flex: 1; /* 按鈕等寬，肥肥的身體在手機螢幕上更容易被戳到 */
+        text-align: center;
+        padding: 10px 0;
+        font-size: 0.75em;
+    }
+}
+
