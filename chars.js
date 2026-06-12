@@ -5,10 +5,10 @@ const characters = [
     category: "fantasy-south",
     name: "Raymond",
     image: "char-pic/Raymond.jpg",
-    tags: ["群聊卡: Raymond & Anamor", "男性", "AnyPOV", "吸血鬼", "中世紀"],
-    description: "？？？",
-    reminder: "",
-    warning: "",
+    tags: ["群聊卡: Raymond & Anamor", "男性", "AnyPOV", "黑暗", "魔法", "焦慮", "緩慢燃燒", "吸血鬼", "Dom", "中世紀"],
+    description: "他們姊弟是邪教摧殘下唯二的倖存者，卻走上了完全相反的道路。<br>面對成了害人怪物的姊姊，弟弟 Raymond 選擇成為專門狩獵怪物的傭兵，拚上性命只為親手給予一切畫下休止符，甚至懷抱同歸於盡的覺悟。<br>你又將如何介入姊弟之間的相愛相殺？",
+    reminder: "亦可單聊，但其他角色會影薄。",
+    warning: "含骨科、死鴿子 🗡🕊 ️要素。",
     features: {
         "中文開場": true,
         "英文開場": true,
@@ -17,7 +17,8 @@ const characters = [
     },
     lorebook: "",
     links: [
-        { name: "近期上架", url: "" }
+        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1515013557056569435/1515013557056569435" },
+        { name: "直接下載", file: "char/Raymond.png" }
     ]
   },
   {
@@ -25,10 +26,10 @@ const characters = [
     category: "fantasy-south",
     name: "Anamor",
     image: "char-pic/Anamor.jpg",
-    tags: ["群聊卡: Raymond & Anamor", "女性", "AnyPOV", "吸血鬼", "中世紀"],
-    description: "？？？",
-    reminder: "",
-    warning: "",
+    tags: ["群聊卡: Raymond & Anamor", "女性", "AnyPOV", "黑暗", "魔法", "拯救與被拯救", "焦慮", "吸血鬼", "Dom", "Sub", "中世紀"],
+    description: "他們姊弟是邪教摧殘下唯二的倖存者，卻走上了完全相反的道路。<br>姊姊 Anamor 的心因仇恨而殘殺人類，卻不敢面對喊她為『怪物』的弟弟，只是躲著弟弟並瘋狂持續著她的血腥復仇。<br>你又將如何介入姊弟之間的相愛相殺？",
+    reminder: "亦可單聊，但其他角色會影薄。",
+    warning: "含極端行為角色、骨科、死鴿子 🗡🕊 ️要素。",
     features: {
         "中文開場": true,
         "英文開場": true,
@@ -37,7 +38,8 @@ const characters = [
     },
     lorebook: "",
     links: [
-        { name: "近期上架", url: "" }
+        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1515013557056569435/1515013557056569435" },
+        { name: "直接下載", file: "char/Anamor.png" }
     ]
   },
   {
