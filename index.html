@@ -13,8 +13,12 @@
 <body>
     <div id="top-fixed-container">
         <header>
-            <a href="#" id="home-btn" class="home-title-btn">HOME</a>
-            <button id="toggle-nav-btn" class="nav-toggle-btn">∧</button>
+            <div class="header-left-space"></div> <!-- 用來平衡美觀的隱形空位 -->
+            <a href="#" id="home-btn" class="home-title-btn">HOME</a><button id="toggle-nav-btn" class="nav-toggle-btn">∧</button>
+            <div class="header-right-controls">
+                <button id="lang-toggle-btn" class="lang-switch-btn" title="切換語言 / Switch Language">EN</button>
+                <button id="theme-toggle-btn" class="theme-switch-btn" title="切換主題">☼</button>
+            </div>
         </header>
         <div id="main-nav-container">
             <div class="scrollable-nav main-nav-scroll">
@@ -42,62 +46,62 @@
     </div>
     <main id="content-area">
         <section id="home-content" class="content-section active">
-            <h1>Adia</h1>
-            <p>不愛社交的 AI-RP 愛好者。</p>
-            <p>專注力不高，時常一邊 AI-RP 一邊東摸西摸，但並沒有因此特別精通了什麼。</p>
-            <p>寫下了教學與提示詞、微調了 SillyTavern 介面美化、創作了角色卡、時不時算個圖，這些都放置於 Discord AI 深夜奶茶店。</p>
-            <p>這裡主要簡介我創作的 SillyTavern 角色卡，並提供部份角色卡的主體下載，如果想要獲取完整的角色卡資產，或是其他種類的資源還煩請前往 Discord AI 深夜奶茶店吧。</p>
+            <h1 data-i18n="homeIntro.authorTitle">Adia</h1>
+            <p data-i18n="homeIntro.authorSub">不愛社交的 AI-RP 愛好者。</p>
+            <p data-i18n="homeIntro.authorP1">專注力不高，時常一邊 AI-RP 一邊東摸西摸，但並沒有因此特別精通了什麼。</p>
+            <p data-i18n="homeIntro.authorP2">寫下了教學與提示詞、微調了 SillyTavern 介面美化、創作了角色卡、時不時算個圖，這些都放置於 Discord AI 深夜奶茶店。</p>
+            <p data-i18n="homeIntro.authorP3">這裡主要簡介我創作的 SillyTavern 角色卡，並提供部份角色卡的主體下載，以及部份最新版提示詞的下載，如果想要獲取完整的角色卡資產，或是其他種類的資源還煩請前往 Discord AI 深夜奶茶店吧。</p>
             <div class="prompt-intro-container">
                 <div class="prompt-intro-toggle" role="button" tabindex="0">
                     <span class="toggle-arrow">›</span>
-                    <span class="title-text">SillyTavern 提示詞s</span>
+                    <span class="title-text" data-i18n="homeIntro.stTitle">SillyTavern 提示詞s</span>
                 </div>
                 <div id="prompts-output-container" class="prompt-list-wrapper collapsed">
                     <!-- 提示詞將由 JavaScript 動態生成於此 -->
                 </div>
             </div>
-            <h1>AI 深夜奶茶店</h1>
-            <p>專為熱愛 AI-RP 的人們而設的繁體中文 Discord 伺服器，我們深知繁體中文的 AI-RP 專業資訊相對零散，因此希望這裡能成為一個友善的據點，讓大家能一起分享經過查證的知識，交流、討論、分享、學習關於 AI 角色扮演的點點滴滴！</p>
-            <p>※ 目前伺服器邀請改為不定期開放。
+            <h1 data-i18n="homeIntro.shopTitle">AI 深夜奶茶店</h1>
+            <p data-i18n="homeIntro.shopP1">專為熱愛 AI-RP 的人們而設的繁體中文 Discord 伺服器，我們深知繁體中文的 AI-RP 專業資訊相對零散，因此希望這裡能成為一個友善的據點，讓大家能一起分享經過查證的知識，交流、討論、分享、學習關於 AI 角色扮演的點點滴滴！</p>
+            <p data-i18n="homeIntro.shopP2">※ 目前伺服器邀請改為不定期開放。</p>
             <div class="home-buttons-container">
                 <a href="https://chocochocococo.github.io/ai-milktea-wiki/" target="_blank" class="join-discord-btn">
-                    <span>AI 深夜奶茶店 wiki</span>
+                    <span data-i18n="homeIntro.btnWiki">AI 深夜奶茶店 wiki</span>
                 </a>
                 <a href="https://discord.gg/Qpcv7wDk8x" target="_blank" class="join-discord-btn">
-                    <span>加入伺服器</span>
+                    <span data-i18n="homeIntro.btnJoin">加入伺服器</span>
                 </a>
             </div>
-            <h1>友情作者</h1>
+            <h1 data-i18n="homeIntro.friendsTitle">友情作者</h1>
             <div class="home-buttons-container friend-links-container">
                 <a href="https://cocos-homes.com/" target="_blank" class="join-discord-btn">
-                    <span>可可 ❧ 個人網站 ☙</span>
+                    <span>可可 ❧ <span data-i18n="homeIntro.suffixPersonalSite">個人網站</span> ☙</span>
                 </a>
                 <a href="https://vesper.uwu.ai/" target="_blank" class="join-discord-btn">
-                    <span>Vesper ❧ 個人網站 ☙</span>
+                    <span>Vesper ❧ <span data-i18n="homeIntro.suffixPersonalSite">個人網站</span> ☙</span>
                 </a>
                 <a href="https://www.threads.com/@ha14hiho" target="_blank" class="join-discord-btn">
-                    <span>風襄 ❧ Threads ☙</span>
+                    <span>風襄 ❧ <span data-i18n="homeIntro.suffixThreads">Threads</span> ☙</span>
                 </a>
                 <a href="https://janitorai.com/profiles/2f4de0c7-3d11-4d67-a9a7-fc9d3a925c7a_profile-of-peanut-rat" target="_blank" class="join-discord-btn">
-                    <span>花生 ❧ JanitorAI ☙</span>
+                    <span>花生 ❧ <span data-i18n="homeIntro.suffixJanitor">JanitorAI</span> ☙</span>
                 </a>
                 <a href="https://janitorai.com/profiles/8b8179f9-a16e-4bbb-ad27-6c14cd082ce6_profile-of-kusayaki" target="_blank" class="join-discord-btn">
-                    <span>串燒 ❧ JanitorAI ☙</span>
+                    <span>串燒 ❧ <span data-i18n="homeIntro.suffixJanitor">JanitorAI</span> ☙</span>
                 </a>
                 <a href="https://janitorai.com/profiles/b60ffd67-feb8-4d93-a3ed-8a5559c1b317_profile-of-lanculus" target="_blank" class="join-discord-btn">
-                    <span>Lan ❧ JanitorAI ☙</span>
+                    <span>Lan ❧ <span data-i18n="homeIntro.suffixJanitor">JanitorAI</span> ☙</span>
                 </a>
                 <a href="https://janitorai.com/profiles/ff108c22-92e6-417e-ae06-c75f72e5ecf2_profile-of-read-night" target="_blank" class="join-discord-btn">
-                    <span>RN ❧ JanitorAI ☙</span>
+                    <span>RN ❧ <span data-i18n="homeIntro.suffixJanitor">JanitorAI</span> ☙</span>
                 </a>
                 <a href="https://janitorai.com/profiles/7c4a9fa0-132d-4672-81bc-51501d0e46ad_profile-of-sallywu" target="_blank" class="join-discord-btn">
-                    <span>Sally ❧ JanitorAI ☙</span>
+                    <span>Sally ❧ <span data-i18n="homeIntro.suffixJanitor">JanitorAI</span> ☙</span>
                 </a>
                 <a href="https://janitorai.com/profiles/bdaf8300-0a4c-4d8e-bee1-3553b7d19d59_profile-of-stardustlight" target="_blank" class="join-discord-btn">
-                    <span>Septem ❧ JanitorAI ☙</span>
+                    <span>Septem ❧ <span data-i18n="homeIntro.suffixJanitor">JanitorAI</span> ☙</span>
                 </a>
                 <a href="https://janitorai.com/profiles/8a12e37b-ae43-4a70-97e1-1d0ce738b06c_profile-of-smith-0603" target="_blank" class="join-discord-btn">
-                    <span>Smith ❧ JanitorAI ☙</span>
+                    <span>Smith ❧ <span data-i18n="homeIntro.suffixJanitor">JanitorAI</span> ☙</span>
                 </a>
             </div>
         </section>
@@ -137,10 +141,11 @@
     </main>
     <footer id="page-footer">
         <p>我的提示詞、角色卡、資產與資源僅供個人私下使用，禁止二次上傳！包含但不限於禁止無授權、無標註原作者、無提供原出處連結的任何形式的修改、參考、借鑑、盜用後再上傳！</p>
-        <p>我的提示詞、角色卡、資產與資源僅只有發布於 Discord AI 深夜奶茶店。</p>
+        <p>我的提示詞、角色卡、資產與資源僅只有發布於 Discord AI 深夜奶茶店，部份發布於個人網站。</p>
     </footer>
     <script src="chars.js"></script>
     <script src="prompts.js"></script>
+    <script src="lang.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
