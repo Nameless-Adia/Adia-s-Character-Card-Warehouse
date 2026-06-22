@@ -1416,4 +1416,16 @@ nav, .sub-nav {
         font-size: 0.75em;
     }
 }
-
+/* ☙—————————————————————————————❧ */
+/*    10. AI 翻譯免責提示 (English Only) */
+/* ☙—————————————————————————————❧ */
+.translation-disclaimer {
+    display: block;
+    font-size: 0.58em !important;          /* 比原本細小的腳本聲明還要更迷你、更自律 */
+    color: var(--color-hint-text) !important; /* 採用柔和安靜的指示藍，不喧賓奪主 */
+    font-style: italic;                    /* 優雅的斜體書寫，提醒這是個備註 */
+    margin-top: 10px !important;           /* 與上方的版權警告保持小小的社交距離 */
+    opacity: 0.8;                          /* 80% 的霧色朦朧感，點到為止 */
+    text-align: center;
+    letter-spacing: 0.5px;
+}

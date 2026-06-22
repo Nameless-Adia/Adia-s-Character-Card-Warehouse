@@ -222,6 +222,14 @@ document.addEventListener('DOMContentLoaded', () => {
         if (langToggleBtn) {
             langToggleBtn.textContent = currentLang === 'zh' ? 'EN' : 'ZH';
         }
+        const translationNotice = document.getElementById('translation-notice');
+        if (translationNotice) {
+            if (currentLang === 'en') {
+                translationNotice.style.display = 'block'; // 英文時英姿颯爽地站出來
+            } else {
+                translationNotice.style.display = 'none';  // 中文時安靜地退隱
+            }
+        }
     }
     function getValueByPath(obj, path) {
         if (!obj || !path) return undefined;
