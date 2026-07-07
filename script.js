@@ -57,8 +57,8 @@ document.addEventListener('DOMContentLoaded', () => {
                                            : "您下載之角色卡僅用於個人私下 AI-RP 使用，不用於任何商業用途與違法用途"}</li>
                                 <li>${isEn ? "Any consequences resulting from providing false information or violating the laws of your jurisdiction shall be solely borne by yourself."
                                            : "如因提供不實資訊或違反所在地法律而產生任何後果，相關責任應由您自行承擔"}</li>
-                                <li>${isEn ? "<strong>RE-UPLOADING IS STRICTLY PROHIBITED!</strong> This includes, but is not limited to, any form of editing, referencing, adapting, or plagiarizing followed by re-uploading without authorization, proper author attribution, or original source links!"
-                                           : "<strong>禁止二次上傳！</strong>包含但不限於禁止無授權、無標註原作者、無提供原出處連結的任何形式的修改、參考、借鑑、盜用後再上傳！"}</li>
+                                <li>${isEn ? "<strong>RE-UPLOADING IS STRICTLY PROHIBITED!</strong> This includes, but is not limited to, unauthorized modifications, derivative works, adaptations, plagiarism, or re-uploading without proper credit and a link to the original source."
+                                           : "<strong>禁止二次上傳！</strong>包含但不限於任何未經授權的修改、衍生作品、改編、盜用，或未標註原作者及提供出處連結的重新上傳行為。"}</li>
                             </ul>
                             ${isEn ? `Do you confirm that you have read, understood, and agreed to the above content?<br>Clicking "Disagree" will cancel the download.`
                                    : `請問您是否已閱讀、理解並同意上述內容？<br>點選「不同意」將不會進行下載。`}
@@ -90,8 +90,8 @@ document.addEventListener('DOMContentLoaded', () => {
                                            : "您下載之提示詞僅用於個人私下 AI-RP 使用，不用於任何商業用途與違法用途"}</li>
                                 <li>${isEn ? "Any consequences resulting from providing false information or violating the laws of your jurisdiction shall be solely borne by yourself."
                                            : "如因提供不實資訊或違反所在地法律而產生任何後果，相關責任應由您自行承擔"}</li>
-                                <li>${isEn ? "<strong>RE-UPLOADING IS STRICTLY PROHIBITED!</strong> This includes, but is not limited to, any form of editing, referencing, adapting, or plagiarizing followed by re-uploading without authorization, proper author attribution, or original source links!"
-                                           : "<strong>禁止二次上傳！</strong>包含但不限於禁止無授權、無標註原作者、無提供原出處連結的任何形式的修改、參考、借鑑、盜用後再上傳！"}</li>
+                                <li>${isEn ? "<strong>RE-UPLOADING IS STRICTLY PROHIBITED!</strong> This includes, but is not limited to, unauthorized modifications, derivative works, adaptations, plagiarism, or re-uploading without proper credit and a link to the original source."
+                                           : "<strong>禁止二次上傳！</strong>包含但不限於任何未經授權的修改、衍生作品、改編、盜用，或未標註原作者及提供出處連結的重新上傳行為。"}</li>
                             </ul>
                             ${isEn ? `Do you confirm that you have read, understood, and agreed to the above content?<br>Clicking "Disagree" will cancel the download.`
                                    : `請問您是否已閱讀、理解並同意上述內容？<br>點選「不同意」將不會進行下載。`}
@@ -419,6 +419,15 @@ document.addEventListener('DOMContentLoaded', () => {
                         <span class="label">▪ ${labelGuide}</span> ${guideText} <a href="${version.guide.link.url || '#'}" target="_blank" rel="noopener noreferrer">${linkName}</a>
                    </p>`;
             }
+            // ☙—————————————————————————————❧
+            //   就是這裡！唯有當 isLatest 為 true (最新版) 時，才會生成特色功能的 HTML
+            //   歷史版本舊卡片 (isLatest 為 false) 將會直接優雅地跳過它，不再渲染顯示
+            // ☙—————————————————————————————❧
+            const featuresHTML = isLatest ? `
+                <p class="prompt-feature prompt-text-wrap">
+                    <span class="label">▪ ${labelFeature}</span> ${features}
+                </p>
+            ` : '';
             return `
                 <p class="${isLatest ? 'current-version' : 'old-version-item-version'}">
                     <span class="label">▪ ${labelVersion}</span> ${version.versionName || ''}
@@ -426,9 +435,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p class="${isLatest ? 'prompt-compatibility' : 'old-version-compatibility'}">
                     <span class="label">▪ ${labelCompat}</span> ${compat}
                 </p>
-                <p class="${isLatest ? 'prompt-feature' : 'old-version-feature'} prompt-text-wrap">
-                    <span class="label">▪ ${labelFeature}</span> ${features}
-                </p>
+                ${featuresHTML}
                 ${guideHTML}
                 ${linksHTML}
             `;
