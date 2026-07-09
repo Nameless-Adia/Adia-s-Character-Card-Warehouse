@@ -66,7 +66,7 @@ const i18n = {
             authorSub: "An AI-RP enthusiast who isn't much of a social butterfly.",
             authorP1: "I tend to jump between different things while doing AI-RP. I haven't mastered any particular field, but I'm always curious to explore.",
             authorP2: "I write guides and prompts, tweak SillyTavern UI themes, create character cards, and occasionally create AI art—all of which are shared on Discord AI 深夜奶茶店.",
-            authorP3: "This site provides summaries and downloads for selected SillyTavern character cards, as well as some of my latest prompts. To access complete character card assets and other resources, please visit Discord AI 深夜奶茶店.",
+            authorP3: "This site provides summaries for all my SillyTavern character cards, while offering downloads for selected cards and my latest prompts. To access complete character card assets and other resources, please visit Discord AI 深夜奶茶店.",
             authorP4: "Contact me：adia.ai.api@gmail.com",
             stTitle: "SillyTavern Prompts",
             shopTitle: "AI 深夜奶茶店",

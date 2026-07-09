@@ -242,6 +242,7 @@ document.addEventListener('DOMContentLoaded', () => {
             updateStaticTexts();
             renderContent();
             renderPrompts();
+            updateTagList();
         });
     }
     // ☙—————————————————————————————❧
@@ -330,8 +331,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 for (const [feature, enabled] of Object.entries(statusData.features)) {
                     let displayFeature = feature;
                     if (isEn) {
-                        if (feature === "中文開場") displayFeature = "ZH First Message";
-                        else if (feature === "英文開場") displayFeature = "EN First Message";
+                        if (feature === "中文開場") displayFeature = "ZH Opening";
+                        else if (feature === "英文開場") displayFeature = "EN Opening";
                         else if (feature === "可替換頭像") displayFeature = "Alt Avatars";
                         else if (feature === "視覺小說立繪") displayFeature = "Visual Novel Sprites";
                     }
