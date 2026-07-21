@@ -1,6 +1,66 @@
 // data.js
 const characters = [
   {
+    id: "fantasy-orth-and-hrus",
+    category: "fantasy-other",
+    name: "Orth ＆ Hrus",
+    name_en: "Orth ＆ Hrus",
+    image: "char-pic/Orth and Hrus.jpg",
+    tags: ["多人卡", "男性", "NSFW", "原創角色", "任何視角", "黑暗", "魔法", "從敵人到戀人", "包辦婚姻", "死鴿子", "非合意", "焦慮", "魔鬼", "貴族", "反派", "支配", "中世紀"],
+    tags_en: ["Multi-char", "Male", "NSFW", "OC", "AnyPOV", "Dark", "Magic", "Enemies to Lovers", "Arranged Marriage", "Dead Dove", "NonCon", "Angst", "Devil", "Noble", "Villain", "Dominant", "Medieval"],
+    description: "經典的魔王勇者傳說，然而你既非勇者亦非魔王，只是生活在同一片大地的一介小小個體，卻不知該說是幸還是不幸的，與魔王麾下最恐怖的魔族將軍兄弟Orth以及Hrus命運交匯。<br>你，將展現出如何的價值，以謀求生存呢？",
+    description_en: "The classic legend of the Demon King and the Hero. Yet, you are neither the hero nor the demon lord; you are merely a small, ordinary individual living on this very land. Whether as a stroke of blessing or a curse of misfortune, your fate has become intertwined with Orth and Hrus—the most terrifying demon generals serving under the Demon King.<br>What kind of value will you display in order to secure your survival?",
+    reminder: "",
+    reminder_en: "",
+    warning: "含極端行為、死鴿子 🗡🕊 ️要素。",
+    warning_en: "Contains Extreme Behavior and Dead Dove 🗡🕊.",
+    features: {
+        "中文開場": true,
+        "英文開場": true,
+        "可替換頭像": true,
+        "視覺小說立繪": false
+    },
+    lorebook: "",
+    links: [
+        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1528945851379220530/1528945851379220530" },
+        { name: "直接下載", file: "char/Orth and Hrus.png" }
+    ],
+    links_en: [
+        { name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1528945851379220530/1528945851379220530" },
+        { name: "Download Card", file: "char/Orth and Hrus.png" }
+    ]
+  },
+  {
+    id: "fantasy-mars",
+    category: "fantasy-other",
+    name: "Mars",
+    name_en: "Mars",
+    image: "char-pic/Mars.jpg",
+    tags: ["單人卡", "男性", "NSFW", "原創角色", "任何視角", "魔法", "從敵人到戀人", "存疑的合意", "喜劇", "龍", "反派", "支配", "中世紀"],
+    tags_en: ["Solo-char", "Male", "NSFW", "OC", "AnyPOV", "Magic", "Enemies to Lovers", "DubCon", "Comedy", "Dragon", "Villain", "Dominant", "Medieval"],
+    description: "那是位整天不務魔王正業只想著把妹的好色龍。<br>就在他被勇者揍爆了之後，他有了新的志向：對勇者死纏爛打，讓勇者好好地對他負起責任。",
+    description_en: "He's a lecherous dragon who constantly neglects his Demon King duties just to chase after girls.<br>After being thoroughly pummeled by the Hero, he suddenly found a brand-new ambition in life: to shamelessly latch onto the Hero and make the Hero take responsibility for him.",
+    reminder: "",
+    reminder_en: "",
+    warning: "",
+    warning_en: "",
+    features: {
+        "中文開場": true,
+        "英文開場": true,
+        "可替換頭像": true,
+        "視覺小說立繪": false
+    },
+    lorebook: "",
+    links: [
+        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1478278735747879023/1478278735747879023" },
+        { name: "直接下載", file: "char/Mars.png" }
+    ],
+    links_en: [
+        { name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1478278735747879023/1478278735747879023" },
+        { name: "Download Card", file: "char/Mars.png" }
+    ]
+  },
+  {
     id: "fantasy-raymond",
     category: "fantasy-south",
     name: "Raymond",
@@ -386,36 +446,6 @@ const characters = [
     links_en: [
         { name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1405045119953928202/1405045119953928202" },
         { name: "Download Card", file: "char/譚樂望.png" }
-    ]
-  },
-  {
-    id: "fantasy-mars",
-    category: "fantasy-other",
-    name: "Mars",
-    name_en: "Mars",
-    image: "char-pic/Mars.jpg",
-    tags: ["單人卡", "男性", "NSFW", "原創角色", "任何視角", "魔法", "從敵人到戀人", "存疑的合意", "喜劇", "龍", "反派", "支配", "中世紀"],
-    tags_en: ["Solo-char", "Male", "NSFW", "OC", "AnyPOV", "Magic", "Enemies to Lovers", "DubCon", "Comedy", "Dragon", "Villain", "Dominant", "Medieval"],
-    description: "那是位整天不務魔王正業只想著把妹的好色龍。<br>就在他被勇者揍爆了之後，他有了新的志向：對勇者死纏爛打，讓勇者好好地對他負起責任。",
-    description_en: "He's a lecherous dragon who constantly neglects his Demon King duties just to chase after girls.<br>After being thoroughly pummeled by the Hero, he suddenly found a brand-new ambition in life: to shamelessly latch onto the Hero and make the Hero take responsibility for him.",
-    reminder: "",
-    reminder_en: "",
-    warning: "",
-    warning_en: "",
-    features: {
-        "中文開場": true,
-        "英文開場": true,
-        "可替換頭像": true,
-        "視覺小說立繪": false
-    },
-    lorebook: "",
-    links: [
-        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1478278735747879023/1478278735747879023" },
-        { name: "直接下載", file: "char/Mars.png" }
-    ],
-    links_en: [
-        { name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1478278735747879023/1478278735747879023" },
-        { name: "Download Card", file: "char/Mars.png" }
     ]
   },
   {
