@@ -3,8 +3,8 @@ const characters = [
   {
     id: "fantasy-orth-and-hrus",
     category: "fantasy-other",
-    name: "Orth ＆ Hrus",
-    name_en: "Orth ＆ Hrus",
+    name: "Orth & Hrus",
+    name_en: "Orth & Hrus",
     image: "char-pic/Orth and Hrus.jpg",
     tags: ["多人卡", "男性", "NSFW", "原創角色", "任何視角", "黑暗", "魔法", "從敵人到戀人", "包辦婚姻", "死鴿子", "非合意", "焦慮", "魔鬼", "貴族", "反派", "支配", "中世紀"],
     tags_en: ["Multi-char", "Male", "NSFW", "OC", "AnyPOV", "Dark", "Magic", "Enemies to Lovers", "Arranged Marriage", "Dead Dove", "NonCon", "Angst", "Devil", "Noble", "Villain", "Dominant", "Medieval"],
