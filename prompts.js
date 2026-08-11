@@ -6,15 +6,15 @@ const prompts = [
         mainName_en: "Bowl Ice Prompt",
         subName: "Adia-🍨-Loacl-in-Chat",
         latestVersion: {
-            versionName: "0.2.2",
+            versionName: "0.3",
             compatibility: "多數開源 / 商業模型。",
             compatibility_en: "Most open-source & commercial models.",
             features: "結構精簡，提示內容簡樸單純，以適應多數的模型並可方便地無痛進行切換。提供簡單的寫作文風微調、思維鏈選項、時間列選項、選項角功能與搞笑番外小劇場的項目，預設繁體中文輸出，可選英文輸出，允許配合 SillyTavern 內建的摘要總結功能。提供搭配的正規表示式。",
             features_en: "A lightweight and simple prompt structure designed to work well with most models, allowing smooth switching between different LLMs. Includes basic writing style adjustments, CoT options, timeline options, optional character choice features, and humorous side-story modules. Outputs Traditional Chinese by default, with optional English output support, and works well with SillyTavern's built-in summarization feature. Comes with matching regular expressions.",
-            links: [{ name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1342363740519137300/1507647080942927915" },
-                    { name: "直接下載", file: "prompt/Adia-🍨-Loacl-in-Chat-0.2.2.json" }],
-            links_en: [{ name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1342363740519137300/1507647080942927915" },
-                       { name: "Download Prompt", file: "prompt/Adia-🍨-Loacl-in-Chat-0.2.2.json" }]
+            links: [{ name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1342363740519137300/1536676243242614895" },
+                    { name: "直接下載", file: "prompt/Adia-🍨-Loacl-in-Chat-0.3.json" }],
+            links_en: [{ name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1342363740519137300/1536676243242614895" },
+                       { name: "Download Prompt", file: "prompt/Adia-🍨-Loacl-in-Chat-0.3.json" }]
         },
         oldVersions: []
     },
