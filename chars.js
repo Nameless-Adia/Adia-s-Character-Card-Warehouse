@@ -543,8 +543,8 @@ const characters = [
   {
     id: "fictional-yury-and-enu",
     category: "fictional-humans",
-    name: "Yury and Enu",
-    name_en: "Yury and Enu",
+    name: "Yury & Enu",
+    name_en: "Yury & Enu",
     image: "char-pic/Yury and Enu.jpg",
     tags: ["多人卡", "男性", "NSFW", "原創角色", "任何視角", "黑暗", "死鴿子", "焦慮", "緩慢燃燒", "傭兵", "反派", "支配", "順從", "文藝復興"],
     tags_en: ["Multi-char", "Male", "NSFW", "OC", "AnyPOV", "Dark", "Dead Dove", "Angst", "Slow Burn", "Mercenaries", "Villain", "Dominant", "Submissive", "The Renaissance"],
