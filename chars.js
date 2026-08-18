@@ -1,6 +1,186 @@
 // data.js
 const characters = [
   {
+    id: "fictional-yakuichi-alt3",
+    category: "fictional-monsters",
+    name: "亦壹",
+    name_en: "Yakuichi",
+    image: "char-pic/Yakuichi [ALT3].jpg",
+    tags: ["單人卡", "男性", "NSFW", "原創角色", "任何視角", "超自然", "死鴿子", "拯救與被拯救", "焦慮", "緩慢燃燒", "支配", "平安時代"],
+    tags_en: ["Solo-char", "Male", "NSFW", "OC", "AnyPOV", "Supernatural", "Dead Dove", "Saviorfagging", "Angst", "Slow Burn", "Dominant", "Heian Period"],
+    description: "千前年，那是他誕生的時代，也是他還未被視作河神並成為信仰的時代。<br>你將在他的過往中，留下如何的回憶碎片？",
+    description_en: "A thousand years ago, during the age of his birth, he was not yet seen as the River God, nor did he possess the peoples' faith.<br>In the depths of his distant past, what fragments of memory will you leave behind?",
+    reminder: "",
+    reminder_en: "",
+    warning: "含死鴿子 🗡🕊 ️要素。",
+    warning_en: "Contains Dead Dove 🗡🕊.",
+    features: {
+        "中文開場": true,
+        "英文開場": true,
+        "可替換頭像": true,
+        "視覺小說立繪": false
+    },
+    lorebook: "",
+    links: [
+        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1355493695591415858/1539146817923711057" }
+    ],
+    links_en: [
+        { name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1355493695591415858/1539146817923711057" }
+    ]
+  },
+  {
+    id: "fictional-yakuichi-alt2",
+    category: "fictional-gods",
+    name: "亦壹",
+    name_en: "Yakuichi",
+    image: "char-pic/Yakuichi [ALT2].jpg",
+    tags: ["單人卡", "男性", "NSFW", "原創角色", "任何視角", "超自然", "死鴿子", "支配", "現代日本"],
+    tags_en: ["Solo-char", "Male", "NSFW", "OC", "AnyPOV", "Supernatural", "Dead Dove", "Dominant", "Modern Japan"],
+    description: "他，一名地方小鎮的風流河神。<br>而你與他在網路上相遇，並引起了他的興趣，在他心滿意足前，他不會輕易的放你走。",
+    description_en: "He is a charming, flirtatious River God from a small local town.<br>After meeting you online and becoming intrigued by you, he won't let you go so easily until he is fully satisfied.",
+    reminder: "內嵌娛樂性的正規式，務必匯入。",
+    reminder_en: "Includes fun regex; importing is strongly recommended.",
+    warning: "含死鴿子 🗡🕊 ️要素。",
+    warning_en: "Contains Dead Dove 🗡🕊.",
+    features: {
+        "中文開場": true,
+        "英文開場": true,
+        "可替換頭像": true,
+        "視覺小說立繪": false
+    },
+    lorebook: "",
+    links: [
+        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1355493695591415858/1429138526666227733" }
+    ],
+    links_en: [
+        { name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1355493695591415858/1429138526666227733" }
+    ]
+  },
+  {
+    id: "fictional-yakuichi-alt",
+    category: "fictional-gods",
+    name: "亦壹",
+    name_en: "Yakuichi",
+    images: [
+      "char-pic/Yakuichi [ALT]/Yakuichi [ALT].jpg",
+      "char-pic/Yakuichi [ALT]/Yakuichi [ALT][2.0].jpg",
+    ],
+    tags: ["單人卡", "男性", "NSFW", "原創角色", "任何視角", "黑暗", "超自然", "從敵人到戀人", "死鴿子", "非合意", "支配", "現代日本"],
+    tags_en: ["Solo-char", "Male", "NSFW", "OC", "AnyPOV", "Dark", "Supernatural", "Enemies to Lovers", "Dead Dove", "NonCon", "Dominant", "Modern Japan"],
+    description: "從人類負面情感誕生並成長的邪神，與從人類願望中誕生並隨信仰成長的神明，是彼此從誕生起就注定敵對的存在。<br>而你，一名新生的邪神，不幸的誕生在他這位千年河神所庇護的小鎮之中，你將會採取如何的行動？",
+    description_en: "An evil god born from humanity's darker emotions, and a deity born from human wishes and strengthened by faith—these two beings were destined to stand as enemies from the very moment of their creation.<br>And you, a newly born evil god, have unfortunately emerged within a town protected by this thousand-year-old River God. What will you do next?",
+    reminder: "",
+    reminder_en: "",
+    warning: "含死鴿子 🗡🕊 ️要素。",
+    warning_en: "Contains Dead Dove 🗡🕊.",
+    versions: [
+      {
+        versionName: "Ver 1.0",
+        features: {
+            "中文開場": false,
+            "英文開場": true,
+            "可替換頭像": true,
+            "視覺小說立繪": false
+        },
+        lorebook: "",
+        lorebook_en: ""
+      },
+      {
+        versionName: "Ver 2.0",
+        updateDescription: "更新：中文開場補完。",
+        updateDescription_en: "Update: Added Traditional Chinese openings."
+      }
+    ],
+    lorebook: "",
+    links: [
+        { name: "DC 下載 Ver 1.0", url: "https://discord.com/channels/1327283064476270603/1355493695591415858/1379447215063568426" },
+        { name: "DC 下載 Ver 2.0", url: "https://discord.com/channels/1327283064476270603/1355493695591415858/1539149226519564359" }
+    ],
+    links_en: [
+        { name: "DC Download Ver 1.0", url: "https://discord.com/channels/1327283064476270603/1355493695591415858/1379447215063568426" },
+        { name: "DC Download Ver 2.0", url: "https://discord.com/channels/1327283064476270603/1355493695591415858/1539149226519564359" }
+    ]
+  },
+  {
+    id: "fictional-yakuichi",
+    category: "fictional-gods",
+    name: "亦壹",
+    name_en: "Yakuichi",
+    images: [
+      "char-pic/Yakuichi/Yakuichi.jpg",
+      "char-pic/Yakuichi/Yakuichi [2.0].jpg",
+    ],
+    tags: ["奶茶店已退休 bot 店員", "單人卡", "男性", "NSFW", "原創角色", "任何視角", "超自然", "死鴿子", "支配", "現代日本"],
+    tags_en: ["奶茶店 Retired Bot Staff", "Solo-char", "Male", "NSFW", "OC", "AnyPOV", "Supernatural", "Dead Dove", "Dominant", "Modern Japan"],
+    description: "他，一名地方小鎮的風流河神。<br>而你與他偶然相遇，並引起了他的興趣，在他心滿意足前，他不會輕易的放你走。",
+    description_en: "He is a charming, flirtatious River God from a small local town.<br>After a chance encounter with you, he becomes intrigued by you and won't let you go so easily until he is fully satisfied.",
+    reminder: "大冰奶中僅提供中文開場。",
+    reminder_en: "The 大冰奶 platform only includes a Traditional Chinese opening.",
+    warning: "含死鴿子 🗡🕊 ️要素。",
+    warning_en: "Contains Dead Dove 🗡🕊.",
+    versions: [
+      {
+        versionName: "Ver 1.0",
+        features: {
+        "中文開場": false,
+        "英文開場": true,
+        "可替換頭像": true,
+        "視覺小說立繪": true
+        },
+        lorebook: "",
+        lorebook_en: ""
+      },
+      {
+        versionName: "Ver 2.0",
+        updateDescription: "更新：中文開場補完。",
+        updateDescription_en: "Update: Added Traditional Chinese openings."
+      }
+    ],
+    lorebook: "",
+    links: [
+        { name: "DC 下載 Ver 1.0", url: "https://discord.com/channels/1327283064476270603/1355493695591415858/1355493695591415858" },
+        { name: "DC 下載 Ver 2.0", url: "https://discord.com/channels/1327283064476270603/1355493695591415858/1539149226519564359" },
+        { name: "直接下載 Ver 2.0", file: "char/Yakuichi [2.0].png" },
+        { name: "去大冰奶遊玩", url: "https://milkteaaichat.up.railway.app/" },
+        { name: "大冰奶是什麼？", url: "https://www.plurk.com/p/3hq6spas09" }
+    ],
+    links_en: [
+        { name: "DC Download Ver 1.0", url: "https://discord.com/channels/1327283064476270603/1355493695591415858/1355493695591415858" },
+        { name: "DC Download Ver 2.0", url: "https://discord.com/channels/1327283064476270603/1355493695591415858/1539149226519564359" },
+        { name: "Download Card Ver 2.0", file: "char/Yakuichi [2.0].png" },
+        { name: "Play on 大冰奶", url: "https://milkteaaichat.up.railway.app/" },
+        { name: "What is 大冰奶?", url: "https://www.plurk.com/p/3hq6spas09" }
+    ]
+  },
+  {
+    id: "fictional-ei",
+    category: "fictional-gods",
+    name: "翳",
+    name_en: "Ei",
+    image: "char-pic/Ei.jpg",
+    tags: ["單人卡", "男性", "NSFW", "原創角色", "任何視角", "黑暗", "超自然", "死鴿子", "非合意", "焦慮", "反派", "支配", "現代日本"],
+    tags_en: ["Solo-char", "Male", "NSFW", "OC", "AnyPOV", "Dark", "Supernatural", "Dead Dove", "NonCon", "Angst", "Villain", "Dominant", "Modern Japan"],
+    description: "從人類負面情感誕生並成長的邪神，他偽裝成人類，盤踞在曾被瘟疫肆虐過的深山村落，以教主的身份宣揚由他所創的邪教，渴望著茁壯實力以躲過諸神的追殺。<br>而當你的命運與他糾葛在一起時，你又會作出如何的選擇？",
+    description_en: "An evil god born and nourished by humanity's darker emotions, he disguises himself as a human and makes his domain within a remote mountain village once ravaged by pestilence. As the leader of a cult he created himself, he spreads its teachings while desperately amassing power to escape the pursuit of the gods.<br>Should your fate become entangled with his, what path will you tread?",
+    reminder: "",
+    reminder_en: "",
+    warning: "含極端行為、病態的控制狂、死鴿子 🗡🕊 ️要素。",
+    warning_en: "Contains Extreme Behavior, Pathological Control & Obsession and Dead Dove 🗡🕊.",
+    features: {
+        "中文開場": true,
+        "英文開場": true,
+        "可替換頭像": true,
+        "視覺小說立繪": false
+    },
+    lorebook: "",
+    links: [
+        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1433792307257282701/1433792307257282701" }
+    ],
+    links_en: [
+        { name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1433792307257282701/1433792307257282701" }
+    ]
+  },
+  {
     id: "fantasy-orth-and-hrus",
     category: "fantasy-other",
     name: "Orth & Hrus",
@@ -716,124 +896,6 @@ const characters = [
     links_en: [
         { name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1411236220867973150/1411236220867973150" },
         { name: "Download Card", file: "char/方紅綾.png" }
-    ]
-  },
-  {
-    id: "fictional-ei",
-    category: "fictional-gods",
-    name: "翳",
-    name_en: "Ei",
-    image: "char-pic/Ei.jpg",
-    tags: ["單人卡", "男性", "NSFW", "原創角色", "任何視角", "黑暗", "超自然", "死鴿子", "非合意", "焦慮", "反派", "支配", "現代日本"],
-    tags_en: ["Solo-char", "Male", "NSFW", "OC", "AnyPOV", "Dark", "Supernatural", "Dead Dove", "NonCon", "Angst", "Villain", "Dominant", "Modern Japan"],
-    description: "從人類負面情感誕生並成長的邪神，他偽裝成人類，盤踞在曾被瘟疫肆虐過的深山村落，以教主的身份宣揚由他所創的邪教，渴望著茁壯實力以躲過諸神的追殺。<br>而當你的命運與他糾葛在一起時，你又會作出如何的選擇？",
-    description_en: "An evil god born and nourished by humanity's darker emotions, he disguises himself as a human and makes his domain within a remote mountain village once ravaged by pestilence. As the leader of a cult he created himself, he spreads its teachings while desperately amassing power to escape the pursuit of the gods.<br>Should your fate become entangled with his, what path will you tread?",
-    reminder: "",
-    reminder_en: "",
-    warning: "含極端行為、病態的控制狂、死鴿子 🗡🕊 ️要素。",
-    warning_en: "Contains Extreme Behavior, Pathological Control & Obsession and Dead Dove 🗡🕊.",
-    features: {
-        "中文開場": true,
-        "英文開場": true,
-        "可替換頭像": true,
-        "視覺小說立繪": false
-    },
-    lorebook: "",
-    links: [
-        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1433792307257282701/1433792307257282701" }
-    ],
-    links_en: [
-        { name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1433792307257282701/1433792307257282701" }
-    ]
-  },
-  {
-    id: "fictional-yakuichi-alt",
-    category: "fictional-gods",
-    name: "亦壹",
-    name_en: "Yakuichi",
-    image: "char-pic/Yakuichi [ALT].jpg",
-    tags: ["單人卡", "男性", "NSFW", "原創角色", "任何視角", "黑暗", "超自然", "從敵人到戀人", "死鴿子", "非合意", "支配", "現代日本"],
-    tags_en: ["Solo-char", "Male", "NSFW", "OC", "AnyPOV", "Dark", "Supernatural", "Enemies to Lovers", "Dead Dove", "NonCon", "Dominant", "Modern Japan"],
-    description: "從人類負面情感誕生並成長的邪神，與從人類願望中誕生並隨信仰成長的神明，是彼此從誕生起就注定敵對的存在。<br>而你，一名新生的邪神，不幸的誕生在他這位千年河神所庇護的小鎮之中，你將會採取如何的行動？",
-    description_en: "An evil god born from humanity's darker emotions, and a deity born from human wishes and strengthened by faith—these two beings were destined to stand as enemies from the very moment of their creation.<br>And you, a newly born evil god, have unfortunately emerged within a town protected by this thousand-year-old River God. What will you do next?",
-    reminder: "",
-    reminder_en: "",
-    warning: "含死鴿子 🗡🕊 ️要素。",
-    warning_en: "Contains Dead Dove 🗡🕊.",
-    features: {
-        "中文開場": false,
-        "英文開場": true,
-        "可替換頭像": true,
-        "視覺小說立繪": false
-    },
-    lorebook: "",
-    links: [
-        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1355493695591415858/1379447215063568426" }
-    ],
-    links_en: [
-        { name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1355493695591415858/1379447215063568426" }
-    ]
-  },
-  {
-    id: "fictional-yakuichi-alt2",
-    category: "fictional-gods",
-    name: "亦壹",
-    name_en: "Yakuichi",
-    image: "char-pic/Yakuichi [ALT2].jpg",
-    tags: ["單人卡", "男性", "NSFW", "原創角色", "任何視角", "超自然", "死鴿子", "支配", "現代日本"],
-    tags_en: ["Solo-char", "Male", "NSFW", "OC", "AnyPOV", "Supernatural", "Dead Dove", "Dominant", "Modern Japan"],
-    description: "他，一名地方小鎮的風流河神。<br>而你與他在網路上相遇，並引起了他的興趣，在他心滿意足前，他不會輕易的放你走。",
-    description_en: "He is a charming, flirtatious River God from a small local town.<br>After meeting you online and becoming intrigued by you, he won't let you go so easily until he is fully satisfied.",
-    reminder: "內嵌娛樂性的正規式，務必匯入。",
-    reminder_en: "Includes fun regex; importing is strongly recommended.",
-    warning: "含死鴿子 🗡🕊 ️要素。",
-    warning_en: "Contains Dead Dove 🗡🕊.",
-    features: {
-        "中文開場": true,
-        "英文開場": true,
-        "可替換頭像": true,
-        "視覺小說立繪": false
-    },
-    lorebook: "",
-    links: [
-        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1355493695591415858/1429138526666227733" }
-    ],
-    links_en: [
-        { name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1355493695591415858/1429138526666227733" }
-    ]
-  },
-  {
-    id: "fictional-yakuichi",
-    category: "fictional-gods",
-    name: "亦壹",
-    name_en: "Yakuichi",
-    image: "char-pic/Yakuichi.jpg",
-    tags: ["奶茶店已退休 bot 店員", "單人卡", "男性", "NSFW", "原創角色", "任何視角", "超自然", "死鴿子", "支配", "現代日本"],
-    tags_en: ["奶茶店 Retired Bot Staff", "Solo-char", "Male", "NSFW", "OC", "AnyPOV", "Supernatural", "Dead Dove", "Dominant", "Modern Japan"],
-    description: "他，一名地方小鎮的風流河神。<br>而你與他偶然相遇，並引起了他的興趣，在他心滿意足前，他不會輕易的放你走。",
-    description_en: "He is a charming, flirtatious River God from a small local town.<br>After a chance encounter with you, he becomes intrigued by you and won't let you go so easily until he is fully satisfied.",
-    reminder: "大冰奶中僅提供中文開場。",
-    reminder_en: "The 大冰奶 platform only includes a Traditional Chinese opening.",
-    warning: "含死鴿子 🗡🕊 ️要素。",
-    warning_en: "Contains Dead Dove 🗡🕊.",
-    features: {
-        "中文開場": false,
-        "英文開場": true,
-        "可替換頭像": true,
-        "視覺小說立繪": true
-    },
-    lorebook: "",
-    links: [
-        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1355493695591415858/1355493695591415858" },
-        { name: "直接下載", file: "char/Yakuichi.png" },
-        { name: "去大冰奶遊玩", url: "https://milkteaaichat.up.railway.app/" },
-        { name: "大冰奶是什麼？", url: "https://www.plurk.com/p/3hq6spas09" }
-    ],
-    links_en: [
-        { name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1355493695591415858/1355493695591415858" },
-        { name: "Download Card", file: "char/Yakuichi.png" },
-        { name: "Play on 大冰奶", url: "https://milkteaaichat.up.railway.app/" },
-        { name: "What is 大冰奶?", url: "https://www.plurk.com/p/3hq6spas09" }
     ]
   },
   {

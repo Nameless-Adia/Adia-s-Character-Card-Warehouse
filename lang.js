@@ -19,6 +19,7 @@ const i18n = {
             "fantasy-other": "因果時空裂隙",
             "fictional-all": "全部",
             "fictional-gods": "諸神",
+            "fictional-monsters": "妖魔",
             "fictional-humans": "凡人"
         },
         homeIntro: {
@@ -59,6 +60,7 @@ const i18n = {
             "fantasy-other": "Extra",
             "fictional-all": "All",
             "fictional-gods": "Gods",
+            "fictional-monsters": "Monsters",
             "fictional-humans": "Humans"
         },
         homeIntro: {
