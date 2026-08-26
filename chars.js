@@ -1,6 +1,205 @@
 // data.js
 const characters = [
   {
+    id: "fantasy-wumei",
+    category: "fantasy-south",
+    name: "寤寐",
+    name_en: "Wumei",
+    image: "char-pic/寤寐.jpg",
+    tags: ["單人卡", "男性", "NSFW", "原創角色", "任何視角", "緩慢燃燒", "龍", "支配", "明朝", "文藝復興"],
+    tags_en: ["Solo-char", "Male", "NSFW", "OC", "AnyPOV", "Slow Burn", "Dragon", "Dominant", "Ming Dynasty", "The Renaissance"],
+    description: "漫漫歲月消磨了前塵往事與七情執妄，乃至名姓。他成了淡泊一切的看客，游離於世人魂靈之間，隨性觀夢窺心。<br>他未曾設想過，這顆近乎枯槁如灰的心，有朝一日，是否還會重燃久違的微溫。",
+    description_en: "The endless flow of time has eroded the memories of his past, his mortal passions and attachments, and even his very name. He has become a detached spectator of all things, drifting among the souls of mortals, peering into their hearts and watching their dreams on a whim.<br>He has never once imagined whether this heart, cold and withered like ash, might one day burn again with a long-forgotten warmth.",
+    reminder: "",
+    reminder_en: "",
+    warning: "",
+    warning_en: "",
+    features: {
+        "中文開場": true,
+        "英文開場": false,
+        "可替換頭像": true,
+        "視覺小說立繪": false
+    },
+    lorebook: "",
+    lorebook_en: "",
+    links: [
+        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1542165796841857155/1542165796841857155" },
+        { name: "直接下載", file: "char/寤寐.png" }
+    ],
+    links_en: [
+        { name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1542165796841857155/1542165796841857155" },
+        { name: "Download Card", file: "char/寤寐.png" }
+    ]
+  },
+  {
+    id: "fantasy-yiyu",
+    category: "fantasy-south",
+    name: "易與",
+    name_en: "Yiyu",
+    image: "char-pic/易與.jpg",
+    tags: ["單人卡", "女性", "NSFW", "原創角色", "任何視角", "歷史", "黑暗", "死鴿子", "緩慢燃燒", "龍", "支配與順從之間切換", "明朝", "文藝復興"],
+    tags_en: ["Solo-char", "Female", "NSFW", "OC", "AnyPOV", "Historical", "Dark", "Dead Dove", "Slow Burn", "Dragon", "Switch", "Ming Dynasty", "The Renaissance"],
+    description: "漫漫歲月教予了她世間貪嗔癡妄與善願念想，卻未磨平她對萬物生靈的興致。她雲遊四海，以願為貨，笑看世人競相逐願。<br>她未曾設想過，這些因果好戲，有朝一日，是否也會將她深深捲入其中。",
+    description_en: "The endless flow of time has taught her the depths of mortal greed, hatred, obsession, and benevolent wishes, yet it has never dulled her fascination with the myriad living beings of the world. She wanders far and wide, making wishes her wares, smiling as she watches mortals vie with one another in pursuit of their desires.<br>She has never once imagined whether, one day, these karmic dramas might draw her deeply into the very affairs she so enjoys watching from the sidelines.",
+    reminder: "",
+    reminder_en: "",
+    warning: "含死鴿子 🗡🕊 ️要素。",
+    warning_en: "Contains Dead Dove 🗡🕊.",
+    features: {
+        "中文開場": true,
+        "英文開場": false,
+        "可替換頭像": true,
+        "視覺小說立繪": false
+    },
+    lorebook: "",
+    lorebook_en: "",
+    links: [
+        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1542165025266073741/1542165025266073741" },
+        { name: "直接下載", file: "char/易與.png" }
+    ],
+    links_en: [
+        { name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1542165025266073741/1542165025266073741" },
+        { name: "Download Card", file: "char/易與.png" }
+    ]
+  },
+  {
+    id: "fantasy-mauro",
+    category: "fantasy-south",
+    name: "Mauro",
+    name_en: "Mauro",
+    images: [
+      "char-pic/Mauro/Mauro.jpg",
+      "char-pic/Mauro/Mauro [2.0].jpg",
+    ],
+    tags: ["單人卡", "男性", "NSFW", "原創角色", "任何視角", "黑暗", "魔法", "偽骨科", "死鴿子", "焦慮", "皇室", "支配與順從之間切換", "文藝復興"],
+    tags_en: ["Solo-char", "Male", "NSFW", "OC", "AnyPOV", "Dark", "Magic", "Pseudo-incest", "Dead Dove", "Angst", "Royalty", "Switch", "The Renaissance"],
+    description: "終結戰亂帶來盛世的黑衣大帝，亦是被稱作不死大帝的他，坐擁巨大的權勢與愛戴，但他的心卻已經千瘡百孔。沒能保護好妹妹 Janice 這件事成為他恆久的夢魘，讓他被無盡的自責與愧疚折磨了數百年。<br>而你卻讓他感受到獲得救贖與被原諒的可能性，僅僅因為他能在你的身上看見曾經 Janice 的身影。",
+    description_en: "The Black-Clad Emperor who brought an end to the wars and ushered in an age of unprecedented prosperity, also known as the Immortal Emperor, commands immense power and the unwavering admiration of his people. Yet his heart has long been left in ruins. His failure to protect his younger sister, Janice, became an eternal nightmare, tormenting him with endless guilt and self-reproach for centuries.<br>And yet, you have made him glimpse the possibility of redemption and forgiveness, simply because he can see the shadow of the Janice he once knew in you.",
+    reminder: "",
+    reminder_en: "",
+    warning: "含偽骨科、嚴重的移情傾向、死鴿子 🗡🕊 ️要素。",
+    warning_en: "Contains Pseudo-incest, Severe Transference & Projection and Dead Dove 🗡🕊.",
+    versions: [
+      {
+        versionName: "Ver 1.0",
+        features: {
+            "中文開場": false,
+            "英文開場": true,
+            "可替換頭像": true,
+            "視覺小說立繪": false,
+        },
+        lorebook: "世界觀補充，可不匯入。",
+        lorebook_en: "World lore supplement; import is optional."
+      },
+      {
+        versionName: "Ver 2.0",
+        updateDescription: "更新：中文開場補完與全新的第三種開場。",
+        updateDescription_en: "Update: Added Traditional Chinese openings and introduced a brand new third opening."
+      }
+    ],
+    links: [
+        { name: "DC 下載 Ver 1.0", url: "https://discord.com/channels/1327283064476270603/1387826204094103582/1387826204094103582" },
+        { name: "DC 下載 Ver 2.0", url: "https://discord.com/channels/1327283064476270603/1387826204094103582/1446171482311889028" },
+        { name: "直接下載 Ver 2.0", file: "char/Mauro [2.0].png" }
+    ],
+    links_en: [
+        { name: "DC Download Ver 1.0", url: "https://discord.com/channels/1327283064476270603/1387826204094103582/1387826204094103582" },
+        { name: "DC Download Ver 2.0", url: "https://discord.com/channels/1327283064476270603/1387826204094103582/1446171482311889028" },
+        { name: "Download Card Ver 2.0", file: "char/Mauro [2.0].png" }
+    ]
+  },
+  {
+    id: "fantasy-lucero",
+    category: "fantasy-south",
+    name: "Lucero",
+    name_en: "Lucero",
+    image: "char-pic/Lucero.jpg",
+    tags: ["單人卡", "男性", "NSFW", "原創角色", "任何視角", "黑暗", "魔法", "偽骨科", "死鴿子", "拯救與被拯救", "焦慮", "緩慢燃燒", "支配與順從之間切換", "中世紀"],
+    tags_en: ["Solo-char", "Male", "NSFW", "OC", "AnyPOV", "Dark", "Magic", "Pseudo-incest", "Dead Dove", "Saviorfagging", "Angst", "Slow Burn", "Switch", "Medieval"],
+    description: "三年前，戰亂終結而和平到來，他也離開了宮廷與他摯友皇帝的身旁，回歸平民的生活。<br>然而曾為了摯友而背棄了誓言的他，心靈卻再也無法給予自己原諒與寬恕。哪怕他做盡善事，甚至籌辦了孤兒院，他內心的愧疚與自責卻從未停歇。<br>在他不斷的渴求著救贖的餘生中，你會給他的靈魂帶來平靜嗎？",
+    description_en: "Three years ago, the war came to an end, and peace finally returned. He left the imperial court and his dearest friend, the Emperor, behind, returning to the life of a commoner. <br>Yet, having broken his vow for the sake of his dearest friend, he can no longer forgive himself. No matter how many good deeds he performs—even founding an orphanage—the guilt and remorse within him never cease. <br>As he spends the rest of his life yearning for redemption, will you be the one to bring peace to his soul?",
+    reminder: "",
+    reminder_en: "",
+    warning: "含偽骨科、愧疚心理、死鴿子 🗡🕊 ️要素。",
+    warning_en: "Contains Pseudo-incest, Guilt & Remorse and Dead Dove 🗡🕊.",
+    features: {
+        "中文開場": true,
+        "英文開場": true,
+        "可替換頭像": true,
+        "視覺小說立繪": false
+    },
+    lorebook: "世界觀補充，可不匯入。",
+    lorebook_en: "World lore supplement; import is optional.",
+    links: [
+        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1507652430735740948/1507652430735740948" }
+    ],
+    links_en: [
+        { name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1507652430735740948/1507652430735740948" }
+    ]
+  },
+  {
+    id: "fantasy-gillamarveo",
+    category: "fantasy-south",
+    name: "Gillamarveo",
+    name_en: "Gillamarveo",
+    image: "char-pic/Gillamarveo.jpg",
+    tags: ["單人卡", "女性", "NSFW", "原創角色", "任何視角", "黑暗", "魔法", "死鴿子", "拯救與被拯救", "焦慮", "非人類", "順從", "支配與順從之間切換", "中世紀"],
+    tags_en: ["Solo-char", "Female", "NSFW", "OC", "AnyPOV", "Dark", "Magic", "Dead Dove", "Saviorfagging", "Angst", "Non-Human", "Submissive", "Switch", "Medieval"],
+    description: "為了活下去，她付出了人格被扭曲、記憶被竄改、甚至不再是人類的代價。然而內心深處，她總想尋回那些被遺失的自我，同時瘋狂的自我質問著：我是誰？<br>而你，將如何朝她伸出援手？",
+    description_en: "To survive, she paid the price of a distorted psyche, altered memories, and a transformation that left her no longer human. Yet deep down, she longs to reclaim the parts of herself she has lost, constantly tormented by the question: \"Who am I?\"<br>How will you reach out to her?",
+    reminder: "",
+    reminder_en: "",
+    warning: "含精神疾患、肉體改造、死鴿子 🗡🕊 ️要素。",
+    warning_en: "Contains Mental Illness, Body Modification and Dead Dove 🗡🕊.",
+    features: {
+        "中文開場": true,
+        "英文開場": true,
+        "可替換頭像": true,
+        "視覺小說立繪": false
+    },
+    lorebook: "世界觀補充，可不匯入。",
+    lorebook_en: "World lore supplement; import is optional.",
+    links: [
+        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1473260040822718504/1473260040822718504" },
+        { name: "直接下載", file: "char/Gillamarveo.png" }
+    ],
+    links_en: [
+        { name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1473260040822718504/1473260040822718504" },
+        { name: "Download Card", file: "char/Gillamarveo.png" }
+    ]
+  },
+  {
+    id: "fantasy-rosalind-fang",
+    category: "fantasy-south",
+    name: "方紅綾",
+    name_en: "Rosalind Fang",
+    image: "char-pic/方紅綾.jpg",
+    tags: ["單人卡", "女性", "NSFW", "原創角色", "任何視角", "黑暗", "魔法", "死鴿子", "焦慮", "皇室", "公主", "順從", "中世紀"],
+    tags_en: ["Solo-char", "Female", "NSFW", "OC", "AnyPOV", "Dark", "Magic", "Dead Dove", "Angst", "Royalty", "Princess", "Submissive", "Medieval"],
+    description: "她是被預言為『救國福兆』的公主，卻在誕生時遭逢了場三天三夜的紅雨，頓時成了舉國認定的『災厄』。然而戰火肆虐之下，民眾同時矛盾的期望著『救國福兆』的預言仍然可以成真，這才保住了她的性命，卻也使她的生命中再無關愛與自由，只剩疏離與禁錮。<br>而你又會為她的命運帶來如何的變數？",
+    description_en: "Prophesied as an 'auspicious omen of national salvation', she was instead born beneath a deluge of red rain that lasted three days and nights, immediately branding her as the nation's ultimate 'calamity'. Amid ravaging warfare, however, the desperate citizens paradoxically cling to the hope that the prophecy of national salvation might still prove true. Though this contradiction spared her life, it also left her existence devoid of warmth and freedom, with nothing but confinement and isolation.<br>What ripples will you create in her fate?",
+    reminder: "",
+    reminder_en: "",
+    warning: "含嚴重的憂鬱傾向、死鴿子 🗡🕊 ️要素。",
+    warning_en: "Contains Severe Depressive Tendencies and Dead Dove 🗡🕊.",
+    features: {
+        "中文開場": true,
+        "英文開場": true,
+        "可替換頭像": false,
+        "視覺小說立繪": false
+    },
+    lorebook: "世界觀補充，可不匯入。",
+    lorebook_en: "World lore supplement; import is optional.",
+    links: [
+        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1411236220867973150/1411236220867973150" },
+        { name: "直接下載", file: "char/方紅綾.png" }
+    ],
+    links_en: [
+        { name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1411236220867973150/1411236220867973150" },
+        { name: "Download Card", file: "char/方紅綾.png" }
+    ]
+  },
+  {
     id: "fictional-yakuichi-alt3",
     category: "fictional-monsters",
     name: "亦壹",
@@ -358,112 +557,6 @@ const characters = [
     links_en: [
         { name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1480173021661757460/1480173021661757460" },
         { name: "Download Card", file: "char/Eluas.png" }
-    ]
-  },
-  {
-    id: "fantasy-lucero",
-    category: "fantasy-south",
-    name: "Lucero",
-    name_en: "Lucero",
-    image: "char-pic/Lucero.jpg",
-    tags: ["單人卡", "男性", "NSFW", "原創角色", "任何視角", "黑暗", "魔法", "偽骨科", "死鴿子", "拯救與被拯救", "焦慮", "緩慢燃燒", "支配與順從之間切換", "中世紀"],
-    tags_en: ["Solo-char", "Male", "NSFW", "OC", "AnyPOV", "Dark", "Magic", "Pseudo-incest", "Dead Dove", "Saviorfagging", "Angst", "Slow Burn", "Switch", "Medieval"],
-    description: "三年前，戰亂終結而和平到來，他也離開了宮廷與他摯友皇帝的身旁，回歸平民的生活。<br>然而曾為了摯友而背棄了誓言的他，心靈卻再也無法給予自己原諒與寬恕。哪怕他做盡善事，甚至籌辦了孤兒院，他內心的愧疚與自責卻從未停歇。<br>在他不斷的渴求著救贖的餘生中，你會給他的靈魂帶來平靜嗎？",
-    description_en: "Three years ago, the war came to an end, and peace finally returned. He left the imperial court and his dearest friend, the Emperor, behind, returning to the life of a commoner. <br>Yet, having broken his vow for the sake of his dearest friend, he can no longer forgive himself. No matter how many good deeds he performs—even founding an orphanage—the guilt and remorse within him never cease. <br>As he spends the rest of his life yearning for redemption, will you be the one to bring peace to his soul?",
-    reminder: "",
-    reminder_en: "",
-    warning: "含偽骨科、愧疚心理、死鴿子 🗡🕊 ️要素。",
-    warning_en: "Contains Pseudo-incest, Guilt & Remorse and Dead Dove 🗡🕊.",
-    features: {
-        "中文開場": true,
-        "英文開場": true,
-        "可替換頭像": true,
-        "視覺小說立繪": false
-    },
-    lorebook: "世界觀補充，可不匯入。",
-    lorebook_en: "World lore supplement; import is optional.",
-    links: [
-        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1507652430735740948/1507652430735740948" }
-    ],
-    links_en: [
-        { name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1507652430735740948/1507652430735740948" }
-    ]
-  },
-  {
-    id: "fantasy-mauro",
-    category: "fantasy-south",
-    name: "Mauro",
-    name_en: "Mauro",
-    images: [
-      "char-pic/Mauro/Mauro.jpg",
-      "char-pic/Mauro/Mauro [2.0].jpg",
-    ],
-    tags: ["單人卡", "男性", "NSFW", "原創角色", "任何視角", "黑暗", "魔法", "偽骨科", "死鴿子", "焦慮", "皇室", "支配與順從之間切換", "文藝復興"],
-    tags_en: ["Solo-char", "Male", "NSFW", "OC", "AnyPOV", "Dark", "Magic", "Pseudo-incest", "Dead Dove", "Angst", "Royalty", "Switch", "The Renaissance"],
-    description: "終結戰亂帶來盛世的黑衣大帝，亦是被稱作不死大帝的他，坐擁巨大的權勢與愛戴，但他的心卻已經千瘡百孔。沒能保護好妹妹 Janice 這件事成為他恆久的夢魘，讓他被無盡的自責與愧疚折磨了數百年。<br>而你卻讓他感受到獲得救贖與被原諒的可能性，僅僅因為他能在你的身上看見曾經 Janice 的身影。",
-    description_en: "The Black-Clad Emperor who brought an end to the wars and ushered in an age of unprecedented prosperity, also known as the Immortal Emperor, commands immense power and the unwavering admiration of his people. Yet his heart has long been left in ruins. His failure to protect his younger sister, Janice, became an eternal nightmare, tormenting him with endless guilt and self-reproach for centuries.<br>And yet, you have made him glimpse the possibility of redemption and forgiveness, simply because he can see the shadow of the Janice he once knew in you.",
-    reminder: "",
-    reminder_en: "",
-    warning: "含偽骨科、嚴重的移情傾向、死鴿子 🗡🕊 ️要素。",
-    warning_en: "Contains Pseudo-incest, Severe Transference & Projection and Dead Dove 🗡🕊.",
-    versions: [
-      {
-        versionName: "Ver 1.0",
-        features: {
-            "中文開場": false,
-            "英文開場": true,
-            "可替換頭像": true,
-            "視覺小說立繪": false,
-        },
-        lorebook: "世界觀補充，可不匯入。",
-        lorebook_en: "World lore supplement; import is optional."
-      },
-      {
-        versionName: "Ver 2.0",
-        updateDescription: "更新：中文開場補完與全新的第三種開場。",
-        updateDescription_en: "Update: Added Traditional Chinese openings and introduced a brand new third opening."
-      }
-    ],
-    links: [
-        { name: "DC 下載 Ver 1.0", url: "https://discord.com/channels/1327283064476270603/1387826204094103582/1387826204094103582" },
-        { name: "DC 下載 Ver 2.0", url: "https://discord.com/channels/1327283064476270603/1387826204094103582/1446171482311889028" },
-        { name: "直接下載 Ver 2.0", file: "char/Mauro [2.0].png" }
-    ],
-    links_en: [
-        { name: "DC Download Ver 1.0", url: "https://discord.com/channels/1327283064476270603/1387826204094103582/1387826204094103582" },
-        { name: "DC Download Ver 2.0", url: "https://discord.com/channels/1327283064476270603/1387826204094103582/1446171482311889028" },
-        { name: "Download Card Ver 2.0", file: "char/Mauro [2.0].png" }
-    ]
-  },
-  {
-    id: "fantasy-gillamarveo",
-    category: "fantasy-south",
-    name: "Gillamarveo",
-    name_en: "Gillamarveo",
-    image: "char-pic/Gillamarveo.jpg",
-    tags: ["單人卡", "女性", "NSFW", "原創角色", "任何視角", "黑暗", "魔法", "死鴿子", "拯救與被拯救", "焦慮", "非人類", "順從", "支配與順從之間切換", "中世紀"],
-    tags_en: ["Solo-char", "Female", "NSFW", "OC", "AnyPOV", "Dark", "Magic", "Dead Dove", "Saviorfagging", "Angst", "Non-Human", "Submissive", "Switch", "Medieval"],
-    description: "為了活下去，她付出了人格被扭曲、記憶被竄改、甚至不再是人類的代價。然而內心深處，她總想尋回那些被遺失的自我，同時瘋狂的自我質問著：我是誰？<br>而你，將如何朝她伸出援手？",
-    description_en: "To survive, she paid the price of a distorted psyche, altered memories, and a transformation that left her no longer human. Yet deep down, she longs to reclaim the parts of herself she has lost, constantly tormented by the question: \"Who am I?\"<br>How will you reach out to her?",
-    reminder: "",
-    reminder_en: "",
-    warning: "含精神疾患、肉體改造、死鴿子 🗡🕊 ️要素。",
-    warning_en: "Contains Mental Illness, Body Modification and Dead Dove 🗡🕊.",
-    features: {
-        "中文開場": true,
-        "英文開場": true,
-        "可替換頭像": true,
-        "視覺小說立繪": false
-    },
-    lorebook: "世界觀補充，可不匯入。",
-    lorebook_en: "World lore supplement; import is optional.",
-    links: [
-        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1473260040822718504/1473260040822718504" },
-        { name: "直接下載", file: "char/Gillamarveo.png" }
-    ],
-    links_en: [
-        { name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1473260040822718504/1473260040822718504" },
-        { name: "Download Card", file: "char/Gillamarveo.png" }
     ]
   },
   {
@@ -868,37 +961,6 @@ const characters = [
     ]
   },
   {
-    id: "fantasy-rosalind-fang",
-    category: "fantasy-south",
-    name: "方紅綾",
-    name_en: "Rosalind Fang",
-    image: "char-pic/方紅綾.jpg",
-    tags: ["單人卡", "女性", "NSFW", "原創角色", "任何視角", "黑暗", "魔法", "死鴿子", "焦慮", "皇室", "公主", "順從", "中世紀"],
-    tags_en: ["Solo-char", "Female", "NSFW", "OC", "AnyPOV", "Dark", "Magic", "Dead Dove", "Angst", "Royalty", "Princess", "Submissive", "Medieval"],
-    description: "她是被預言為『救國福兆』的公主，卻在誕生時遭逢了場三天三夜的紅雨，頓時成了舉國認定的『災厄』。然而戰火肆虐之下，民眾同時矛盾的期望著『救國福兆』的預言仍然可以成真，這才保住了她的性命，卻也使她的生命中再無關愛與自由，只剩疏離與禁錮。<br>而你又會為她的命運帶來如何的變數？",
-    description_en: "Prophesied as an 'auspicious omen of national salvation', she was instead born beneath a deluge of red rain that lasted three days and nights, immediately branding her as the nation's ultimate 'calamity'. Amid ravaging warfare, however, the desperate citizens paradoxically cling to the hope that the prophecy of national salvation might still prove true. Though this contradiction spared her life, it also left her existence devoid of warmth and freedom, with nothing but confinement and isolation.<br>What ripples will you create in her fate?",
-    reminder: "",
-    reminder_en: "",
-    warning: "含嚴重的憂鬱傾向、死鴿子 🗡🕊 ️要素。",
-    warning_en: "Contains Severe Depressive Tendencies and Dead Dove 🗡🕊.",
-    features: {
-        "中文開場": true,
-        "英文開場": true,
-        "可替換頭像": false,
-        "視覺小說立繪": false
-    },
-    lorebook: "世界觀補充，可不匯入。",
-    lorebook_en: "World lore supplement; import is optional.",
-    links: [
-        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1411236220867973150/1411236220867973150" },
-        { name: "直接下載", file: "char/方紅綾.png" }
-    ],
-    links_en: [
-        { name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1411236220867973150/1411236220867973150" },
-        { name: "Download Card", file: "char/方紅綾.png" }
-    ]
-  },
-  {
     id: "fictional-ivansylth-alt",
     category: "fictional-humans",
     name: "Ivansylth",
@@ -958,7 +1020,7 @@ const characters = [
         { name: "Download Card", file: "char/Shano [ALT].png" }
     ]
   },
-  { /* 從這裡開始繼續整理翻譯 goon */
+  {
     id: "fictional-shano-alt2",
     category: "fictional-humans",
     name: "夏諾",
