@@ -1,6 +1,92 @@
 // data.js
 const characters = [
   {
+    id: "fictional-tan-lewang-alt2",
+    category: "fictional-humans",
+    name: "譚樂望",
+    name_en: "Tan Lewang",
+    image: "char-pic/譚樂望 [ALT2].jpg",
+    tags: ["單人卡", "男性", "NSFW", "原創角色", "任何視角", "中式古風", "歷史", "仙俠", "超自然", "東方道法", "儒家思想", "支配與順從之間切換", "明朝"],
+    tags_en: ["Solo-char", "Male", "NSFW", "OC", "AnyPOV", "Ancient Chinese Style", "Historical", "Xianxia", "Supernatural", "Taoist Sorcery", "Confucianism", "Switch", "Ming Dynasty"],
+    description: "他身負仙緣卻貪戀煙火塵世，憑一身道法行俠仗義，甚至與皇帝朱瞻基結為莫逆之交。<br>而當你的命數與胸懷俠義的他交織在一塊時，又將會激起如何的漣漪？",
+    description_en: "Though blessed with a fated connection to the immortal path, he remains enamored with the mortal world, wielding his Daoist arts to champion the righteous—and has even become a kindred spirit to Emperor Zhu Zhanji.<br>And when your destiny intertwines with that of this chivalrous soul, what ripples will your encounter set in motion?",
+    reminder: "",
+    reminder_en: "",
+    warning: "",
+    warning_en: "",
+    features: {
+        "中文開場": true,
+        "英文開場": false,
+        "可替換頭像": true,
+        "視覺小說立繪": false
+    },
+    lorebook: "",
+    links: [
+        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1405045119953928202/1560169764041789525" }
+    ],
+    links_en: [
+        { name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1405045119953928202/1560169764041789525" }
+    ]
+  },
+  {
+    id: "fictional-tan-lewang-alt",
+    category: "fictional-humans",
+    name: "譚樂望",
+    name_en: "Tan Lewang",
+    image: "char-pic/譚樂望 [ALT].jpg",
+    tags: ["單人卡", "男性", "NSFW", "原創角色", "任何視角", "歷史", "仙俠", "超自然", "東方道法", "喜劇", "支配與順從之間切換", "現代"],
+    tags_en: ["Solo-char", "Male", "NSFW", "OC", "AnyPOV", "Historical", "Xianxia", "Supernatural", "Taoist Sorcery", "Comedy", "Switch", "Modern"],
+    description: "戰火紛飛的年代，他最終接受了遊說，隨著他的師父一同遁入洞天福地，只為修身求道，然而他的心卻無論如何都斬斷不了那份貪戀。百年的時光過去，他依然想念著故鄉、留戀著人間的那份煙火氣息，也因此來自師父的那道出山課題，可讓他樂壞了。<br>背起簡便的小行囊，他，就是滿懷希冀與興奮的再次來到人間……",
+    description_en: "During an age ravaged by war, he finally yielded to persuasion and entered a hidden blessed realm with his master, seeking cultivation and the Dao. Yet, no matter how hard he tried, his heart could never let go of its attachment to the mortal world. A century has passed, and he still longs for his hometown and the simple joys of mortal life. Therefore, when his master gave him a task that required him to descend the mountain, he was overjoyed.<br>With a simple satchel on his back, he steps into the mortal realm once more, filled with hope and excitement...",
+    reminder: "",
+    reminder_en: "",
+    warning: "可能涉及歷史爭議與敏感政治議題。<br>所有情節、觀點與對話，皆為角色塑造所需，其生成內容亦受 AI 模型之不確定性影響，均不代表作者本人之立場。",
+    warning_en: "May involve historical controversies and sensitive political topics.<br>All story elements, viewpoints, and dialogues are created solely for character development. AI-generated content is subject to the inherent unpredictability of AI models and does not represent the author's personal stance.",
+    features: {
+        "中文開場": true,
+        "英文開場": false,
+        "可替換頭像": true,
+        "視覺小說立繪": false
+    },
+    lorebook: "",
+    links: [
+        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1405045119953928202/1482764501735444561" }
+    ],
+    links_en: [
+        { name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1405045119953928202/1482764501735444561" }
+    ]
+  },
+  {
+    id: "fictional-tan-lewang",
+    category: "fictional-humans",
+    name: "譚樂望",
+    name_en: "Tan Lewang",
+    image: "char-pic/譚樂望.jpg",
+    tags: ["單人卡", "男性", "NSFW", "原創角色", "任何視角", "歷史", "仙俠", "超自然", "東方道法", "喜劇", "支配與順從之間切換", "現代台灣"],
+    tags_en: ["Solo-char", "Male", "NSFW", "OC", "AnyPOV", "Historical", "Xianxia", "Supernatural", "Taoist Sorcery", "Comedy", "Switch", "Modern Taiwan"],
+    description: "從民國初年至現代，從中國東北至台灣，歷經了戰火與歲月的磨礪，他，一名無名半仙，卻依舊保有初心，堅持著他的俠義心腸。<br>而你與這樣的他相遇了……",
+    description_en: "From the early Republican era to the modern day, from Northeastern China to Taiwan, he has endured the trials of war and time. Yet this unknown half-immortal still holds onto his original convictions, steadfastly upholding his sense of chivalry and justice.<br>And you have crossed paths with him...",
+    reminder: "",
+    reminder_en: "",
+    warning: "可能涉及歷史爭議與敏感政治議題。<br>所有情節、觀點與對話，皆為角色塑造所需，其生成內容亦受 AI 模型之不確定性影響，均不代表作者本人之立場。",
+    warning_en: "May involve historical controversies and sensitive political topics.<br>All story elements, viewpoints, and dialogues are created solely for character development. AI-generated content is subject to the inherent unpredictability of AI models and does not represent the author's personal stance.",
+    features: {
+        "中文開場": true,
+        "英文開場": false,
+        "可替換頭像": true,
+        "視覺小說立繪": false
+    },
+    lorebook: "",
+    links: [
+        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1405045119953928202/1405045119953928202" },
+        { name: "直接下載", file: "char/譚樂望.png" }
+    ],
+    links_en: [
+        { name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1405045119953928202/1405045119953928202" },
+        { name: "Download Card", file: "char/譚樂望.png" }
+    ]
+  },
+  {
     id: "fantasy-wumei",
     category: "fantasy-south",
     name: "寤寐",
@@ -661,64 +747,6 @@ const characters = [
     links_en: [
         { name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1487141625082806473/1487141625082806473" },
         { name: "Download Card", file: "char/Yury and Enu.png" }
-    ]
-  },
-  {
-    id: "fictional-tan-lewang-alt",
-    category: "fictional-humans",
-    name: "譚樂望",
-    name_en: "Tan Lewang",
-    image: "char-pic/譚樂望 [ALT].jpg",
-    tags: ["單人卡", "男性", "NSFW", "原創角色", "任何視角", "歷史", "仙俠", "超自然", "東方道法", "喜劇", "支配與順從之間切換", "現代"],
-    tags_en: ["Solo-char", "Male", "NSFW", "OC", "AnyPOV", "Historical", "Xianxia", "Supernatural", "Taoist Sorcery", "Comedy", "Switch", "Modern"],
-    description: "戰火紛飛的年代，他最終接受了遊說，隨著他的師父一同遁入洞天福地，只為修身求道，然而他的心卻無論如何都斬斷不了那份貪戀。百年的時光過去，他依然想念著故鄉、留戀著人間的那份煙火氣息，也因此來自師父的那道出山課題，可讓他樂壞了。<br>背起簡便的小行囊，他，就是滿懷希冀與興奮的再次來到人間……",
-    description_en: "During an age ravaged by war, he finally yielded to persuasion and entered a hidden blessed realm with his master, seeking cultivation and the Dao. Yet, no matter how hard he tried, his heart could never let go of its attachment to the mortal world. A century has passed, and he still longs for his hometown and the simple joys of mortal life. Therefore, when his master gave him a task that required him to descend the mountain, he was overjoyed.<br>With a simple satchel on his back, he steps into the mortal realm once more, filled with hope and excitement...",
-    reminder: "",
-    reminder_en: "",
-    warning: "可能涉及歷史爭議與敏感政治議題。<br>所有情節、觀點與對話，皆為角色塑造所需，其生成內容亦受 AI 模型之不確定性影響，均不代表作者本人之立場。",
-    warning_en: "May involve historical controversies and sensitive political topics.<br>All story elements, viewpoints, and dialogues are created solely for character development. AI-generated content is subject to the inherent unpredictability of AI models and does not represent the author's personal stance.",
-    features: {
-        "中文開場": true,
-        "英文開場": false,
-        "可替換頭像": true,
-        "視覺小說立繪": false
-    },
-    lorebook: "",
-    links: [
-        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1405045119953928202/1482764501735444561" }
-    ],
-    links_en: [
-        { name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1405045119953928202/1482764501735444561" }
-    ]
-  },
-  {
-    id: "fictional-tan-lewang",
-    category: "fictional-humans",
-    name: "譚樂望",
-    name_en: "Tan Lewang",
-    image: "char-pic/譚樂望.jpg",
-    tags: ["單人卡", "男性", "NSFW", "原創角色", "任何視角", "歷史", "仙俠", "超自然", "東方道法", "喜劇", "支配與順從之間切換", "現代台灣"],
-    tags_en: ["Solo-char", "Male", "NSFW", "OC", "AnyPOV", "Historical", "Xianxia", "Supernatural", "Taoist Sorcery", "Comedy", "Switch", "Modern Taiwan"],
-    description: "從民國初年至現代，從中國東北至台灣，歷經了戰火與歲月的磨礪，他，一名無名半仙，卻依舊保有初心，堅持著他的俠義心腸。<br>而你與這樣的他相遇了……",
-    description_en: "From the early Republican era to the modern day, from Northeastern China to Taiwan, he has endured the trials of war and time. Yet this unknown half-immortal still holds onto his original convictions, steadfastly upholding his sense of chivalry and justice.<br>And you have crossed paths with him...",
-    reminder: "",
-    reminder_en: "",
-    warning: "可能涉及歷史爭議與敏感政治議題。<br>所有情節、觀點與對話，皆為角色塑造所需，其生成內容亦受 AI 模型之不確定性影響，均不代表作者本人之立場。",
-    warning_en: "May involve historical controversies and sensitive political topics.<br>All story elements, viewpoints, and dialogues are created solely for character development. AI-generated content is subject to the inherent unpredictability of AI models and does not represent the author's personal stance.",
-    features: {
-        "中文開場": true,
-        "英文開場": false,
-        "可替換頭像": true,
-        "視覺小說立繪": false
-    },
-    lorebook: "",
-    links: [
-        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1405045119953928202/1405045119953928202" },
-        { name: "直接下載", file: "char/譚樂望.png" }
-    ],
-    links_en: [
-        { name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1405045119953928202/1405045119953928202" },
-        { name: "Download Card", file: "char/譚樂望.png" }
     ]
   },
   {
