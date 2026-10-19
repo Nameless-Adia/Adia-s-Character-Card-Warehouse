@@ -6,15 +6,15 @@ const prompts = [
         mainName_en: "Bowl Ice Prompt",
         subName: "Adia-🍨-Loacl-in-Chat",
         latestVersion: {
-            versionName: "0.3.4",
+            versionName: "0.4",
             compatibility: "多數開源 / 商業模型。",
             compatibility_en: "Most open-source & commercial models.",
             features: "結構精簡，提示內容簡樸單純，以適應多數的模型並可方便地無痛進行切換。提供簡單的寫作文風微調、思維鏈選項、時間列選項、選項角功能與搞笑番外小劇場的項目，預設繁體中文輸出，可選英文輸出，允許配合 SillyTavern 內建的摘要總結功能。提供搭配的正規表示式。",
             features_en: "A lightweight and simple prompt structure designed to work well with most models, allowing smooth switching between different LLMs. Includes basic writing style adjustments, CoT options, timeline options, optional character choice features, and humorous side-story modules. Outputs Traditional Chinese by default, with optional English output support, and works well with SillyTavern's built-in summarization feature. Comes with matching regular expressions.",
-            links: [{ name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1342363740519137300/1556857293600067604" },
-                    { name: "直接下載", file: "prompt/Adia-🍨-Loacl-in-Chat-0.3.4.json" }],
-            links_en: [{ name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1342363740519137300/1556857293600067604" },
-                       { name: "Download Prompt", file: "prompt/Adia-🍨-Loacl-in-Chat-0.3.4.json" }]
+            links: [{ name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1342363740519137300/1561587885684035619" },
+                    { name: "直接下載", file: "prompt/Adia-🍨-Loacl-in-Chat-0.4.json" }],
+            links_en: [{ name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1342363740519137300/1561587885684035619" },
+                       { name: "Download Prompt", file: "prompt/Adia-🍨-Loacl-in-Chat-0.4.json" }]
         },
         oldVersions: []
     },
@@ -24,15 +24,15 @@ const prompts = [
         mainName_en: "WontoNnnnnnn Prompt",
         subName: "Adia-🥟-WontoNnnnnnn",
         latestVersion: {
-            versionName: "1.2",
+            versionName: "1.3",
             compatibility: "Gemini-Flash 及常見商業 / 開源模型。",
             compatibility_en: "Gemini-Flash and popular commercial / open-source models.",
             features: "結構些許複雜，提示內容主要針對 Gemini 的特性進行撰寫，並強調情感敘述與描寫。提供寫作文風選項、思維鏈選項、時間列選項、好感列選項、選項角功能與多風格番外小劇場的項目，預設繁體中文輸出，可選英文輸出，允許配合 SillyTavern 內建的摘要總結功能。提供搭配的正規表示式。",
             features_en: "A more feature-rich prompt framework primarily designed around Gemini's strengths, with an emphasis on emotional narration and descriptive writing. It includes writing style options, CoT options, timeline options, affection meter options, optional character choice features, and multi-style bonus side stories. Traditional Chinese output is enabled by default, with optional English output support. It also works with SillyTavern's built-in summarization feature and comes with matching regular expressions.",
-            links: [{ name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1360563361087094904/1546433014647488542" },
-                    { name: "直接下載", file: "prompt/Adia-🥟-WontoNnnnnnn-1.2.json" }],
-            links_en: [{ name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1360563361087094904/1546433014647488542" },
-                       { name: "Download Prompt", file: "prompt/Adia-🥟-WontoNnnnnnn-1.2.json" }]
+            links: [{ name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1360563361087094904/1561587007858278530" },
+                    { name: "直接下載", file: "prompt/Adia-🥟-WontoNnnnnnn-1.3.json" }],
+            links_en: [{ name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1360563361087094904/1561587007858278530" },
+                       { name: "Download Prompt", file: "prompt/Adia-🥟-WontoNnnnnnn-1.3.json" }]
         },
         oldVersions: [
             {
@@ -102,13 +102,13 @@ const prompts = [
         mainName_en: "System Persona Prompt",
         subName: "Adia-🧂-System",
         latestVersion: {
-            versionName: "0.1",
+            versionName: "0.1.1",
             compatibility: "任何模型。",
             compatibility_en: "Any model.",
             features: "允許透過 SillyTavern 內建的角色定義、知識書、摘要等等欄位，讓 LLM 助手擁有非常私人化的背景、性格、記憶。",
             features_en: "Allows the LLM assistant to be given highly personalized backgrounds, personalities, and memories through SillyTavern's built-in Character Definition, Lorebooks, Summary, and related fields.",
-            links: [{ name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1389976248838524959/1389976248838524959" }],
-            links_en: [{ name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1389976248838524959/1389976248838524959" }]
+            links: [{ name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1389976248838524959/1561584972224274552" }],
+            links_en: [{ name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1389976248838524959/1561584972224274552" }]
         },
         oldVersions: []
     },
