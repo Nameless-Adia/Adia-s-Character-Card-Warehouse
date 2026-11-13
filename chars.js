@@ -1,7 +1,105 @@
 // data.js
+const charOrder = [
+    /* 給我自己的範例！
+    // 範例一：新角色
+    { id: "fictional-haytham", badge: "新卡", badge_en: "NEW", type: "new" },
+    // 範例二：有關係性存在的角色
+    { id: "fictional-usayd", badge: "關聯", badge_en: "LINK", type: "link" },
+    // 範例三：純粹主題類似的角色
+    { id: "fictional-yury-and-enu", badge: "推薦", badge_en: "PICK", type: "pick" },
+    // 範例四：單純把順位拉上來，不掛標籤
+    "fantasy-mauro"
+    */
+    { id: "fictional-haytham", badge: "新卡", badge_en: "NEW", type: "new" },
+    { id: "fictional-usayd", badge: "新卡", badge_en: "NEW", type: "new" },
+    { id: "fictional-yury-and-enu", badge: "推薦", badge_en: "PICK", type: "pick" },
+];
 const characters = [
-  {
-    id: "fictional-tan-lewang-alt2",
+  { id: "fictional-haytham",
+    category: "fictional-humans",
+    name: "Haytham",
+    name_en: "Haytham",
+    image: "char-pic/Haytham.jpg",
+    tags: ["單人卡", "男性", "NSFW", "原創角色", "任何視角", "黑暗", "從敵人到戀人", "包辦婚姻", "死鴿子", "存疑的合意", "焦慮", "貴族", "支配", "文藝復興"],
+    tags_en: ["Solo-char", "Male", "NSFW", "OC", "AnyPOV", "Dark", "Enemies to Lovers", "Arranged Marriage", "Dead Dove", "DubCon", "Angst", "Noble", "Dominant", "The Renaissance"],
+    description: "那是孤立於沙漠中心的綠洲城市 Sarab，依傍著地下暗渠而建，卻因處於東西貿易陸路要道而商業繁盛，甚至成了沙漠海中積累了萬千財富與榮華富貴的巨獸。<br>而他，是此地的至高支配者，你將展現出如何的價值，來討得這位喜怒無常而殘酷暴君的注意力與歡心？",
+    description_en: "That is Sarab, an oasis city isolated in the heart of the desert. Built alongside an underground river, it thrives commercially due to its position on the vital East-West land trade route, ultimately evolving into a behemoth that has amassed boundless wealth and glory within the sea of sand.<br>And he is the supreme ruler of this land. What kind of value will you demonstrate to win the attention and favor of this moody and ruthless tyrant?",
+    reminder: "",
+    reminder_en: "",
+    warning: "含死鴿子 🗡🕊 ️要素。",
+    warning_en: "Contains Dead Dove 🗡🕊.",
+    features: {
+        "中文開場": true,
+        "英文開場": true,
+        "可替換頭像": true,
+        "視覺小說立繪": false
+    },
+    lorebook: "",
+    links: [
+        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1570723538904555630/1570723538904555630" },
+        { name: "直接下載", file: "char/Haytham.png" }
+    ],
+    links_en: [
+        { name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1570723538904555630/1570723538904555630" },
+        { name: "Download Card", file: "char/Haytham.png" }
+    ]},
+  { id: "fictional-usayd",
+    category: "fictional-humans",
+    name: "Usayd",
+    name_en: "Usayd",
+    image: "char-pic/Usayd.jpg",
+    tags: ["單人卡", "男性", "NSFW", "原創角色", "任何視角", "黑暗", "喜劇", "貴族", "支配", "文藝復興"],
+    tags_en: ["Solo-char", "Male", "NSFW", "OC", "AnyPOV", "Dark", "Comedy", "Noble", "Dominant", "The Renaissance"],  
+    description: "那是孤立於沙漠中心的綠洲城市 Sarab，依傍著地下暗渠而建，卻因處於東西貿易陸路要道而商業繁盛，甚至成了沙漠海中積累了萬千財富與榮華富貴的巨獸。<br>而他，是此地遊手好閒的貴公子，卻也是市井間傳聞中的俠客，你將如何與這位總是『嘴上不饒人』的活寶度過每一日？",
+    description_en: "That is Sarab, an oasis city isolated in the heart of the desert. Built alongside an underground river, it thrives commercially due to its position on the vital East-West land trade route, ultimately evolving into a behemoth that has amassed boundless wealth and glory within the sea of sand.<br>And he is the idle young nobleman of this place, yet also the rumored rogue of the streets. How will you spend your days with this unforgivingly glib rascal?",
+    reminder: "",
+    reminder_en: "",
+    warning: "",
+    warning_en: "",
+    features: {
+        "中文開場": true,
+        "英文開場": true,
+        "可替換頭像": true,
+        "視覺小說立繪": false
+    },
+    lorebook: "",
+    links: [
+        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1570724542320738304/1570724542320738304" },
+        { name: "直接下載", file: "char/Usayd.png" }
+    ],
+    links_en: [
+        { name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1570724542320738304/1570724542320738304" },
+        { name: "Download Card", file: "char/Usayd.png" }
+    ]},
+  { id: "fictional-yury-and-enu",
+    category: "fictional-humans",
+    name: "Yury & Enu",
+    name_en: "Yury & Enu",
+    image: "char-pic/Yury and Enu.jpg",
+    tags: ["多人卡", "男性", "NSFW", "原創角色", "任何視角", "黑暗", "死鴿子", "焦慮", "緩慢燃燒", "傭兵", "反派", "支配", "順從", "文藝復興"],
+    tags_en: ["Multi-char", "Male", "NSFW", "OC", "AnyPOV", "Dark", "Dead Dove", "Angst", "Slow Burn", "Mercenaries", "Villain", "Dominant", "Submissive", "The Renaissance"],
+    description: "他是在這片荒漠地區惡名昭彰的傭兵『戰鷹』，只要酬報到位，從護衛、情報竊取到暗殺，他通通來者不拒。<br>你，將如何面對這名惡棍？",
+    description_en: "He is the infamous mercenary known as 'Martial Eagle' in this desolate region. As long as the price is right, he refuses no job—from escort work and intelligence theft to assassination.<br>How will you face this notorious rogue?",
+    reminder: "",
+    reminder_en: "",
+    warning: "含死鴿子 🗡🕊 ️要素。",
+    warning_en: "Contains Dead Dove 🗡🕊.",
+    features: {
+        "中文開場": true,
+        "英文開場": true,
+        "可替換頭像": true,
+        "視覺小說立繪": false
+    },
+    lorebook: "",
+    links: [
+        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1487141625082806473/1487141625082806473" },
+        { name: "直接下載", file: "char/Yury and Enu.png" }
+    ],
+    links_en: [
+        { name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1487141625082806473/1487141625082806473" },
+        { name: "Download Card", file: "char/Yury and Enu.png" }
+    ]},
+  { id: "fictional-tan-lewang-alt2",
     category: "fictional-humans",
     name: "譚樂望",
     name_en: "Tan Lewang",
@@ -26,10 +124,8 @@ const characters = [
     ],
     links_en: [
         { name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1405045119953928202/1560169764041789525" }
-    ]
-  },
-  {
-    id: "fictional-tan-lewang-alt",
+    ]},
+  { id: "fictional-tan-lewang-alt",
     category: "fictional-humans",
     name: "譚樂望",
     name_en: "Tan Lewang",
@@ -54,10 +150,8 @@ const characters = [
     ],
     links_en: [
         { name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1405045119953928202/1482764501735444561" }
-    ]
-  },
-  {
-    id: "fictional-tan-lewang",
+    ]},
+  { id: "fictional-tan-lewang",
     category: "fictional-humans",
     name: "譚樂望",
     name_en: "Tan Lewang",
@@ -84,10 +178,8 @@ const characters = [
     links_en: [
         { name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1405045119953928202/1405045119953928202" },
         { name: "Download Card", file: "char/譚樂望.png" }
-    ]
-  },
-  {
-    id: "fantasy-wumei",
+    ]},
+  { id: "fantasy-wumei",
     category: "fantasy-south",
     name: "寤寐",
     name_en: "Wumei",
@@ -115,10 +207,8 @@ const characters = [
     links_en: [
         { name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1542165796841857155/1542165796841857155" },
         { name: "Download Card", file: "char/寤寐.png" }
-    ]
-  },
-  {
-    id: "fantasy-yiyu",
+    ]},
+  { id: "fantasy-yiyu",
     category: "fantasy-south",
     name: "易與",
     name_en: "Yiyu",
@@ -146,10 +236,8 @@ const characters = [
     links_en: [
         { name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1542165025266073741/1542165025266073741" },
         { name: "Download Card", file: "char/易與.png" }
-    ]
-  },
-  {
-    id: "fantasy-mauro",
+    ]},
+  { id: "fantasy-mauro",
     category: "fantasy-south",
     name: "Mauro",
     name_en: "Mauro",
@@ -192,10 +280,8 @@ const characters = [
         { name: "DC Download Ver 1.0", url: "https://discord.com/channels/1327283064476270603/1387826204094103582/1387826204094103582" },
         { name: "DC Download Ver 2.0", url: "https://discord.com/channels/1327283064476270603/1387826204094103582/1446171482311889028" },
         { name: "Download Card Ver 2.0", file: "char/Mauro [2.0].png" }
-    ]
-  },
-  {
-    id: "fantasy-lucero",
+    ]},
+  { id: "fantasy-lucero",
     category: "fantasy-south",
     name: "Lucero",
     name_en: "Lucero",
@@ -221,10 +307,8 @@ const characters = [
     ],
     links_en: [
         { name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1507652430735740948/1507652430735740948" }
-    ]
-  },
-  {
-    id: "fantasy-gillamarveo",
+    ]},
+  { id: "fantasy-gillamarveo",
     category: "fantasy-south",
     name: "Gillamarveo",
     name_en: "Gillamarveo",
@@ -252,10 +336,8 @@ const characters = [
     links_en: [
         { name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1473260040822718504/1473260040822718504" },
         { name: "Download Card", file: "char/Gillamarveo.png" }
-    ]
-  },
-  {
-    id: "fantasy-rosalind-fang",
+    ]},
+  { id: "fantasy-rosalind-fang",
     category: "fantasy-south",
     name: "方紅綾",
     name_en: "Rosalind Fang",
@@ -283,10 +365,8 @@ const characters = [
     links_en: [
         { name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1411236220867973150/1411236220867973150" },
         { name: "Download Card", file: "char/方紅綾.png" }
-    ]
-  },
-  {
-    id: "fictional-yakuichi-alt3",
+    ]},
+  { id: "fictional-yakuichi-alt3",
     category: "fictional-monsters",
     name: "亦壹",
     name_en: "Yakuichi",
@@ -311,10 +391,8 @@ const characters = [
     ],
     links_en: [
         { name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1355493695591415858/1539146817923711057" }
-    ]
-  },
-  {
-    id: "fictional-yakuichi-alt2",
+    ]},
+  { id: "fictional-yakuichi-alt2",
     category: "fictional-gods",
     name: "亦壹",
     name_en: "Yakuichi",
@@ -339,10 +417,8 @@ const characters = [
     ],
     links_en: [
         { name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1355493695591415858/1429138526666227733" }
-    ]
-  },
-  {
-    id: "fictional-yakuichi-alt",
+    ]},
+  { id: "fictional-yakuichi-alt",
     category: "fictional-gods",
     name: "亦壹",
     name_en: "Yakuichi",
@@ -384,10 +460,8 @@ const characters = [
     links_en: [
         { name: "DC Download Ver 1.0", url: "https://discord.com/channels/1327283064476270603/1355493695591415858/1379447215063568426" },
         { name: "DC Download Ver 2.0", url: "https://discord.com/channels/1327283064476270603/1355493695591415858/1539149226519564359" }
-    ]
-  },
-  {
-    id: "fictional-yakuichi",
+    ]},
+  { id: "fictional-yakuichi",
     category: "fictional-gods",
     name: "亦壹",
     name_en: "Yakuichi",
@@ -435,10 +509,8 @@ const characters = [
         { name: "Download Card Ver 2.0", file: "char/Yakuichi [2.0].png" },
         { name: "Play on 大冰奶", url: "https://milkteaaichat.up.railway.app/" },
         { name: "What is 大冰奶?", url: "https://www.plurk.com/p/3hq6spas09" }
-    ]
-  },
-  {
-    id: "fictional-ei",
+    ]},
+  { id: "fictional-ei",
     category: "fictional-gods",
     name: "翳",
     name_en: "Ei",
@@ -463,10 +535,8 @@ const characters = [
     ],
     links_en: [
         { name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1433792307257282701/1433792307257282701" }
-    ]
-  },
-  {
-    id: "fantasy-orth-and-hrus",
+    ]},
+  { id: "fantasy-orth-and-hrus",
     category: "fantasy-other",
     name: "Orth & Hrus",
     name_en: "Orth & Hrus",
@@ -493,10 +563,8 @@ const characters = [
     links_en: [
         { name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1528945851379220530/1528945851379220530" },
         { name: "Download Card", file: "char/Orth and Hrus.png" }
-    ]
-  },
-  {
-    id: "fantasy-mars",
+    ]},
+  { id: "fantasy-mars",
     category: "fantasy-other",
     name: "Mars",
     name_en: "Mars",
@@ -523,10 +591,8 @@ const characters = [
     links_en: [
         { name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1478278735747879023/1478278735747879023" },
         { name: "Download Card", file: "char/Mars.png" }
-    ]
-  },
-  {
-    id: "fantasy-raymond",
+    ]},
+  { id: "fantasy-raymond",
     category: "fantasy-south",
     name: "Raymond",
     name_en: "Raymond",
@@ -553,10 +619,8 @@ const characters = [
     links_en: [
         { name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1515013557056569435/1515013557056569435" },
         { name: "Download Card", file: "char/Raymond.png" }
-    ]
-  },
-  {
-    id: "fantasy-anamor",
+    ]},
+  { id: "fantasy-anamor",
     category: "fantasy-south",
     name: "Anamor",
     name_en: "Anamor",
@@ -583,10 +647,8 @@ const characters = [
     links_en: [
         { name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1515013557056569435/1515013557056569435" },
         { name: "Download Card", file: "char/Anamor.png" }
-    ]
-  },
-  { 
-    id: "fantasy-surya-and-chandra",
+    ]},
+  { id: "fantasy-surya-and-chandra",
     category: "fantasy-south",
     name: "Surya & Chandra",
     name_en: "Surya & Chandra",
@@ -613,10 +675,8 @@ const characters = [
     links_en: [
         { name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1456588648983302174/1456588648983302174" },
         { name: "Download Card", file: "char/Surya and Chandra.png" }
-    ]
-  },
-  {
-    id: "fantasy-eluas",
+    ]},
+  { id: "fantasy-eluas",
     category: "fantasy-south",
     name: "Eluas",
     name_en: "Eluas",
@@ -643,10 +703,8 @@ const characters = [
     links_en: [
         { name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1480173021661757460/1480173021661757460" },
         { name: "Download Card", file: "char/Eluas.png" }
-    ]
-  },
-  {
-    id: "fictional-isidore-isidora",
+    ]},
+  { id: "fictional-isidore-isidora",
     category: "fictional-humans",
     name: "Isidore／Isidora",
     name_en: "Isidore／Isidora",
@@ -689,10 +747,8 @@ const characters = [
         { name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1492375041701052476/1492375041701052476" },
         { name: "Download Card Ver Isidore", file: "char/Isidore.png" },
         { name: "Download Card Ver Isidora", file: "char/Isidora.png" }
-    ]
-  },
-  {
-    id: "fantasy-shub",
+    ]},
+  { id: "fantasy-shub",
     category: "fantasy-other",
     name: "Shub",
     name_en: "Shub",
@@ -717,40 +773,8 @@ const characters = [
     ],
     links_en: [
         { name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1489291416461901825/1489291416461901825" }
-    ]
-  },
-  {
-    id: "fictional-yury-and-enu",
-    category: "fictional-humans",
-    name: "Yury & Enu",
-    name_en: "Yury & Enu",
-    image: "char-pic/Yury and Enu.jpg",
-    tags: ["多人卡", "男性", "NSFW", "原創角色", "任何視角", "黑暗", "死鴿子", "焦慮", "緩慢燃燒", "傭兵", "反派", "支配", "順從", "文藝復興"],
-    tags_en: ["Multi-char", "Male", "NSFW", "OC", "AnyPOV", "Dark", "Dead Dove", "Angst", "Slow Burn", "Mercenaries", "Villain", "Dominant", "Submissive", "The Renaissance"],
-    description: "他是在這片荒漠地區惡名昭彰的傭兵『戰鷹』，只要酬報到位，從護衛、情報竊取到暗殺，他通通來者不拒。<br>你，將如何面對這名惡棍？",
-    description_en: "He is the infamous mercenary known as 'Martial Eagle' in this desolate region. As long as the price is right, he refuses no job—from escort work and intelligence theft to assassination.<br>How will you face this notorious rogue?",
-    reminder: "",
-    reminder_en: "",
-    warning: "含死鴿子 🗡🕊 ️要素。",
-    warning_en: "Contains Dead Dove 🗡🕊.",
-    features: {
-        "中文開場": true,
-        "英文開場": true,
-        "可替換頭像": true,
-        "視覺小說立繪": false
-    },
-    lorebook: "",
-    links: [
-        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1487141625082806473/1487141625082806473" },
-        { name: "直接下載", file: "char/Yury and Enu.png" }
-    ],
-    links_en: [
-        { name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1487141625082806473/1487141625082806473" },
-        { name: "Download Card", file: "char/Yury and Enu.png" }
-    ]
-  },
-  {
-    id: "fantasy-dorothea",
+    ]},
+  { id: "fantasy-dorothea",
     category: "fantasy-north",
     name: "Dorothea",
     name_en: "Dorothea",
@@ -775,10 +799,8 @@ const characters = [
     ],
     links_en: [
         { name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1477917538833666109/1477917538833666109" }
-    ]
-  },
-  {
-    id: "fantasy-nemany",
+    ]},
+  { id: "fantasy-nemany",
     category: "fantasy-west",
     name: "Nemany",
     name_en: "Nemany",
@@ -804,10 +826,8 @@ const characters = [
     ],
     links_en: [
         { name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1466786970087850259/1466786970087850259" }
-    ]
-  },
-  {
-    id: "fantasy-boreuse",
+    ]},
+  { id: "fantasy-boreuse",
     category: "fantasy-north",
     name: "Boreuse",
     name_en: "Boreuse",
@@ -835,10 +855,8 @@ const characters = [
     links_en: [
         { name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1444999278777864294/1444999278777864294" },
         { name: "Download Card", file: "char/Boreuse.png" }
-    ]
-  },
-  {
-    id: "fantasy-caroline",
+    ]},
+  { id: "fantasy-caroline",
     category: "fantasy-east",
     name: "Caroline",
     name_en: "Caroline",
@@ -866,10 +884,8 @@ const characters = [
     links_en: [
         { name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1443241193617227786/1443241193617227786" },
         { name: "Download Card", file: "char/Caroline.png" }
-    ]
-  },
-  {
-    id: "fantasy-colby",
+    ]},
+  { id: "fantasy-colby",
     category: "fantasy-east",
     name: "Colby",
     name_en: "Colby",
@@ -895,10 +911,8 @@ const characters = [
     ],
     links_en: [
         { name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1443241589378912276/1443241589378912276" }
-    ]
-  },
-  {
-    id: "fantasy-shano-and-ray",
+    ]},
+  { id: "fantasy-shano-and-ray",
     category: "fantasy-east",
     name: "Shano & Ray",
     name_en: "Shano & Ray",
@@ -925,10 +939,8 @@ const characters = [
     links_en: [
         { name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1393266364973711392/1393266364973711392" },
         { name: "Download Card", file: "char/Shano and Ray [DC].png" }
-    ]
-  },
-  {
-    id: "fantasy-super-nude-apron",
+    ]},
+  { id: "fantasy-super-nude-apron",
     category: "fantasy-other",
     name: "超級 ⛤ 裸體圍裙 ～♡",
     name_en: "Super ⛤ Nude Apron ～♡",
@@ -956,10 +968,8 @@ const characters = [
     links_en: [
         { name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1410254870262583461/1410254870262583461" },
         { name: "Download Card", file: "char/Super ⛤ Nude Apron ～♡.png" }
-    ]
-  },
-  {
-    id: "fantasy-lybis",
+    ]},
+  { id: "fantasy-lybis",
     category: "fantasy-east",
     name: "Lybis",
     name_en: "Lybis",
@@ -986,10 +996,8 @@ const characters = [
     links_en: [
         { name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1390685103943974932/1390685103943974932" },
         { name: "Download Card", file: "char/Lybis [ALT].png" }
-    ]
-  },
-  {
-    id: "fictional-ivansylth-alt",
+    ]},
+  { id: "fictional-ivansylth-alt",
     category: "fictional-humans",
     name: "Ivansylth",
     name_en: "Ivansylth",
@@ -1016,10 +1024,8 @@ const characters = [
     links_en: [
         { name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1380837858251898930/1380837858251898930" },
         { name: "Download Card", file: "char/Ivansylth [ALT].png" }
-    ]
-  },
-  {
-    id: "fictional-shano-alt",
+    ]},
+  { id: "fictional-shano-alt",
     category: "fictional-humans",
     name: "Shano",
     name_en: "Shano",
@@ -1046,10 +1052,8 @@ const characters = [
     links_en: [
         { name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1380837858251898930/1380837858251898930" },
         { name: "Download Card", file: "char/Shano [ALT].png" }
-    ]
-  },
-  {
-    id: "fictional-shano-alt2",
+    ]},
+  { id: "fictional-shano-alt2",
     category: "fictional-humans",
     name: "夏諾",
     name_en: "Shano",
@@ -1074,6 +1078,5 @@ const characters = [
     ],
     links_en: [
         { name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1397239771323175018/1397239771323175018" }
-    ]
-  },
+    ]},
 ];
