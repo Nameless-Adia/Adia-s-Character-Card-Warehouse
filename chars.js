@@ -10,6 +10,8 @@ const charOrder = [
     // 範例四：單純把順位拉上來，不掛標籤
     "fantasy-mauro"
     */
+    { id: "fantasy-julian-fang", badge: "新卡", badge_en: "NEW", type: "new" },
+    { id: "fantasy-rosalind-fang", badge: "關聯", badge_en: "LINK", type: "link" },
     { id: "fictional-haytham", badge: "新卡", badge_en: "NEW", type: "new" },
     { id: "fictional-usayd", badge: "新卡", badge_en: "NEW", type: "new" },
     { id: "fictional-yury-and-enu", badge: "推薦", badge_en: "PICK", type: "pick" },
@@ -337,13 +339,42 @@ const characters = [
         { name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1473260040822718504/1473260040822718504" },
         { name: "Download Card", file: "char/Gillamarveo.png" }
     ]},
+  { id: "fantasy-julian-fang",
+    category: "fantasy-south",
+    name: "方半夏",
+    name_en: "Julian Fang",
+    image: "char-pic/方半夏.jpg",
+    tags: ["單人卡", "男性", "NSFW", "原創角色", "任何視角", "黑暗", "魔法", "儒家思想", "死鴿子", "皇室", "王子", "支配與順從之間切換", "中世紀"],
+    tags_en: ["Solo-char", "Male", "NSFW", "OC", "AnyPOV", "Dark", "Magic", "Confucianism", "Dead Dove", "Royalty", "Prince", "Switch", "Medieval"],
+    description: "他所生活的國家由連綿不斷的戰事構成其歷史，嚴格的禮教與瘋狂的迷信組成其日常，這一切成為百姓安居樂業的基石。然而他渴望著為國家帶來開明之風，卻深知這會破壞如今百姓安逸的日常與幸福，為此他躊躇不前，因為傷害百姓亦非他所願。<br>面對懷抱著此等矛盾理想的他，你將如何介入他的人生？",
+    description_en: "The nation he calls home has its history forged by ceaseless warfare, and its daily life shaped by rigid ritual propriety and fanatical superstition—all of which form the very foundation upon which its people live in peace. Yet while he yearns to bring winds of enlightenment to his country, he knows full well that doing so would upend the peaceful lives the people currently enjoy. Torn by this dilemma, he hesitates to press forward, for bringing harm to his people is the last thing he desires.<br>Faced with a prince harboring such conflicting ideals, how will you step into his life?",
+    reminder: "",
+    reminder_en: "",
+    warning: "含死鴿子 🗡🕊 ️要素。",
+    warning_en: "Contains Dead Dove 🗡🕊.",
+    features: {
+        "中文開場": true,
+        "英文開場": true,
+        "可替換頭像": true,
+        "視覺小說立繪": false
+    },
+    lorebook: "世界觀補充，可不匯入。",
+    lorebook_en: "World lore supplement; import is optional.",
+    links: [
+        { name: "DC 下載", url: "https://discord.com/channels/1327283064476270603/1574355761612718243/1574355761612718243" },
+        { name: "直接下載", file: "char/方半夏.png" }
+    ],
+    links_en: [
+        { name: "DC Download", url: "https://discord.com/channels/1327283064476270603/1574355761612718243/1574355761612718243" },
+        { name: "Download Card", file: "char/方半夏.png" }
+    ]},
   { id: "fantasy-rosalind-fang",
     category: "fantasy-south",
     name: "方紅綾",
     name_en: "Rosalind Fang",
     image: "char-pic/方紅綾.jpg",
-    tags: ["單人卡", "女性", "NSFW", "原創角色", "任何視角", "黑暗", "魔法", "死鴿子", "焦慮", "皇室", "公主", "順從", "中世紀"],
-    tags_en: ["Solo-char", "Female", "NSFW", "OC", "AnyPOV", "Dark", "Magic", "Dead Dove", "Angst", "Royalty", "Princess", "Submissive", "Medieval"],
+    tags: ["單人卡", "女性", "NSFW", "原創角色", "任何視角", "黑暗", "魔法", "儒家思想", "死鴿子", "焦慮", "皇室", "公主", "順從", "中世紀"],
+    tags_en: ["Solo-char", "Female", "NSFW", "OC", "AnyPOV", "Dark", "Magic", "Confucianism", "Dead Dove", "Angst", "Royalty", "Princess", "Submissive", "Medieval"],
     description: "她是被預言為『救國福兆』的公主，卻在誕生時遭逢了場三天三夜的紅雨，頓時成了舉國認定的『災厄』。然而戰火肆虐之下，民眾同時矛盾的期望著『救國福兆』的預言仍然可以成真，這才保住了她的性命，卻也使她的生命中再無關愛與自由，只剩疏離與禁錮。<br>而你又會為她的命運帶來如何的變數？",
     description_en: "Prophesied as an 'auspicious omen of national salvation', she was instead born beneath a deluge of red rain that lasted three days and nights, immediately branding her as the nation's ultimate 'calamity'. Amid ravaging warfare, however, the desperate citizens paradoxically cling to the hope that the prophecy of national salvation might still prove true. Though this contradiction spared her life, it also left her existence devoid of warmth and freedom, with nothing but confinement and isolation.<br>What ripples will you create in her fate?",
     reminder: "",
@@ -353,7 +384,7 @@ const characters = [
     features: {
         "中文開場": true,
         "英文開場": true,
-        "可替換頭像": false,
+        "可替換頭像": true,
         "視覺小說立繪": false
     },
     lorebook: "世界觀補充，可不匯入。",

@@ -6,6 +6,11 @@ const changelogData = {
     // 歷史更新紀錄（最新的一筆放在最上面！首頁會自動抓取第一筆的 date 來顯示）
     logs: [
         {
+            date: "2026.11.23",
+            content: "▪ 新角色卡上架：方半夏。\n▪ 世界觀：萬邦諸國『方』更新、萬邦諸國『Apopys』修正。\n▪ 美化與排版修正。",
+            content_en: "▪ New character card released: Julian Fang.\n▪ Worldview: Myriad Realms 'Fang' updated, Myriad realms 'Apopys' revised.\n▪ Visual polish and layout bug fixes."
+        },
+        {
             date: "2026.11.13",
             content: "▪ 新角色卡上架：Haytham、Usayd。\n▪ 提示詞更新：Adia-🍨-Loacl-in-Chat-0.4.1、Adia-🥟-WontoNnnnnnn-1.3.1。\n▪ 釋出世界觀。\n▪ 美化與排版微調。",
             content_en: "▪ New character cards released: Haytham, Usayd.\n▪ Prompt updates: Adia-🍨-Loacl-in-Chat-0.4.1, Adia-🥟-WontoNnnnnnn-1.3.1.\n▪ Worldview section released.\n▪ Visual polish and layout adjustments."

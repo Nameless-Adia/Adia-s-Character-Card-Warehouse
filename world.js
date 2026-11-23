@@ -94,6 +94,7 @@ const worldviewData = {
                     { id: "fantasy-anamor", name: "Anamor" },
                     { id: "fantasy-raymond", name: "Raymond" },
                     { id: "fantasy-surya-and-chandra", name: "Surya & Chandra" },
+                    { id: "fantasy-julian-fang", name: "方半夏" },
                     { id: "fantasy-rosalind-fang", name: "方紅綾" },
                     { id: "fantasy-gillamarveo", name: "Gillamarveo" }
                 ]
@@ -277,6 +278,7 @@ const worldviewData = {
                         <p>常年的戰事使該國的軍事造詣逐漸凌駕於往昔引以為傲的絲織技藝之上，成為特色與資產，所產出的兵書與軍事人材更是多國萬金渴求的珍寶。然被戰事浸染的日常也使該國的思想發展出深厚的迷信色彩，以及嚴格的禮教制度。</p>
                         <p>隨著 Apopys 挾著劃時代科學兵器進逼，南方諸國效仿先人再次結成『南方聯合防禦戰線』，以抵禦 Apopys 如火如荼的南侵氣勢，該國亦加入為成員，並成為『南方聯合防禦戰線』的核心支柱之一。</p>
                         <p>然在僵持近二十載後，最終仍不敵 Apopys 並亡國，致使『南方聯合防禦戰線』的敗勢顯露。</p>
+                        <h4><span>◈ 鑄神劍儀式</span>神話中的鎮國神劍『憾天』，相傳劍身赤紅如血，揮之則風雷齊動，劍鋒所指，天崩地裂，彈指間敵影灰飛煙滅。然其鑄劍材料卻是處子公主之血，且歷史上從未有過鑄神劍儀式成功的紀錄，因此即便是迷信的國民也認為這不過是虛妄的傳說，僅極少數極端者仍堅持相信『只是缺了哪些材料』或是『只是錯了哪些步驟』。</h4>
                         `,
                         desc_en: `
                         <h4><span>◈ Capital</span>Ebonpolis</h4>
@@ -286,8 +288,10 @@ const worldviewData = {
                         <p>Years of constant warfare caused the nation's military prowess to gradually surpass the silk-weaving craft it once prided itself on, becoming its defining trait and greatest asset; the military treatises and strategists it produced were treasures sought after by many nations at any price. However, daily life steeped in war also gave rise to deeply rooted superstition and a rigid code of ritual propriety within its culture.</p>
                         <p>As Apopys closed in with its revolutionary scientific weaponry, the southern realms followed the example of their forebears and once again formed the 'Southern United Defense Front' to resist the fierce southward invasion. Fang joined as a member state as well, standing as one of the core pillars of the 'Southern United Defense Front'.</p>
                         <p>Yet after holding out in a stalemate for nearly two decades, it was ultimately overpowered by Apopys and fell, exposing the faltering position of the 'Southern United Defense Front'.</p>
+                        <h4><span>◈ The Sword-Forging Ritual</span>In myth, the nation's divine guardian sword, 'Heaven-Shaker', is said to have a blade as crimson as blood; its swing summons thunder and storms, and where its edge points, the very earth and heavens break asunder, obliterating enemies in the blink of an eye. Yet the ritual demands the blood of a virgin princess as its essential ingredient, and it has never once succeeded throughout recorded history. Consequently, even the superstitious populace largely regards it as nothing more than a baseless legend, with only a handful of diehards stubbornly insisting that past attempts 'merely lacked certain materials' or 'simply erred in a few steps'.</h4>
                         `,
                         chars: [
+                            { id: "fantasy-julian-fang", name: "方半夏" },
                             { id: "fantasy-rosalind-fang", name: "方紅綾" }
                         ]
                     }
@@ -393,7 +397,7 @@ const worldviewData = {
                                 <p>然本該成為遏止 Apopys 繼續侵略行徑的大陸東方強權，也是當時全大陸最強大的國度 Nemses 在一夜之間的毀滅，使 Apopys 的野心與自信心得到極大的激勵，絲毫不將雖繁盛卻毫不團結的大陸南方諸國放在眼中，毫無憚忌地揮軍展開南侵。</p>
                                 <p>此舉卻將 Apopys 拖入意想不到的情境中，南方諸國結成的『南方聯合防禦戰線』削減了 Apopys 的侵略氣燄，更將其拖入數十年的長期戰爭泥沼中。國庫近乎全投入軍事中的 Apopys 根本無暇顧及民生，長久的戰事讓這問題越發明顯，民怨再起。</p>
                                 <p>為鎮壓內亂，Apopys 的南侵腳步不得不放緩，儘管仍在最後關頭攻破『南方聯合防禦戰線』，隨後要面對的卻是已然完全重整旗鼓的 Elenveka，最終 Apopys 的國力徹底被戰爭拖垮並敗亡於 Elenveka。</p>
-                                <h4><span>◈ 奇幻物種獵殺狂潮</span>始於民間的仇恨心理，後被 Apopys 軍方利用與煽動，成為席捲大陸西方與北方的風潮，直至 Apopys 亡國方才終結。狂潮期間，大量的奇幻物種被捕捉並被公開行刑或是殘忍私刑殺害，導致最終狂潮結束後，大陸上的奇幻物種幾乎絕跡，其中大半是被殺害，殘存者也多數不敢再輕易接近人類而隱去蹤跡。</h4>
+                                <h4><span>◈ 奇幻物種獵殺狂潮</span>始於民間的仇恨心理，後被 Apopys 軍方利用與煽動，成為席捲大陸西方與北方的風潮，直至 Apopys 亡國方才終結。狂潮期間，大量奇幻物種被捕捉並被公開行刑或是殘忍私刑殺害，部份被視為私產或奴隸對待，導致最終狂潮結束後，大陸上的奇幻物種幾乎絕跡，其中大半是被殺害，殘存者也多數不敢再輕易接近人類而隱去蹤跡。</h4>
                                 `,
                                 desc_en: `
                                 <h4><span>◈ Capital</span>Centrumundi</h4>
@@ -405,7 +409,7 @@ const worldviewData = {
                                 <p>Meanwhile, the overnight destruction of Nemses—the eastern superpower and strongest nation on the continent that should have deterred Apopys's further aggression—greatly emboldened Apopys's ambition and confidence. Dismissing the prosperous yet fractured realms of the south entirely, Apopys marched south without hesitation.</p>
                                 <p>Yet this move dragged Apopys into an unforeseen predicament. The 'Southern United Defense Front' formed by the southern realms blunted Apopys's aggressive momentum and pulled it into a decades-long quagmire of war. With its treasury poured almost entirely into the military, Apopys had no capacity to care for the livelihood of its people—a problem that grew ever more glaring as the war dragged on, sparking public resentment once more.</p>
                                 <p>To suppress domestic unrest, Apopys was forced to slow its southern advance. Though it still managed to break through the 'Southern United Defense Front' at the very last moment, it was immediately confronted by a fully revitalized Elenveka; in the end, Apopys's national strength was utterly exhausted by war, and it was defeated and destroyed by Elenveka.</p>
-                                <h4><span>◈ The Great Hunt of Fantastical Species</span>A hunting frenzy born from popular hatred and subsequently exploited and stoked by the Apopys military, sweeping across the western and northern reaches of the continent until it finally ended with the fall of Apopys. During the frenzy, vast numbers of fantastical species were captured and subjected to public executions or brutal lynchings. By the time it ended, fantastical species had been driven nearly to extinction across the continent—most having been slaughtered, while the majority of the survivors vanished into hiding, no longer daring to readily approach humans.</h4>
+                                <h4><span>◈ The Great Hunt of Fantastical Species</span>A hunting frenzy born from popular hatred and subsequently exploited and stoked by the Apopys military, sweeping across the western and northern reaches of the continent until it finally ended with the fall of Apopys. During the frenzy, vast numbers of fantastical species were captured and subjected to public executions or brutal lynchings, with some treated as private property or slaves. By the time it ended, fantastical species had been driven nearly to extinction across the continent—most having been slaughtered, while the majority of the survivors vanished into hiding, no longer daring to readily approach humans.</h4>
                                 `,
                                 chars: [
                                     { id: "fantasy-nemany", name: "Nemany" }
@@ -436,6 +440,7 @@ const worldviewData = {
                         { id: "fantasy-caroline", name: "Caroline" },
                         { id: "fantasy-nemany", name: "Nemany" },
                         { id: "fantasy-shano-and-ray", name: "Ray" },
+                        { id: "fantasy-julian-fang", name: "方半夏" },
                         { id: "fantasy-rosalind-fang", name: "方紅綾" },
                         { id: "fantasy-lucero", name: "Lucero" },
                         { id: "fantasy-super-nude-apron", name: "超級 ⛤ 裸體圍裙 ～♡" }
